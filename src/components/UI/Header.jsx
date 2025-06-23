@@ -1,7 +1,10 @@
 import { useState } from "react";
-// 1. IMPORT NavLink from react-router-dom
 import { NavLink } from "react-router-dom";
 import { HiGlobeAlt, HiSearch, HiMenu, HiX } from "react-icons/hi";
+
+// 1. IMPORT THE LOGO IMAGE
+// Make sure this path is correct relative to your Header.jsx file
+import logo from '../../assets/img/Logoo.png'; 
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -14,7 +17,6 @@ export default function Header() {
     setMenuOpen(false);
   };
 
-  // 2. UPDATED: Simple array of strings for navigation items
   const navItems = [
     "Home",
     "About",
@@ -30,16 +32,18 @@ export default function Header() {
       <header className="bg-white shadow-md sticky top-0 z-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo now uses NavLink for consistency */}
+            
+            {/* 2. REPLACE THE TEXT LOGO WITH THE IMAGE LOGO */}
             <NavLink to="/" className="flex items-center" onClick={closeMenu}>
-              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-gray-400 tracking-wide">
-                TITANIUM
-              </div>
+              <img 
+                src={logo} 
+                alt="Titanium Engineering Logo" 
+                className="h-16 lg:h-28 w-28" // Responsive height, auto width
+              />
             </NavLink>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-              {/* 3. UPDATED: Mapping the new array and using NavLink */}
               {navItems.map((item) => (
                 <NavLink
                   key={item}
@@ -47,8 +51,8 @@ export default function Header() {
                   className={({ isActive }) =>
                     `transition-colors duration-200 font-medium text-sm xl:text-base uppercase tracking-wider px-2 py-1 border-b-2
                      ${isActive
-                       ? 'text-red-600 border-red-600' // Active style
-                       : 'text-gray-700 border-transparent hover:text-red-600' // Inactive style
+                       ? 'text-red-600 border-red-600'
+                       : 'text-gray-700 border-transparent hover:text-red-600'
                      }`
                   }
                 >
@@ -90,7 +94,6 @@ export default function Header() {
           `}
         >
           <nav className="px-4 pt-2 pb-6 space-y-1">
-            {/* 4. UPDATED: Mobile nav also uses the new approach */}
             {navItems.map((item) => (
               <NavLink
                 key={item}
@@ -99,16 +102,14 @@ export default function Header() {
                 className={({ isActive }) =>
                   `block px-3 py-3 font-medium text-sm uppercase tracking-wider rounded-md transition-colors duration-200
                    ${isActive
-                     ? 'bg-red-500 text-white' // Active style
-                     : 'text-gray-700 hover:text-red-600 hover:bg-red-50' // Inactive style
+                     ? 'bg-red-500 text-white'
+                     : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
                    }`
                 }
               >
                 {item}
               </NavLink>
             ))}
-
-            {/* Mobile Right Side Items */}
             <div className="flex items-center justify-between pt-4 mt-4 border-t border-gray-200 px-3">
               <div className="flex items-center space-x-2 text-gray-700">
                 <span className="text-sm font-medium">EN</span>
@@ -122,7 +123,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Overlay for mobile menu - closes menu on click */}
+      {/* Overlay for mobile menu */}
       {isMenuOpen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-25 lg:hidden z-40" 
