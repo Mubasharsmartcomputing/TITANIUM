@@ -99,7 +99,7 @@ const ProjectComponent = () => {
                             <a href={project.image} title="Zoom In" className="text-white bg-red-500/80 hover:bg-red-500 rounded-full p-3 transition-colors">
                                 <BiZoomIn size={24} />
                             </a>
-                            <a href={`/project-details/${project.id}`} title="More Details" className="text-white bg-red-500/80 hover:bg-red-500 rounded-full p-3 transition-colors">
+                            <a href={`/`} title="More Details" className="text-white bg-red-500/80 hover:bg-red-500 rounded-full p-3 transition-colors">
                                 <BiLink size={24} />
                             </a>
                             </div>
