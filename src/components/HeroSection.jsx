@@ -1,19 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa';
 
+// --- IMPORT IMAGES (The Modern Way) ---
+// Make sure these paths are correct for your project structure
+import heroImg1 from '../assets/img/hero-carousel/hero-carousel-1.jpg';
+import heroImg2 from '../assets/img/hero-carousel/hero-carousel-2.jpg';
+import heroImg3 from '../assets/img/hero-carousel/hero-carousel-3.jpg';
+import heroImg4 from '../assets/img/hero-carousel/hero-carousel-4.jpg';
+import heroImg5 from '../assets/img/hero-carousel/hero-carousel-5.jpg';
+
+
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Carousel images - you can replace these with your actual image paths
+  // --- UPDATED CAROUSEL IMAGES ARRAY ---
+  // Now uses the imported image variables
   const carouselImages = [
-   
-    'src/assets/img/hero-carousel/hero-carousel-1.jpg',
-    'src/assets/img/hero-carousel/hero-carousel-2.jpg',
-    'src/assets/img/hero-carousel/hero-carousel-3.jpg',
-    'src/assets/img/hero-carousel/hero-carousel-4.jpg',
-    'src/assets/img/hero-carousel/hero-carousel-5.jpg',
-    
+    heroImg1,
+    heroImg2,
+    heroImg3,
+    heroImg4,
+    heroImg5,
   ];
 
   // Auto-play functionality
@@ -41,7 +49,6 @@ const HeroCarousel = () => {
   };
 
   const handleGetStarted = () => {
-    // Add your get started functionality here
     document.getElementById('get-started')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -91,25 +98,22 @@ const HeroCarousel = () => {
       <div className="relative z-10 h-full flex items-center justify-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
-            {/* Main Title */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
              The Foundation of Everything 
               <br />
               <span className="text-white">You Want to Build</span>
             </h1>
 
-            {/* Orange accent line */}
+            {/* Red accent line (Corrected color) */}
             <div className="w-20 h-1 bg-red-500 mx-auto mb-8"></div>
 
-            {/* Description */}
             <p className="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
               At Titanium Engineering Project Management, we bring hands-on experience in civil engineering to your projects. From scheduling and site coordination to documentation and authority liaison, we handle every detail with precision. Serving Bavaria and across Germany, we help planning offices and construction companies build with confidence.
             </p>
 
-            {/* Get Started Button */}
             <button
               onClick={handleGetStarted}
-              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-transparent border-2 border-red-500 rounded-full hover:bg-red-500 hover:border-red-500 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-orange-500/30"
+              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-transparent border-2 border-red-500 rounded-full hover:bg-red-500 hover:border-red-500 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-500/30"
             >
               Get Started
             </button>
@@ -119,7 +123,6 @@ const HeroCarousel = () => {
 
       {/* Carousel Navigation Controls */}
       <div className="absolute inset-0 flex items-center justify-between px-4 sm:px-8 z-20 pointer-events-none">
-        {/* Previous Button */}
         <button
           onClick={goToPrevious}
           className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white/30 pointer-events-auto"
@@ -127,8 +130,6 @@ const HeroCarousel = () => {
         >
           <FaChevronLeft className="w-6 h-6 sm:w-7 sm:h-7" />
         </button>
-
-        {/* Next Button */}
         <button
           onClick={goToNext}
           className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white/30 pointer-events-auto"
@@ -147,7 +148,7 @@ const HeroCarousel = () => {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 ${
                 index === currentSlide
-                  ? 'bg-orange-500 scale-125'
+                  ? 'bg-red-500 scale-125' // (Corrected color)
                   : 'bg-white/50 hover:bg-white/70'
               }`}
               aria-label={`Go to slide ${index + 1}`}
@@ -163,11 +164,7 @@ const HeroCarousel = () => {
           className="w-10 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50"
           aria-label={isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'}
         >
-          {isAutoPlaying ? (
-            <FaPause className="w-4 h-4" />
-          ) : (
-            <FaPlay className="w-4 h-4" />
-          )}
+          {isAutoPlaying ? <FaPause className="w-4 h-4" /> : <FaPlay className="w-4 h-4" />}
         </button>
       </div>
     </section>
