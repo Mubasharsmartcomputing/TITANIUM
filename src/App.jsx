@@ -6,7 +6,7 @@ import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import { ErrorPage } from './pages/ErrorPage'
 import { AppLayout } from './components/layout/AppLayout'
-import Portfolio from './pages/portfolio'
+
 import Services from './pages/Services'
 import Consultant from './pages/Consultant'
 import Projects from './pages/Projects'
@@ -35,11 +35,6 @@ const router = createBrowserRouter([
       },
       
       // Portfolio Routes - These match the dropdown paths exactly
-      
-      {
-        path: 'portfolio',
-        element: <Portfolio/>,
-      },
       
       // Services Routes - These match the dropdown paths exactly
       
