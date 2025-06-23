@@ -1,5 +1,6 @@
 import { useState } from "react";
-// 1. IMPORT ICONS DIRECTLY FROM REACT-ICONS
+// 1. IMPORT NavLink from react-router-dom
+import { NavLink } from "react-router-dom";
 import { HiGlobeAlt, HiSearch, HiMenu, HiX } from "react-icons/hi";
 
 export default function Header() {
@@ -13,47 +14,45 @@ export default function Header() {
     setMenuOpen(false);
   };
 
+  // 2. UPDATED: Simple array of strings for navigation items
   const navItems = [
-    { name: "HOME", path: "/" },
-    { name: "ABOUT", path: "/about" },
-    { name: "SERVICES", path: "/services" },
-    { name: "CONSULTANT", path: "/consultant" },
-    { name: "PROJECTS", path: "/projects" },
-    { name: "BLOG", path: "/blog" },
-    { name: "CONTACT", path: "/contact" },
+    "Home",
+    "About",
+    "Services",
+    "Consultant",
+    "Projects",
+    "Blog",
+    "Contact",
   ];
-
-  // Using a component for links for consistency
-  const NavLink = ({ to, children, className, onClick }) => (
-    <a href={to} className={className} onClick={onClick}>
-      {children}
-    </a>
-  );
 
   return (
     <>
-      {/* The header is relative to allow absolute positioning of the mobile menu */}
       <header className="bg-white shadow-md sticky top-0 z-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <NavLink to="/" className="flex items-center" onClick={closeMenu}>
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-gray-400 tracking-wide">
-                  TITANIUM
-                </div>
-              </NavLink>
-            </div>
+            {/* Logo now uses NavLink for consistency */}
+            <NavLink to="/" className="flex items-center" onClick={closeMenu}>
+              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-gray-400 tracking-wide">
+                TITANIUM
+              </div>
+            </NavLink>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+              {/* 3. UPDATED: Mapping the new array and using NavLink */}
               {navItems.map((item) => (
                 <NavLink
-                  key={item.name}
-                  to={item.path}
-                  className="text-gray-700 hover:text-red-600 transition-colors duration-200 font-medium text-sm xl:text-base uppercase tracking-wider px-2 py-1"
+                  key={item}
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  className={({ isActive }) =>
+                    `transition-colors duration-200 font-medium text-sm xl:text-base uppercase tracking-wider px-2 py-1 border-b-2
+                     ${isActive
+                       ? 'text-red-600 border-red-600' // Active style
+                       : 'text-gray-700 border-transparent hover:text-red-600' // Inactive style
+                     }`
+                  }
                 >
-                  {item.name}
+                  {item}
                 </NavLink>
               ))}
             </nav>
@@ -82,8 +81,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* MOBILE MENU - POSITIONED ABSOLUTELY */}
-        {/* It's positioned below the header and uses transitions for a smooth effect */}
+        {/* MOBILE MENU */}
         <div
           className={`
             lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg
@@ -92,14 +90,21 @@ export default function Header() {
           `}
         >
           <nav className="px-4 pt-2 pb-6 space-y-1">
+            {/* 4. UPDATED: Mobile nav also uses the new approach */}
             {navItems.map((item) => (
               <NavLink
-                key={item.name}
-                to={item.path}
-                className="block px-3 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 transition-colors duration-200 font-medium text-sm uppercase tracking-wider rounded-md"
+                key={item}
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 onClick={closeMenu}
+                className={({ isActive }) =>
+                  `block px-3 py-3 font-medium text-sm uppercase tracking-wider rounded-md transition-colors duration-200
+                   ${isActive
+                     ? 'bg-red-500 text-white' // Active style
+                     : 'text-gray-700 hover:text-red-600 hover:bg-red-50' // Inactive style
+                   }`
+                }
               >
-                {item.name}
+                {item}
               </NavLink>
             ))}
 
