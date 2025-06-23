@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaArrowUp } from 'react-icons/fa';
 
-// --- 1. IMPORT THE BACKGROUND IMAGE ---
-// Make sure this path is correct for your project structure
+// --- IMPORT THE BACKGROUND IMAGE ---
 import footerBgImage from '../../assets/img/footer-bg.jpg';
 
 const Footer = () => {
@@ -29,7 +28,7 @@ const Footer = () => {
     });
   };
 
-  // --- UPDATED: Data for links relevant to your business ---
+  // --- Data for links relevant to your business ---
   const usefulLinks = ['Home', 'About', 'Services', 'Projects', 'Contact'];
   const ourServices = [
       'Construction Scheduling',
@@ -58,7 +57,6 @@ const Footer = () => {
     <footer className="relative bg-slate-800 text-gray-300 overflow-hidden">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0">
-        {/* 2. USE THE IMPORTED IMAGE VARIABLE --- */}
         <div
           className="absolute inset-0 w-full h-full bg-cover bg-center opacity-20"
           style={{
@@ -74,20 +72,20 @@ const Footer = () => {
           
           {/* Column 1: Company Info & Socials */}
           <div className="lg:col-span-1">
-            {/* 3. UPDATED BRAND NAME --- */}
             <h3 className="text-2xl font-bold text-white mb-6">TITANIUM</h3>
             <div className="space-y-3 text-sm">
+              {/* --- DUMMY DATA ADDED --- */}
               <p className="text-gray-400">
-                [Your Street Address]<br/>
-                [City, Postal Code]<br/>
+                Musterstraße 123<br/>
+                80331 München<br/>
                 Germany
               </p>
               <div className="space-y-1">
                 <p className="text-gray-400">
-                  <span className="font-semibold text-white">Phone:</span> [Your Phone Number]
+                  <span className="font-semibold text-white">Phone:</span> +49 (0)89 1234567
                 </p>
                 <p className="text-gray-400">
-                  <span className="font-semibold text-white">Email:</span> [Your Email Address]
+                  <span className="font-semibold text-white">Email:</span> info@titanium-pm.de
                 </p>
               </div>
             </div>
