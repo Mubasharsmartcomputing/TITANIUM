@@ -1,4 +1,5 @@
 import './App.css'
+import './i18n' // Import i18n configuration - ADD THIS LINE
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'

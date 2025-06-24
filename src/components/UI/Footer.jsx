@@ -29,7 +29,7 @@ const Footer = () => {
   };
 
   // --- Data for links relevant to your business ---
-  const usefulLinks = ['Home', 'About', 'Services', 'Projects', 'Contact'];
+
   const ourServices = [
       'Construction Scheduling',
       'Subcontractor Coordination',
@@ -37,13 +37,7 @@ const Footer = () => {
       'Management Support',
       'Planning & Tendering',
   ];
-  const ourExpertise = [
-      'Commercial Construction',
-      'Residential Developments',
-      'Industrial Facilities',
-      'Public Infrastructure',
-      'Risk Management',
-  ];
+  
   const legalLinks = ['Privacy Policy', 'Terms of Service', 'Imprint'];
 
   const socialLinks = [
@@ -68,13 +62,13 @@ const Footer = () => {
       
       {/* Main Footer Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        {/* --- UPDATED: Grid columns adjusted to match the 3 content blocks --- */}
+        <div className="grid grid-cols-1 justify-center items-center sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           
-          {/* Column 1: Company Info & Socials */}
-          <div className="lg:col-span-1">
+          {/* Column 1: Company Info & Socials (takes up 2 columns on large screens) */}
+          <div className="lg:col-span-2 md:ml-32 ml-auto"> 
             <h3 className="text-2xl font-bold text-white mb-6">TITANIUM</h3>
             <div className="space-y-3 text-sm">
-              {/* --- DUMMY DATA ADDED --- */}
               <p className="text-gray-400">
                 Musterstraße 123<br/>
                 80331 München<br/>
@@ -99,21 +93,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Useful Links */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Useful Links</h4>
-            <ul className="space-y-2">
-              {usefulLinks.map((link) => (
-                <li key={link}>
-                  <a href={`/${link.toLowerCase()}`} className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3: Our Services */}
+          
+          {/* Column 2: Our Services */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-6">Our Services</h4>
             <ul className="space-y-2">
@@ -126,22 +107,8 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Column 4: Our Expertise */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Our Expertise</h4>
-            <ul className="space-y-2">
-              {ourExpertise.map((item) => (
-                <li key={item}>
-                  <a href="/projects" className="text-gray-400 hover:text-white transition-colors duration-300 text-sm">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 5: Legal */}
+         
+          {/* Column 3: Legal */}
           <div>
             <h4 className="text-lg font-semibold text-white mb-6">Legal</h4>
             <ul className="space-y-2">
@@ -164,7 +131,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* --- Red Scroll to Top Button --- */}
+      {/* --- Scroll to Top Button --- */}
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"

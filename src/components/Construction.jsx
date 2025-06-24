@@ -3,26 +3,27 @@ import { motion } from 'framer-motion';
 
 // --- IMPORT IMAGES ---
 // Make sure these paths are correct for your project structure
-import construction1 from '../assets/img/constructions-1.jpg';
-import construction2 from '../assets/img/constructions-2.jpg';
-import construction3 from '../assets/img/constructions-3.jpg';
+import construction1 from '../assets/img/constructions-1.png';
+import construction2 from '../assets/img/constructions-2.png';
+import construction3 from '../assets/img/constructions-3.png';
 import construction4 from '../assets/img/constructions-4.jpg';
 
 
 // --- Data for the construction cards ---
 const constructionsData = [
   {
-    id: 1,
-    image: construction1,
-    title: 'Commercial Office Towers',
-    description: 'We specialize in the end-to-end project management of high-rise commercial buildings, ensuring structural integrity, on-time delivery, and adherence to complex urban regulations.',
-  },
-  {
     id: 2,
     image: construction2,
     title: 'Residential Apartment Complexes',
     description: 'Our expertise extends to multi-family residential projects, where we coordinate all trades to deliver high-quality living spaces that meet both developer and resident expectations.',
   },
+  {
+    id: 1,
+    image: construction1,
+    title: 'Commercial Office Towers',
+    description: 'We specialize in the end-to-end project management of high-rise commercial buildings, ensuring structural integrity, on-time delivery, and adherence to complex urban regulations.',
+  },
+  
   {
     id: 3,
     image: construction3,
@@ -41,7 +42,10 @@ const constructionsData = [
 // --- Reusable Construction Card Component ---
 const ConstructionCard = ({ image, title, description }) => {
     return (
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        // MODIFICATION: Changed `rounded-lg` to `rounded-[2.5rem]` for a much more
+        // pronounced curve, similar to the example image. The `overflow-hidden`
+        // class ensures the inner image is clipped to this new rounded shape.
+        <div className="bg-white rounded-[2.5rem] shadow-lg overflow-hidden">
             <div className="grid grid-cols-1 xl:grid-cols-12">
                 <div className="xl:col-span-5">
                     <div className="h-full min-h-[200px] xl:min-h-full">

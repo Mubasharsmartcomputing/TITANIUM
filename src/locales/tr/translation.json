@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetler",
+    "consultant": "Danışman",
+    "projects": "Projeler",
+    "blog": "Blog",
+    "contact": "İletişim"
+  },
+  "common": {
+    "search": "Ara",
+    "language": "Dil",
+    "welcome": "Titanium Innovations'a Hoş Geldiniz",
+    "loading": "Yükleniyor...",
+    "submit": "Gönder",
+    "cancel": "İptal"
+  },
+  "pages": {
+    "home": {
+      "title": "Şirketimize Hoş Geldiniz",
+      "subtitle": "Yenilikçi mühendislik çözümleri sunuyoruz",
+      "cta": "Başlayın"
+    },
+    "about": {
+      "title": "Hakkımızda",
+      "description": "Önde gelen bir mühendislik şirketiyiz..."
+    },
+    "services": {
+      "title": "Hizmetlerimiz",
+      "description": "Kapsamlı mühendislik hizmetleri sunuyoruz"
+    },
+    "contact": {
+      "title": "İletişim",
+      "address": "Adres",
+      "phone": "Telefon",
+      "email": "E-posta"
+    }
+  }
+}

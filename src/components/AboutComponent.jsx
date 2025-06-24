@@ -40,8 +40,8 @@ const TeamMember = ({ image, name, role, description, socials }) => (
         transition={{ duration: 0.5 }}
     >
         <div className="relative overflow-hidden rounded-lg mb-6 shadow-lg">
-            <img src={image} alt={name} className="w-full h-auto" />
-            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
+            <img src={image} alt={name} className="w-full h-auto rounded-4xl shadow-xl " />
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-4xl shadow-xl  flex items-center justify-center space-x-4">
                 {socials.map(social => (
                     <a key={social.name} href={social.url} className="text-white hover:text-red-400 transition-colors p-2 bg-black/20 rounded-full">
                         <social.icon size={20} />
@@ -74,7 +74,7 @@ const AboutComponent = () => {
             <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
                 <motion.img 
                     src={aboutImg} alt="Construction site" 
-                    className="w-full h-full object-cover rounded-lg shadow-xl" 
+                    className="w-full h-full object-cover rounded-4xl shadow-xl " 
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -87,7 +87,7 @@ const AboutComponent = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="bg-white p-8 lg:p-12 shadow-2xl rounded-lg"
+                className="bg-white p-8 lg:p-12 rounded-4xl shadow-xl"
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">Forged by 15 Years of Engineering Excellence.</h2>
                 <div className="our-story">
@@ -132,7 +132,7 @@ const AboutComponent = () => {
       </section>
       
       {/* Team Section */}
-      <section id="team" className="py-16 lg:py-24">
+      <section id="team" className="py-16 lg:py-24 ">
         <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-12"
@@ -144,7 +144,7 @@ const AboutComponent = () => {
                 <h2 className="text-4xl font-bold text-gray-800">Meet Our Team</h2>
                 <p className="text-lg text-gray-600 mt-2">The dedicated professionals behind our success.</p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 lg:gap-12">
                 {teamData.map((member, index) => <TeamMember key={index} {...member} />)}
             </div>
         </div>

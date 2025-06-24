@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { HiGlobeAlt, HiSearch, HiMenu, HiX } from "react-icons/hi";
-
-// 1. IMPORT THE LOGO IMAGE
-// Make sure this path is correct relative to your Header.jsx file
-import logo from '../../assets/img/Logoo.png'; 
+import { useTranslation } from 'react-i18next';
+import { HiGlobeAlt, HiSearch, HiMenu, HiX, HiChevronDown } from "react-icons/hi";
+import logo from '../../assets/img/Logo_for_Titanium_Innovations_Company-removebg-preview.png';
 
 export default function Header() {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
+
+  const languages = [
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'tr', name: 'Türkçe', flag: '🇹🇷' }
+  ];
 
   const handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen);
@@ -17,14 +22,25 @@ export default function Header() {
     setMenuOpen(false);
   };
 
+  const handleLanguageChange = (languageCode) => {
+    i18n.changeLanguage(languageCode);
+    setLanguageDropdownOpen(false);
+    console.log(`Language changed to: ${languageCode}`);
+  };
+
+  const toggleLanguageDropdown = () => {
+    setLanguageDropdownOpen(!isLanguageDropdownOpen);
+  };
+
+  // Navigation items with translations
   const navItems = [
-    "Home",
-    "About",
-    "Services",
-    "Consultant",
-    "Projects",
-    "Blog",
-    "Contact",
+    { key: 'home', path: '/' },
+    { key: 'about', path: '/about' },
+    { key: 'services', path: '/services' },
+    { key: 'consultant', path: '/consultant' },
+    { key: 'projects', path: '/projects' },
+    { key: 'blog', path: '/blog' },
+    { key: 'contact', path: '/contact' },
   ];
 
   return (
@@ -33,12 +49,12 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             
-            {/* 2. REPLACE THE TEXT LOGO WITH THE IMAGE LOGO */}
+            {/* Logo */}
             <NavLink to="/" className="flex items-center" onClick={closeMenu}>
               <img 
                 src={logo} 
                 alt="Titanium Engineering Logo" 
-                className="h-16 lg:h-28 w-28" // Responsive height, auto width
+                className="h-16 w-16 lg:h-22 md:w-22"
               />
             </NavLink>
 
@@ -46,8 +62,8 @@ export default function Header() {
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
               {navItems.map((item) => (
                 <NavLink
-                  key={item}
-                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  key={item.key}
+                  to={item.path}
                   className={({ isActive }) =>
                     `transition-colors duration-200 font-medium text-sm xl:text-base uppercase tracking-wider px-2 py-1 border-b-2
                      ${isActive
@@ -56,18 +72,47 @@ export default function Header() {
                      }`
                   }
                 >
-                  {item}
+                  {t(`nav.${item.key}`)}
                 </NavLink>
               ))}
             </nav>
 
             {/* Desktop Right Side Icons */}
             <div className="hidden lg:flex items-center space-x-4">
-              <div className="flex items-center space-x-2 text-gray-700">
-                <span className="text-sm font-medium">EN</span>
-                <HiGlobeAlt size={16} />
+              {/* Language Switcher */}
+              <div className="relative">
+                <button
+                  onClick={toggleLanguageDropdown}
+                  className="flex items-center space-x-2 text-gray-700 hover:text-red-600 transition-colors duration-200 px-2 py-1 rounded-md"
+                >
+                  <span className="text-sm font-medium">{i18n.language.toUpperCase()}</span>
+                  <HiGlobeAlt size={16} />
+                  <HiChevronDown size={14} className={`transition-transform duration-200 ${isLanguageDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {/* Language Dropdown */}
+                {isLanguageDropdownOpen && (
+                  <div className="absolute right-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-50">
+                    {languages.map((language) => (
+                      <button
+                        key={language.code}
+                        onClick={() => handleLanguageChange(language.code)}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-red-50 hover:text-red-600 transition-colors duration-200 flex items-center space-x-2
+                          ${i18n.language === language.code ? 'bg-red-50 text-red-600' : 'text-gray-700'}
+                        `}
+                      >
+                        <span>{language.flag}</span>
+                        <span>{language.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
-              <button className="text-red-600 hover:text-red-700 transition-colors duration-200">
+
+              <button 
+                className="text-red-600 hover:text-red-700 transition-colors duration-200"
+                title={t('common.search')}
+              >
                 <HiSearch size={20} />
               </button>
             </div>
@@ -96,8 +141,8 @@ export default function Header() {
           <nav className="px-4 pt-2 pb-6 space-y-1">
             {navItems.map((item) => (
               <NavLink
-                key={item}
-                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                key={item.key}
+                to={item.path}
                 onClick={closeMenu}
                 className={({ isActive }) =>
                   `block px-3 py-3 font-medium text-sm uppercase tracking-wider rounded-md transition-colors duration-200
@@ -107,17 +152,42 @@ export default function Header() {
                    }`
                 }
               >
-                {item}
+                {t(`nav.${item.key}`)}
               </NavLink>
             ))}
-            <div className="flex items-center justify-between pt-4 mt-4 border-t border-gray-200 px-3">
-              <div className="flex items-center space-x-2 text-gray-700">
-                <span className="text-sm font-medium">EN</span>
-                <HiGlobeAlt size={16} />
+            
+            {/* Mobile Language Switcher */}
+            <div className="pt-4 mt-4 border-t border-gray-200 px-3">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-medium text-gray-700">{t('common.language')}</span>
               </div>
-              <button className="text-red-600 hover:text-red-700 transition-colors duration-200">
-                <HiSearch size={20} />
-              </button>
+              <div className="space-y-2">
+                {languages.map((language) => (
+                  <button
+                    key={language.code}
+                    onClick={() => handleLanguageChange(language.code)}
+                    className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors duration-200 flex items-center space-x-2
+                      ${i18n.language === language.code 
+                        ? 'bg-red-500 text-white' 
+                        : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+                      }
+                    `}
+                  >
+                    <span>{language.flag}</span>
+                    <span>{language.name}</span>
+                  </button>
+                ))}
+              </div>
+              
+              {/* Search button */}
+              <div className="flex justify-end pt-3 mt-3 border-t border-gray-200">
+                <button 
+                  className="text-red-600 hover:text-red-700 transition-colors duration-200"
+                  title={t('common.search')}
+                >
+                  <HiSearch size={20} />
+                </button>
+              </div>
             </div>
           </nav>
         </div>
@@ -130,6 +200,15 @@ export default function Header() {
           onClick={closeMenu}
         />
       )}
+
+      {/* Overlay for language dropdown */}
+      {isLanguageDropdownOpen && (
+        <div 
+          className="fixed inset-0 z-40" 
+          onClick={() => setLanguageDropdownOpen(false)}
+        />
+      )}
     </>
   );
 }
+

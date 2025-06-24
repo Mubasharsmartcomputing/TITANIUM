@@ -4,8 +4,6 @@ import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa';
 // --- IMPORT IMAGES (The Modern Way) ---
 // Make sure these paths are correct for your project structure
 import heroImg1 from '../assets/img/hero-carousel/hero-carousel-1.jpg';
-import heroImg2 from '../assets/img/hero-carousel/hero-carousel-2.jpg';
-import heroImg3 from '../assets/img/hero-carousel/hero-carousel-3.jpg';
 import heroImg4 from '../assets/img/hero-carousel/hero-carousel-4.jpg';
 import heroImg5 from '../assets/img/hero-carousel/hero-carousel-5.jpg';
 
@@ -18,8 +16,6 @@ const HeroCarousel = () => {
   // Now uses the imported image variables
   const carouselImages = [
     heroImg1,
-    heroImg2,
-    heroImg3,
     heroImg4,
     heroImg5,
   ];
@@ -111,12 +107,7 @@ const HeroCarousel = () => {
               At Titanium Engineering Project Management, we bring hands-on experience in civil engineering to your projects. From scheduling and site coordination to documentation and authority liaison, we handle every detail with precision. Serving Bavaria and across Germany, we help planning offices and construction companies build with confidence.
             </p>
 
-            <button
-              onClick={handleGetStarted}
-              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-transparent border-2 border-red-500 rounded-full hover:bg-red-500 hover:border-red-500 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-red-500/30"
-            >
-              Get Started
-            </button>
+           
           </div>
         </div>
       </div>

@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "consultant": "Consultant",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "common": {
+    "search": "Search",
+    "language": "Language",
+    "welcome": "Welcome to Titanium Innovations",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel"
+  },
+  "pages": {
+    "home": {
+      "title": "Welcome to Our Company",
+      "subtitle": "We provide innovative engineering solutions",
+      "cta": "Get Started"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "We are a leading engineering company..."
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "We offer comprehensive engineering services"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email"
+    }
+  }
+}

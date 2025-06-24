@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaTwitter, FaCalendarAlt, FaFolderOpen } from 'react-icon
 import { HiArrowRight } from 'react-icons/hi';
 
 // --- IMPORT IMAGES ---
-import pageTitleBg from '../assets/img/page-title-bg.jpg';
+
 import profileImg from '..//assets/img/consultant-profile.png'; // Your professional headshot
 import blogImg1 from '../assets/img/blog/blog-1.jpg';
 import blogImg2 from '../assets/img/blog/blog-2.jpg';
@@ -51,7 +51,7 @@ const Consultant = () => {
   return (
     <main className="bg-white">
       {/* Page Title Section */}
-      <div className="relative py-24 bg-cover bg-center" style={{ backgroundImage: `url(${pageTitleBg})` }}>
+      {/* <div className="relative py-24 bg-cover bg-center" style={{ backgroundImage: `url(${pageTitleBg})` }}>
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative container mx-auto px-4 text-center text-white z-10">
           <h1 className="text-5xl font-bold">Consultant Profile</h1>
@@ -63,7 +63,7 @@ const Consultant = () => {
             </ol>
           </nav>
         </div>
-      </div>
+      </div> */}
 
       {/* Profile Intro Section */}
       <section className="py-16 lg:py-24">
@@ -76,7 +76,7 @@ const Consultant = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <img src={profileImg} alt="Andreas Keller" className="rounded-lg shadow-2xl w-full h-auto" />
+              <img src={profileImg} alt="Andreas Keller" className="rounded-4xl shadow-xl  w-full h-auto" />
             </motion.div>
             <motion.div
               className="lg:col-span-2"
@@ -150,7 +150,7 @@ const Consultant = () => {
                 <a href={article.link} className="block group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                   <div className="grid md:grid-cols-4 gap-6 items-center">
                     <div className="md:col-span-1">
-                      <img src={article.image} alt={article.title} className="rounded-md w-full h-32 md:h-full object-cover" />
+                      <img src={article.image} alt={article.title} className="rounded-2xl shadow-xl  w-full h-32 md:h-full object-cover" />
                     </div>
                     <div className="md:col-span-3">
                       <h3 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-red-600 transition-colors">{article.title}</h3>

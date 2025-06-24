@@ -1,65 +1,44 @@
 import React from 'react';
-import { motion } from 'framer-motion'; // <-- 1. IMPORT MOTION
+import { motion } from 'framer-motion';
 
 // --- IMPORT ICONS ---
 import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 
-// --- IMPORT IMAGES ---
-import pageTitleBg from '../assets/img/page-title-bg.jpg';
-
-// Reusable component for the info cards (Address, Call, Email)
+// --- Reusable component for the info cards ---
 const InfoCard = ({ icon, title, children }) => (
-  <div className="bg-white p-8 shadow-lg rounded-lg flex flex-col items-center text-center h-full">
+  <div className="bg-white p-6 rounded-2xl shadow-xl  flex flex-col items-center text-center h-full">
     <div className="icon-wrapper mb-4">
-      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-red-100 text-red-500 transition-colors duration-300 group-hover:bg-red-500 group-hover:text-white">{icon}</div>
+      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-500 transition-colors duration-300 group-hover:bg-red-500 group-hover:text-white">
+        {icon}
+      </div>
     </div>
-    <h3 className="text-2xl font-bold text-gray-800 mb-2">{title}</h3>
-    <div className="text-gray-600">{children}</div>
+    <h3 className="text-xl font-bold text-gray-800 mb-2">{title}</h3>
+    <div className="text-gray-600 text-sm">{children}</div>
   </div>
 );
 
 const ContactPage = () => {
   return (
     <main className="bg-gray-50">
-      
-      {/* --- Page Title Section --- */}
-      <div 
-        className="relative py-24 bg-cover bg-center"
-        style={{ backgroundImage: `url(${pageTitleBg})` }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative container mx-auto px-4 text-center text-white z-10">
-          {/* 2. Animate the Title and Breadcrumbs */}
-          <motion.h1 
-            className="text-5xl font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Contact Us
-          </motion.h1>
-          <motion.nav 
-            className="text-sm mt-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <ol className="list-none p-0 inline-flex items-center">
-              <li><a href="/" className="text-red-400 hover:text-white">Home</a></li>
-              <li className="mx-2">/</li>
-              <li><span>Contact</span></li>
-            </ol>
-          </motion.nav>
-        </div>
-      </div>
-
-      {/* --- Contact Details and Form Section --- */}
       <section id="contact" className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
+
+          {/* ✨ NEW: Centered Section Title Block */}
+          <motion.div
+            className="text-center mb-16" // Increased bottom margin to 16
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-4xl font-bold text-gray-800">Get In Touch</h2>
+            <p className="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">
+              We're here to help and answer any question you might have. We look forward to hearing from you.
+            </p>
+          </motion.div>
           
-          {/* --- Top Info Cards (Address, Call, Email) --- */}
+          {/* --- Info Cards --- */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
-            {/* 3. Animate each info card with a staggered delay */}
             <motion.div 
               className="lg:col-span-6 group"
               initial={{ opacity: 0, y: 50 }}
@@ -67,7 +46,7 @@ const ContactPage = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <InfoCard icon={<FiMapPin className="h-7 w-7" />} title="Address"><p>A108 Adam Street, New York, NY 535022</p></InfoCard>
+              <InfoCard icon={<FiMapPin className="h-6 w-6" />} title="Address"><p>Taksim Square, Gümüşsuyu, Istanbul, Turkey</p></InfoCard>
             </motion.div>
             
             <motion.div 
@@ -77,7 +56,7 @@ const ContactPage = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <InfoCard icon={<FiPhone className="h-7 w-7" />} title="Call Us"><p>+1 5589 55488 55</p></InfoCard>
+              <InfoCard icon={<FiPhone className="h-6 w-6" />} title="Call Us"><p>+90 212 123 45 67</p></InfoCard>
             </motion.div>
 
             <motion.div 
@@ -87,13 +66,12 @@ const ContactPage = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <InfoCard icon={<FiMail className="h-7 w-7" />} title="Email Us"><p>info@example.com</p></InfoCard>
+              <InfoCard icon={<FiMail className="h-6 w-6" />} title="Email Us"><p>contact@istanbul-construction.com</p></InfoCard>
             </motion.div>
           </div>
           
           {/* --- Map and Form --- */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* 4. Animate the Google Maps container */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -101,24 +79,22 @@ const ContactPage = () => {
               transition={{ duration: 0.7 }}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
-                className="w-full h-full border-0 rounded-lg shadow-lg min-h-[400px]" // Use h-full and a min-height for responsiveness
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192697.7728347898!2d28.87209618991487!3d41.00498229971274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2sIstanbul%2C%20Turkey!5e0!3m2!1sen!2sus!4v1676962243765!5m2!1sen!2sus"
+                className="w-full h-full border-0 rounded-2xl shadow-xl  min-h-[400px]"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps Location"
+                title="Google Maps Location - Istanbul, Turkey"
               ></iframe>
             </motion.div>
 
-            {/* 5. Animate the Contact Form container */}
             <motion.div 
-              className="bg-white p-8 shadow-lg rounded-lg"
+              className="bg-white p-8 rounded-2xl shadow-xl  "
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              {/* Added flex classes to make form take full height */}
               <form action="#" method="post" className="space-y-6 flex flex-col h-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <input type="text" name="name" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-transparent transition" placeholder="Your Name" required />
@@ -127,7 +103,6 @@ const ContactPage = () => {
                 <div>
                   <input type="text" name="subject" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-transparent transition" placeholder="Subject" required />
                 </div>
-                {/* flex-grow makes the textarea expand to fill available space */}
                 <div className="flex-grow">
                   <textarea name="message" rows="6" className="w-full h-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-transparent transition" placeholder="Message" required></textarea>
                 </div>

@@ -91,7 +91,7 @@ const ProjectComponent = () => {
                         transition={{ duration: 0.3 }}
                         className="group relative overflow-hidden rounded-lg shadow-lg"
                         >
-                        <img src={project.image} className="w-full h-72 object-cover" alt={project.title} />
+                        <img src={project.image} className="w-full h-72 rounded-2xl shadow-xl  object-cover" alt={project.title} />
                         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
                             <h4 className="text-white text-2xl font-bold mb-2">{project.title}</h4>
                             <p className="text-gray-300 mb-4">{project.description}</p>
