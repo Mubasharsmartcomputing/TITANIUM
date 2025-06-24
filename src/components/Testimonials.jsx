@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next'; // 1. Import hook
 
 // --- IMPORT IMAGES ---
-// Make sure these paths are correct for your project structure
 import testimonial1 from '../assets/img/testimonials/testimonials-1.jpg';
 import testimonial2 from '../assets/img/testimonials/testimonials-2.jpg';
 import testimonial3 from '../assets/img/testimonials/testimonials-3.jpg';
@@ -9,53 +9,13 @@ import testimonial4 from '../assets/img/testimonials/testimonials-4.jpg';
 import testimonial5 from '../assets/img/testimonials/testimonials-5.jpg';
 
 
-// --- UPDATED & RELEVANT TESTIMONIALS DATA ---
-const testimonialsData = [
-  {
-    id: 1,
-    name: 'Klaus Mueller',
-    role: 'CEO',
-    company: 'Schmidt Architekten',
-    text: 'Titanium Engineering\'s project management is second to none. Their scheduling and coordination kept our multi-million euro project on track and under budget. A true partner.',
-    rating: 5,
-    image: testimonial1,
-  },
-  {
-    id: 2,
-    name: 'Sabine Richter',
-    role: 'Construction Manager',
-    company: 'Bauer AG',
-    text: 'Their expertise in navigating the local Bauamt and regulations saved us countless hours and potential fines. Incredibly professional and thorough from start to finish.',
-    rating: 5,
-    image: testimonial2,
-  },
-  {
-    id: 3,
-    name: 'Jürgen Klein',
-    role: 'Lead Planning Engineer',
-    company: 'Ingenieurbüro Klein',
-    text: 'The level of detail in their site documentation and invoice reviews gave us complete peace of mind. We always knew the precise financial and physical state of our project.',
-    rating: 5,
-    image: testimonial3,
-  },
-  {
-    id: 4,
-    name: 'Anja Weber',
-    role: 'Project Lead',
-    company: 'Mayer Bauträger',
-    text: 'Amazing results! Their management support was critical in overcoming unforeseen on-site challenges. Their problem-solving skills are exceptional.',
-    rating: 5,
-    image: testimonial4,
-  },
-  {
-    id: 5,
-    name: 'Stefan Koch',
-    role: 'Director of Operations',
-    company: 'Hoffmann & Söhne',
-    text: 'The most reliable project management firm we have ever worked with. Their commitment to quality and transparency is evident in everything they do. Highly recommended.',
-    rating: 5,
-    image: testimonial5,
-  }
+// 2. Data for non-translatable content. Order MUST match the JSON.
+const staticTestimonialsInfo = [
+  { id: 1, rating: 5, image: testimonial1 },
+  { id: 2, rating: 5, image: testimonial2 },
+  { id: 3, rating: 5, image: testimonial3 },
+  { id: 4, rating: 5, image: testimonial4 },
+  { id: 5, rating: 5, image: testimonial5 },
 ];
 
 const StarRating = ({ rating }) => {
@@ -93,9 +53,16 @@ const TestimonialCard = ({ testimonial }) => {
 };
 
 const Testimonials = () => {
+  const { t } = useTranslation(); // 3. Initialize hook
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
+
+  // 4. Dynamically create data by merging static and translated content
+  const testimonialsData = t('pages.home.testimonials.items', { returnObjects: true }).map((item, index) => ({
+    ...staticTestimonialsInfo[index], // Gets id, rating, image
+    ...item, // Gets name, role, company, text
+  }));
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -142,10 +109,11 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-block">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            {/* 5. Replace hardcoded text */}
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('pages.home.testimonials.title')}</h2>
             <div className="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Building strong partnerships is our greatest measure of success. Here's what our valued clients have to say.</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('pages.home.testimonials.subtitle')}</p>
         </div>
 
         <div className="relative mb-12">
@@ -158,21 +126,21 @@ const Testimonials = () => {
               ))}
             </div>
           </div>
-          <button onClick={prevSlide} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-200 hover:bg-red-50 z-10" aria-label="Previous testimonial">
+          {/* 5. Replace hardcoded aria-labels */}
+          <button onClick={prevSlide} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-200 hover:bg-red-50 z-10" aria-label={t('pages.home.testimonials.prevAriaLabel')}>
             <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
           </button>
-          <button onClick={nextSlide} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-200 hover:bg-red-50 z-10" aria-label="Next testimonial">
+          <button onClick={nextSlide} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-200 hover:bg-red-50 z-10" aria-label={t('pages.home.testimonials.nextAriaLabel')}>
             <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </button>
         </div>
 
         <div className="flex justify-center space-x-3">
           {Array.from({ length: getMaxIndex() + 1 }).map((_, index) => (
-            <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-red-600 w-8' : 'bg-gray-300 hover:bg-gray-400'}`} aria-label={`Go to testimonial set ${index + 1}`} />
+            // 5. Replace hardcoded aria-label with dynamic one
+            <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-red-600 w-8' : 'bg-gray-300 hover:bg-gray-400'}`} aria-label={t('pages.home.testimonials.goToSetAriaLabel', { index: index + 1 })} />
           ))}
         </div>
-
-      
       </div>
     </section>
   );

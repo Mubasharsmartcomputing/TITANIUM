@@ -14,27 +14,118 @@
     "welcome": "Titanium Innovations'a Hoş Geldiniz",
     "loading": "Yükleniyor...",
     "submit": "Gönder",
-    "cancel": "İptal"
+    "cancel": "İptal",
+    "previousSlide": "Önceki slayt",
+    "nextSlide": "Sonraki slayt",
+    "goToSlide": "{{index}}. slayda git",
+    "pauseSlideshow": "Slayt gösterisini duraklat",
+    "playSlideshow": "Slayt gösterisini başlat"
   },
   "pages": {
     "home": {
       "title": "Şirketimize Hoş Geldiniz",
       "subtitle": "Yenilikçi mühendislik çözümleri sunuyoruz",
-      "cta": "Başlayın"
+      "cta": "Başlayın",
+      "heroTitle1": "İnşa Etmek İstediğiniz Her Şeyin",
+      "heroTitle2": "Temeli",
+      "heroDescription": "Titanium Mühendislik Proje Yönetimi olarak, inşaat mühendisliğindeki uygulamalı deneyimimizi projelerinize taşıyoruz. Zamanlama ve saha koordinasyonundan dokümantasyon ve resmi makamlarla ilişkilere kadar her ayrıntıyı hassasiyetle yönetiyoruz. Bavyera'da ve Almanya genelinde hizmet vererek, planlama ofislerinin ve inşaat şirketlerinin güvenle inşa etmelerine yardımcı oluyoruz.",
+      "methodology": {
+        "title": "Metodolojimiz: Güvenin Temeli",
+        "subtitle": "Başarıyı dört temel üzerine inşa ediyor, projenizin hassasiyet, dürüstlük ve net iletişimle yönetilmesini sağlıyoruz.",
+        "tabs": [
+          { "title": "Finansal Kontrol", "heading": "Proje Başarısı için Finansal Kontrolde Uzmanlaşma", "description": "Baştan sona finansal bütünlüğü korumak için titiz fatura doğrulaması ve sıkı proje kontrolleri sağlıyoruz.", "points": ["Bütçeye Uyum Takibi", "Değer Mühendisliği", "Fatura ve Ödeme Doğrulaması"] },
+          { "title": "Risk Azaltma", "heading": "Riskleri Proaktif Olarak Azaltma, Sorunsuz İlerleme Sağlama", "description": "Proaktif yaklaşımımız, potansiyel sorunları maliyetli problemlere dönüşmeden önce belirleyerek daha sorunsuz bir proje akışı sağlar.", "points": ["Proaktif Problem Çözme", "Güvenlik ve Uygunluk Denetimleri", "Sözleşmesel Güvenceler"] },
+          { "title": "Kalite Güvencesi", "heading": "Tavizsiz Kalite Standartlarını Sürdürme", "description": "Tüm malzemelerin, işçiliğin ve nihai sonuçların tam olarak şartnamenize uygun olmasını sağlayarak en yüksek standartları koruyoruz.", "points": ["Malzeme Kalite Kontrolleri", "İşçilik Denetimleri", "Projelere Uygunluk"] },
+          { "title": "Açık İletişim", "heading": "Tek ve Bütüncül İletişim Noktanız", "description": "Tek iletişim noktanız olarak hizmet vererek, projenin her aşamasında tüm paydaşların uyumlu ve bilgili olmasını sağlıyoruz.", "points": ["Düzenli İlerleme Raporları", "Paydaş Toplantılarını Kolaylaştırma", "Merkezi Bilgi Platformu"] }
+        ]
+      },
+      "constructions": {
+        "title": "Ana İnşaat Sektörlerimiz",
+        "subtitle": "Zorlu inşaat ortamlarının geniş bir yelpazesinde uzmanlık.",
+        "cards": [
+          { "title": "Konut Apartman Kompleksleri", "description": "Uzmanlığımız, hem geliştirici hem de sakin beklentilerini karşılayan yüksek kaliteli yaşam alanları sunmak için tüm meslekleri koordine ettiğimiz çok aileli konut projelerini kapsamaktadır." },
+          { "title": "Ticari Ofis Kuleleri", "description": "Yüksek katlı ticari binaların uçtan uca proje yönetiminde uzmanlaşarak, yapısal bütünlüğü, zamanında teslimatı ve karmaşık kentsel düzenlemelere uyumu sağlıyoruz." },
+          { "title": "Endüstriyel ve Lojistik Tesisler", "description": "Devasa depolardan özel üretim tesislerine kadar, iş akışı verimliliğine ve sağlam altyapıya odaklanarak endüstriyel inşaatın benzersiz zorluklarını yönetiyoruz." },
+          { "title": "Kamu Altyapı Projeleri", "description": "Köprüler ve ulaşım merkezleri de dahil olmak üzere hayati kamu işlerine hassas mühendislik ve yönetim getirerek, toplum için dayanıklılık ve uzun vadeli değer sağlıyoruz." }
+        ]
+      },
+      "strategicPartner": {
+        "title": "Sadece Bir Yönetici Değil, Stratejik Bir Ortak",
+        "description": "Günlük denetimin ötesinde, projenizi bir üst seviyeye taşıyan stratejik bilgiler sunuyoruz. 15 yıllık mühendislik deneyimimizi her fırsatta değer katmak için kullanarak, zorlukları yenilik ve verimlilik fırsatlarına dönüştürüyoruz.",
+        "imageAlt": "Stratejik Proje Planlaması",
+        "services": [
+          { "title": "Stratejik Planlama", "description": "Proje hedeflerini uzun vadeli iş hedefleriyle uyumlu hale getirme." },
+          { "title": "Kalite ve Güvenlik Denetimleri", "description": "Mükemmelliği ve güvenliği garanti etmek için sıkı kontroller uygulama." },
+          { "title": "Şeffaf Raporlama", "description": "Gerçek zamanlı ilerleme ve bütçe takibi için modern araçlar kullanma." },
+          { "title": "Teknoloji Entegrasyonu", "description": "Verimliliği artırmak için BIM gibi araçlar konusunda danışmanlık ve uygulama." }
+        ]
+      },
+      "testimonials": {
+        "title": "Müşterilerimiz Ne Diyor",
+        "subtitle": "Güçlü ortaklıklar kurmak en büyük başarı ölçümüzdür. Değerli müşterilerimizin söyledikleri burada.",
+        "prevAriaLabel": "Önceki referans",
+        "nextAriaLabel": "Sonraki referans",
+        "goToSetAriaLabel": "{{index}}. referans setine git",
+        "items": [
+          { "name": "Klaus Mueller", "role": "CEO", "company": "Schmidt Architekten", "text": "Titanium Mühendislik'in proje yönetimi eşsiz. Zamanlamaları ve koordinasyonları, milyonlarca avroluk projemizi planlanan zamanda ve bütçenin altında tuttu. Gerçek bir ortak." },
+          { "name": "Sabine Richter", "role": "İnşaat Müdürü", "company": "Bauer AG", "text": "Yerel Bauamt ve yönetmelikler konusundaki uzmanlıkları bize sayısız saat kazandırdı ve olası cezalardan kurtardı. Baştan sona inanılmaz profesyonel ve titizler." },
+          { "name": "Jürgen Klein", "role": "Lider Planlama Mühendisi", "company": "Ingenieurbüro Klein", "text": "Saha dokümantasyonlarındaki ve fatura incelemelerindeki detay seviyesi bize tam bir gönül rahatlığı verdi. Projemizin mali ve fiziki durumunu her zaman tam olarak biliyorduk." },
+          { "name": "Anja Weber", "role": "Proje Lideri", "company": "Mayer Bauträger", "text": "Harika sonuçlar! Yönetim destekleri, öngörülemeyen saha zorluklarının üstesinden gelmede kritikti. Problem çözme becerileri olağanüstü." },
+          { "name": "Stefan Koch", "role": "Operasyon Direktörü", "company": "Hoffmann & Söhne", "text": "Şimdiye kadar çalıştığımız en güvenilir proje yönetim firması. Kaliteye ve şeffaflığa olan bağlılıkları yaptıkları her işte açıkça görülüyor. Şiddetle tavsiye edilir." }
+        ]
+      },
+      "recentBlogTitle": "Son Yazılarımız"
     },
-    "about": {
-      "title": "Hakkımızda",
-      "description": "Önde gelen bir mühendislik şirketiyiz..."
-    },
-    "services": {
-      "title": "Hizmetlerimiz",
-      "description": "Kapsamlı mühendislik hizmetleri sunuyoruz"
-    },
-    "contact": {
-      "title": "İletişim",
-      "address": "Adres",
-      "phone": "Telefon",
-      "email": "E-posta"
+    "about": { "title": "Hakkımızda", "description": "Önde gelen bir mühendislik şirketiyiz..." },
+    "services": { "title": "Hizmetlerimiz", "description": "Kapsamlı mühendislik hizmetleri sunuyoruz" },
+    "contact": { "title": "İletişim", "address": "Adres", "phone": "Telefon", "email": "E-posta" },
+    "blog": {
+      "title": "Blog",
+      "readMore": "Devamını Oku",
+      "posts": [
+        { "date": "15 Ağustos", "title": "Kusursuz Bir İnşaat Programı Neden Projenizin En Değerli Varlığıdır?", "author": "Jonas Richter", "category": "Proje Yönetimi", "excerpt": "Başarılı bir proje, gerçekçi, optimize edilmiş ve aktif olarak yönetilen bir program üzerinde ilerler. 15 yıllık deneyimimizin kilometre taşlarına hassasiyetle ulaşılmasını nasıl sağladığını inceliyoruz." },
+        { "date": "22 Ağustos", "title": "Kontrol Sanatı: Uzman Alt Yüklenici Koordinasyonu ile Kaosu Ortadan Kaldırma", "author": "Stefan Koch", "category": "Saha Yönetimi", "excerpt": "Bir projenin momentumu, hareketli parçalarının sorunsuz entegrasyonuna bağlıdır. Titanium Mühendislik'in sürtünmeyi ortadan kaldırmak ve verimliliği en üst düzeye çıkarmak için tüm birimleri nasıl senkronize ettiğini öğrenin." },
+        { "date": "29 Ağustos", "title": "Bauamt'ta Yol Bulma: Uzman Kurum İrtibatı Alman Projenizi Nasıl Yolda Tutar?", "author": "Anja Weber", "category": "Mevzuat Uyumu", "excerpt": "Alman inşaat yönetmeliklerinde gezinmek derin uzmanlık gerektirir. Projeniz ile Bauamt arasında resmi irtibatı sağlayarak, maliyetli gecikmeleri önlemek için evrak işlerini yönetiyoruz." },
+        { "date": "05 Eylül", "title": "Görünmez Kahraman: Titiz Saha Dokümantasyonu Projenizi Nasıl Korur?", "author": "Alex Schmidt", "category": "Risk Yönetimi", "excerpt": "Açık ve tutarlı dokümantasyon, projenizin anlaşmazlıklara karşı en iyi savunmasıdır. Projenizin geçmişinin kusursuz bir kaydını oluşturmak için günlük raporları ve talepleri nasıl yönettiğimizi keşfedin." },
+        { "date": "17 Eylül", "title": "Kârınızı Korumak: Titiz Fatura İncelemesinin Gücü", "author": "Lena Bauer", "category": "Finansal Kontrol", "excerpt": "Mali çıkarlarınız her şeyden önemlidir. Dikkatli fatura doğrulamasının önemini ve sürekli proje kontrolümüzün gerçek zamanlı finansal netlik sağlayıp bütçe aşımlarını nasıl önlediğini inceliyoruz." },
+        { "date": "28 Eylül", "title": "Denetimden Daha Fazlası: Ekibinizi Talep Üzerine Yönetim Desteğiyle Güçlendirme", "author": "Markus Wolf", "category": "Ekip Desteği", "excerpt": "İster şirket içi ekibinizi güçlendirin ister karmaşık bir aşama için özel denetim gerektirin, esnek destek anahtardır. 'Sahadaki gücümüz' yaklaşımımızın ihtiyacınız olan teknik çözümleri nasıl sağladığını öğrenin." }
+      ]
     }
+  },
+  "footer": {
+    "companyName": "TITANIUM",
+    "address": {
+      "street": "Musterstraße 123",
+      "city": "80331 München",
+      "country": "Almanya"
+    },
+    "phoneLabel": "Telefon:",
+    "emailLabel": "E-posta:",
+    "socials": [
+      { "label": "Twitter" },
+      { "label": "Facebook" },
+      { "label": "Instagram" },
+      { "label": "LinkedIn" }
+    ],
+    "ourServices": {
+      "title": "Hizmetlerimiz",
+      "items": [
+        "İnşaat Programlama",
+        "Alt Yüklenici Koordinasyonu",
+        "Saha Dokümantasyonu",
+        "Yönetim Desteği",
+        "Planlama ve İhale"
+      ]
+    },
+    "legal": {
+      "title": "Yasal",
+      "items": [
+        "Gizlilik Politikası",
+        "Hizmet Şartları",
+        "Künye"
+      ]
+    },
+    "copyright": "© Telif Hakkı {{companyName}} Tüm Hakları Saklıdır",
+    "scrollToTop": "Yukarı kaydır"
   }
 }

@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaArrowUp } from 'react-icons/fa';
 
 // --- IMPORT THE BACKGROUND IMAGE ---
 import footerBgImage from '../../assets/img/footer-bg.jpg';
 
+// Static data for social links (icons and hrefs)
+const staticSocialLinks = [
+  { href: '#', icon: FaTwitter },
+  { href: '#', icon: FaFacebookF },
+  { href: '#', icon: FaInstagram },
+  { href: '#', icon: FaLinkedinIn },
+];
+
 const Footer = () => {
-  // --- State and effect for the "Scroll to Top" button ---
+  const { t } = useTranslation();
   const [isScrollButtonVisible, setScrollButtonVisible] = useState(false);
 
   useEffect(() => {
@@ -28,24 +37,14 @@ const Footer = () => {
     });
   };
 
-  // --- Data for links relevant to your business ---
-
-  const ourServices = [
-      'Construction Scheduling',
-      'Subcontractor Coordination',
-      'Site Documentation',
-      'Management Support',
-      'Planning & Tendering',
-  ];
+  // --- Dynamically generate data from translation files ---
+  const ourServices = t('footer.ourServices.items', { returnObjects: true });
+  const legalLinks = t('footer.legal.items', { returnObjects: true });
   
-  const legalLinks = ['Privacy Policy', 'Terms of Service', 'Imprint'];
-
-  const socialLinks = [
-    { href: '#', icon: FaTwitter, label: 'Twitter' },
-    { href: '#', icon: FaFacebookF, label: 'Facebook' },
-    { href: '#', icon: FaInstagram, label: 'Instagram' },
-    { href: '#', icon: FaLinkedinIn, label: 'LinkedIn' },
-  ];
+  const socialLinks = t('footer.socials', { returnObjects: true }).map((social, index) => ({
+    ...staticSocialLinks[index], // Gets href, icon
+    ...social,                   // Gets label
+  }));
 
   return (
     <footer className="relative bg-slate-800 text-gray-300 overflow-hidden">
@@ -62,24 +61,23 @@ const Footer = () => {
       
       {/* Main Footer Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        {/* --- UPDATED: Grid columns adjusted to match the 3 content blocks --- */}
         <div className="grid grid-cols-1 justify-center items-center sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           
-          {/* Column 1: Company Info & Socials (takes up 2 columns on large screens) */}
+          {/* Column 1: Company Info & Socials */}
           <div className="lg:col-span-2 md:ml-32 ml-auto"> 
-            <h3 className="text-2xl font-bold text-white mb-6">TITANIUM</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">{t('footer.companyName')}</h3>
             <div className="space-y-3 text-sm">
               <p className="text-gray-400">
-                Musterstraße 123<br/>
-                80331 München<br/>
-                Germany
+                {t('footer.address.street')}<br/>
+                {t('footer.address.city')}<br/>
+                {t('footer.address.country')}
               </p>
               <div className="space-y-1">
                 <p className="text-gray-400">
-                  <span className="font-semibold text-white">Phone:</span> +49 (0)89 1234567
+                  <span className="font-semibold text-white">{t('footer.phoneLabel')}</span> +49 (0)89 1234567
                 </p>
                 <p className="text-gray-400">
-                  <span className="font-semibold text-white">Email:</span> info@titanium-pm.de
+                  <span className="font-semibold text-white">{t('footer.emailLabel')}</span> info@titanium-pm.de
                 </p>
               </div>
             </div>
@@ -96,7 +94,7 @@ const Footer = () => {
           
           {/* Column 2: Our Services */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Our Services</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">{t('footer.ourServices.title')}</h4>
             <ul className="space-y-2">
               {ourServices.map((service) => (
                 <li key={service}>
@@ -110,7 +108,7 @@ const Footer = () => {
          
           {/* Column 3: Legal */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6">Legal</h4>
+            <h4 className="text-lg font-semibold text-white mb-6">{t('footer.legal.title')}</h4>
             <ul className="space-y-2">
               {legalLinks.map((item) => (
                 <li key={item}>
@@ -126,7 +124,7 @@ const Footer = () => {
         {/* --- Bottom Copyright Section --- */}
         <div className="border-t border-slate-700 mt-12 pt-6 text-center">
           <p className="text-gray-400 text-sm">
-            © Copyright <span className="font-semibold text-white">TITANIUM</span> All Rights Reserved
+            {t('footer.copyright', { companyName: t('footer.companyName') })}
           </p>
         </div>
       </div>
@@ -134,7 +132,7 @@ const Footer = () => {
       {/* --- Scroll to Top Button --- */}
       <button
         onClick={scrollToTop}
-        aria-label="Scroll to top"
+        aria-label={t('footer.scrollToTop')}
         className={`fixed bottom-6 right-6 w-11 h-11 bg-red-600 hover:bg-red-700 text-white rounded-full 
                     shadow-lg transition-all duration-300 transform hover:scale-105 
                     flex items-center justify-center z-50

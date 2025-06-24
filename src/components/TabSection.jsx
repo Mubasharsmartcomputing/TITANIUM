@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next'; // ✨ IMPORT THE HOOK
 
 // ✨ UPDATED: We only need the check icon for the new design
 import { BsCheck2All } from 'react-icons/bs';
@@ -10,63 +11,25 @@ import features2 from '../assets/img/features-2.jpg'; // Corresponds to Risk Mit
 import features3 from '../assets/img/features-3.jpg'; // Corresponds to Quality Assurance
 import features4 from '../assets/img/features-4.jpg'; // Corresponds to Clear Communication
 
-
-// --- ✨ REFACTORED: Data for the tabs, now based on your Feature Cards ---
-const tabsData = [
-    {
-        id: 1,
-        title: 'Financial Control',
-        heading: 'Mastering Financial Control for Project Success',
-        description: 'We provide vigilant invoice verification and rigorous project controls to maintain financial integrity from start to finish.',
-        points: [
-            'Budget Adherence Tracking', 
-            'Value Engineering', 
-            'Invoice & Payment Verification'
-        ],
-        image: features1, // Re-using existing images
-    },
-    {
-        id: 2,
-        title: 'Risk Mitigation',
-        heading: 'Proactively Mitigating Risks, Ensuring Smooth Progress',
-        description: 'Our proactive approach identifies potential issues before they become costly problems, ensuring a smoother project flow.',
-        points: [
-            'Proactive Problem Solving', 
-            'Safety & Compliance Audits', 
-            'Contractual Safeguards'
-        ],
-        image: features2,
-    },
-    {
-        id: 3,
-        title: 'Quality Assurance',
-        heading: 'Upholding Uncompromising Standards of Quality',
-        description: 'We uphold the highest standards, ensuring that all materials, craftsmanship, and final results meet your exact specifications.',
-        points: [
-            'Material Quality Checks', 
-            'Workmanship Inspections', 
-            'Adherence to Blueprints'
-        ],
-        image: features3,
-    },
-    {
-        id: 4,
-        title: 'Clear Communication',
-        heading: 'Your Single, Cohesive Point of Contact',
-        description: 'Serving as your single point of contact, we ensure all stakeholders are aligned and informed at every stage of the project.',
-        points: [
-            'Regular Progress Reports', 
-            'Stakeholder Meeting Facilitation', 
-            'Centralized Information Hub'
-        ],
-        image: features4,
-    },
+// ✨ This array holds static info that doesn't need translation (like IDs and images)
+const staticTabInfo = [
+    { id: 1, image: features1 },
+    { id: 2, image: features2 },
+    { id: 3, image: features3 },
+    { id: 4, image: features4 },
 ];
-
 
 // --- ✨ REFACTORED: Main Component ---
 const TabSection = () => {
+    const { t } = useTranslation(); // ✨ INITIALIZE THE HOOK
     const [activeTab, setActiveTab] = useState(1);
+
+    // ✨ DYNAMICALLY BUILD TABS DATA by combining static info with translated text
+    const tabsData = t('pages.home.methodology.tabs', { returnObjects: true }).map((tab, index) => ({
+        ...staticTabInfo[index], // gets id and image
+        ...tab,                 // gets title, heading, description, points from JSON
+    }));
+
     const activeTabData = tabsData.find(tab => tab.id === activeTab);
 
     return (
@@ -82,8 +45,8 @@ const TabSection = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h2 className="text-4xl font-bold text-gray-800">Our Methodology: A Foundation of Trust</h2>
-                  <p className="text-lg text-gray-600 mt-2 max-w-3xl mx-auto">We build success on four key pillars, ensuring your project is managed with precision, integrity, and clear communication.</p>
+                  <h2 className="text-4xl font-bold text-gray-800">{t('pages.home.methodology.title')}</h2>
+                  <p className="text-lg text-gray-600 mt-2 max-w-3xl mx-auto">{t('pages.home.methodology.subtitle')}</p>
                 </motion.div>
 
                 {/* Tab Buttons (Functionality remains the same, styles are great) */}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next'; // Import the hook
 import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa';
 
 // --- IMPORT IMAGES (The Modern Way) ---
@@ -9,6 +10,7 @@ import heroImg5 from '../assets/img/hero-carousel/hero-carousel-5.jpg';
 
 
 const HeroCarousel = () => {
+  const { t } = useTranslation(); // Initialize the translation hook
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -95,18 +97,25 @@ const HeroCarousel = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-             The Foundation of Everything 
+              {t('pages.home.heroTitle1')}
               <br />
-              <span className="text-white">You Want to Build</span>
+              <span className="text-white">{t('pages.home.heroTitle2')}</span>
             </h1>
 
             {/* Red accent line (Corrected color) */}
             <div className="w-20 h-1 bg-red-500 mx-auto mb-8"></div>
 
             <p className="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
-              At Titanium Engineering Project Management, we bring hands-on experience in civil engineering to your projects. From scheduling and site coordination to documentation and authority liaison, we handle every detail with precision. Serving Bavaria and across Germany, we help planning offices and construction companies build with confidence.
+              {t('pages.home.heroDescription')}
             </p>
 
+            {/* Get Started Button */}
+            <button
+              onClick={handleGetStarted}
+              className="bg-red-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              {t('pages.home.cta')}
+            </button>
            
           </div>
         </div>
@@ -117,14 +126,14 @@ const HeroCarousel = () => {
         <button
           onClick={goToPrevious}
           className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white/30 pointer-events-auto"
-          aria-label="Previous slide"
+          aria-label={t('common.previousSlide')}
         >
           <FaChevronLeft className="w-6 h-6 sm:w-7 sm:h-7" />
         </button>
         <button
           onClick={goToNext}
           className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white/30 pointer-events-auto"
-          aria-label="Next slide"
+          aria-label={t('common.nextSlide')}
         >
           <FaChevronRight className="w-6 h-6 sm:w-7 sm:h-7" />
         </button>
@@ -142,7 +151,7 @@ const HeroCarousel = () => {
                   ? 'bg-red-500 scale-125' // (Corrected color)
                   : 'bg-white/50 hover:bg-white/70'
               }`}
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={t('common.goToSlide', { index: index + 1 })}
             />
           ))}
         </div>
@@ -153,7 +162,7 @@ const HeroCarousel = () => {
         <button
           onClick={() => setIsAutoPlaying(!isAutoPlaying)}
           className="w-10 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50"
-          aria-label={isAutoPlaying ? 'Pause slideshow' : 'Play slideshow'}
+          aria-label={isAutoPlaying ? t('common.pauseSlideshow') : t('common.playSlideshow')}
         >
           {isAutoPlaying ? <FaPause className="w-4 h-4" /> : <FaPlay className="w-4 h-4" />}
         </button>
