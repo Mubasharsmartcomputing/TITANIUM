@@ -1,30 +1,30 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next'; // 1. Import hook
 
 // --- IMPORT ICONS ---
 import { FaLinkedinIn, FaTwitter, FaCalendarAlt, FaFolderOpen } from 'react-icons/fa';
 import { HiArrowRight } from 'react-icons/hi';
 
 // --- IMPORT IMAGES ---
-
-import profileImg from '..//assets/img/consultant-profile.png'; // Your professional headshot
+import profileImg from '../assets/img/consultant-profile.png'; // Your professional headshot
 import blogImg1 from '../assets/img/blog/blog-1.jpg';
 import blogImg2 from '../assets/img/blog/blog-2.jpg';
 import blogImg3 from '../assets/img/blog/blog-3.jpg';
 
-// --- DATA FOR THE PAGE ---
-const skillsData = [
-  { name: 'Project Scheduling & Management', level: '95%' },
-  { name: 'Risk Mitigation & Problem Solving', level: '98%' },
-  { name: 'Budget Control & Financial Oversight', level: '90%' },
-  { name: 'Regulatory Compliance (Bauamt)', level: '92%' },
-  { name: 'Subcontractor & Stakeholder Coordination', level: '97%' },
+// 2. Data for non-translatable content. The order MUST match the JSON.
+const staticSkillsData = [
+  { level: '95%' },
+  { level: '98%' },
+  { level: '90%' },
+  { level: '92%' },
+  { level: '97%' },
 ];
 
-const recentArticlesData = [
-  { id: 1, image: blogImg1, date: 'August 15', title: 'Why a Flawless Construction Schedule is Your Project\'s Most Valuable Asset', category: 'Project Management', link: '/blog/construction-scheduling-excellence' },
-  { id: 2, image: blogImg2, date: 'August 22', title: 'The Art of Control: Eliminating Chaos Through Expert Subcontractor Coordination', category: 'Site Management', link: '/blog/mastering-subcontractor-coordination' },
-  { id: 3, image: blogImg3, date: 'August 29', title: 'Navigating the Bauamt: How Expert Authority Liaison Keeps Your German Project on Track', category: 'Regulatory Compliance', link: '/blog/navigating-german-bauamt' },
+const staticArticlesData = [
+  { id: 1, image: blogImg1, link: '/blog/construction-scheduling-excellence' },
+  { id: 2, image: blogImg2, link: '/blog/mastering-subcontractor-coordination' },
+  { id: 3, image: blogImg3, link: '/blog/navigating-german-bauamt' },
 ];
 
 // --- REUSABLE SKILL BAR COMPONENT ---
@@ -48,23 +48,22 @@ const SkillBar = ({ skill, level }) => (
 
 // --- MAIN CONSULTANT PROFILE PAGE COMPONENT ---
 const Consultant = () => {
+  const { t } = useTranslation(); // 3. Initialize hook
+
+  // 4. Dynamically create data by merging static info with translated text
+  const skillsData = t('pages.consultant.skills.items', { returnObjects: true }).map((skillName, index) => ({
+    name: skillName,
+    ...staticSkillsData[index],
+  }));
+
+  // Re-use blog posts from the main blog data to avoid duplication
+  const recentArticlesData = t('pages.blog.posts', { returnObjects: true }).slice(0, 3).map((post, index) => ({
+    ...staticArticlesData[index], // Gets id, image, link
+    ...post,                      // Gets date, title, category from main blog data
+  }));
+
   return (
     <main className="bg-white">
-      {/* Page Title Section */}
-      {/* <div className="relative py-24 bg-cover bg-center" style={{ backgroundImage: `url(${pageTitleBg})` }}>
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative container mx-auto px-4 text-center text-white z-10">
-          <h1 className="text-5xl font-bold">Consultant Profile</h1>
-          <nav className="text-sm mt-4">
-            <ol className="list-none p-0 inline-flex items-center">
-              <li><a href="/" className="text-red-400 hover:text-white">Home</a></li>
-              <li className="mx-2">/</li>
-              <li><span>About the Founder</span></li>
-            </ol>
-          </nav>
-        </div>
-      </div> */}
-
       {/* Profile Intro Section */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
@@ -76,7 +75,7 @@ const Consultant = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <img src={profileImg} alt="Andreas Keller" className="rounded-4xl shadow-xl  w-full h-auto" />
+              <img src={profileImg} alt={t('pages.consultant.profile.name')} className="rounded-4xl shadow-xl w-full h-auto" />
             </motion.div>
             <motion.div
               className="lg:col-span-2"
@@ -85,14 +84,13 @@ const Consultant = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">Andreas Keller</h2>
-              <h3 className="text-xl font-semibold text-red-600 mb-4">Founder & Lead Civil Engineer, Titanium Engineering</h3>
-              <p className="text-lg text-gray-600 mb-6">
-                With 15 years of field-proven experience, I founded Titanium Engineering to bridge the critical gap between brilliant design and flawless execution. My passion lies in bringing order to complexity, ensuring every project is a testament to quality, efficiency, and unwavering integrity. My hands-on approach means I am deeply involved in every project we undertake, serving as a direct partner to our clients.
-              </p>
+              {/* 5. Use translated text */}
+              <h2 className="text-4xl font-bold text-gray-800 mb-4">{t('pages.consultant.profile.name')}</h2>
+              <h3 className="text-xl font-semibold text-red-600 mb-4">{t('pages.consultant.profile.role')}</h3>
+              <p className="text-lg text-gray-600 mb-6">{t('pages.consultant.profile.bio')}</p>
               <div className="flex items-center space-x-4">
                 <a href="/contact" className="bg-red-500 text-white font-bold py-3 px-8 rounded-full hover:bg-red-600 transition-colors duration-300">
-                  Contact Me
+                  {t('pages.consultant.profile.ctaButton')}
                 </a>
                 <div className="flex space-x-3">
                   <a href="#" className="text-gray-500 hover:text-red-500"><FaTwitter size={24} /></a>
@@ -114,8 +112,8 @@ const Consultant = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl font-bold text-gray-800">Core Expertise</h2>
-            <p className="text-lg text-gray-600 mt-2">Specialized skills to guarantee project success.</p>
+            <h2 className="text-4xl font-bold text-gray-800">{t('pages.consultant.skills.title')}</h2>
+            <p className="text-lg text-gray-600 mt-2">{t('pages.consultant.skills.subtitle')}</p>
           </motion.div>
           <div className="max-w-4xl mx-auto space-y-6">
             {skillsData.map((skill, index) => (
@@ -135,8 +133,8 @@ const Consultant = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl font-bold text-gray-800">Recent Insights</h2>
-            <p className="text-lg text-gray-600 mt-2">Sharing knowledge from the front lines of project management.</p>
+            <h2 className="text-4xl font-bold text-gray-800">{t('pages.consultant.articles.title')}</h2>
+            <p className="text-lg text-gray-600 mt-2">{t('pages.consultant.articles.subtitle')}</p>
           </motion.div>
           <div className="space-y-8">
             {recentArticlesData.map((article, index) => (
@@ -150,7 +148,7 @@ const Consultant = () => {
                 <a href={article.link} className="block group bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                   <div className="grid md:grid-cols-4 gap-6 items-center">
                     <div className="md:col-span-1">
-                      <img src={article.image} alt={article.title} className="rounded-2xl shadow-xl  w-full h-32 md:h-full object-cover" />
+                      <img src={article.image} alt={article.title} className="rounded-2xl shadow-xl w-full h-32 md:h-full object-cover" />
                     </div>
                     <div className="md:col-span-3">
                       <h3 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-red-600 transition-colors">{article.title}</h3>
@@ -159,7 +157,7 @@ const Consultant = () => {
                         <span className="flex items-center"><FaFolderOpen className="mr-2" />{article.category}</span>
                       </div>
                       <p className="text-red-600 font-semibold flex items-center">
-                        Read Article <HiArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+                        {t('pages.consultant.articles.readMore')} <HiArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                       </p>
                     </div>
                   </div>

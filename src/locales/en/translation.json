@@ -76,9 +76,129 @@
       },
       "recentBlogTitle": "Our Recent Posts"
     },
-    "about": { "title": "About Us", "description": "We are a leading engineering company..." },
-    "services": { "title": "Our Services", "description": "We offer comprehensive engineering services" },
-    "contact": { "title": "Contact Us", "address": "Address", "phone": "Phone", "email": "Email" },
+    "about": {
+      "story": {
+        "title": "Forged by 15 Years of Engineering Excellence.",
+        "subtitle": "Our Story",
+        "paragraph": "I founded Titanium Engineering Project Management with a single, clear vision: to be the strongest link in the construction chain. The name \"Titanium\" represents not only strength but also the high-performance, corrosion-resistant nature of our management process. We don't just oversee projects; we protect them.",
+        "listItems": [
+          "Unwavering commitment to project timelines.",
+          "Transparent communication with all stakeholders.",
+          "Meticulous budget and quality control."
+        ],
+        "videoLinkText": "Watch Our Company Video"
+      },
+      "stats": {
+        "title": "Our Track Record",
+        "subtitle": "Proven results and a commitment to excellence.",
+        "items": {
+          "experience": "Years of Experience",
+          "projects": "Projects Completed+",
+          "satisfaction": "Client Satisfaction (%)",
+          "teamMembers": "Core Team Members"
+        }
+      },
+      "team": {
+        "title": "Meet Our Team",
+        "subtitle": "The dedicated professionals behind our success.",
+        "members": [
+          { "name": "Andreas Keller", "role": "Founder & Lead Civil Engineer", "description": "With 15 years of field-proven experience, Andreas leads every project with precision and a commitment to excellence." },
+          { "name": "Lena Bauer", "role": "Project Coordinator", "description": "Lena ensures seamless communication and coordination between all stakeholders, from subcontractors to authorities." },
+          { "name": "Markus Wolf", "role": "Site Manager", "description": "Markus expertly oversees all on-site operations, guaranteeing quality, safety, and adherence to the project schedule." },
+          { "name": "Anja Weber", "role": "Lead Architect", "description": "Anja translates vision into reality, ensuring architectural integrity and design excellence throughout the build process." },
+          { "name": "Stefan Koch", "role": "Financial Controller", "description": "Stefan manages project finances with meticulous care, providing transparent budget tracking and invoice control." },
+          { "name": "Jonas Richter", "role": "Safety & Compliance Officer", "description": "Jonas is dedicated to maintaining the highest safety standards and ensuring full regulatory compliance on every job site." }
+        ]
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "readMore": "Read More",
+      "cards": [
+        { "title": "Construction Scheduling", "description": "We develop and manage critical path schedules, optimizing workflow and ensuring all project milestones are met with precision." },
+        { "title": "Subcontractor Coordination", "description": "We act as your central point of contact, synchronizing all trades to create a harmonious and efficient worksite." },
+        { "title": "Site Documentation", "description": "Meticulous, real-time documentation provides a comprehensive project record, ensuring clarity, accountability, and risk mitigation." },
+        { "title": "Management Support", "description": "We reinforce your existing team with expert oversight, technical guidance, and hands-on support to overcome any challenge." },
+        { "title": "Planning & Tendering", "description": "Our strategic approach to planning and tendering ensures you secure the most qualified partners at the best possible value." },
+        { "title": "Authority Cooperation", "description": "We expertly navigate German building regulations, managing all communications with authorities to keep your project moving." }
+      ]
+    },
+    "consultant": {
+      "profile": {
+        "name": "Andreas Keller",
+        "role": "Founder & Lead Civil Engineer, Titanium Engineering",
+        "bio": "With 15 years of field-proven experience, I founded Titanium Engineering to bridge the critical gap between brilliant design and flawless execution. My passion lies in bringing order to complexity, ensuring every project is a testament to quality, efficiency, and unwavering integrity. My hands-on approach means I am deeply involved in every project we undertake, serving as a direct partner to our clients.",
+        "ctaButton": "Contact Me"
+      },
+      "skills": {
+        "title": "Core Expertise",
+        "subtitle": "Specialized skills to guarantee project success.",
+        "items": [
+          "Project Scheduling & Management",
+          "Risk Mitigation & Problem Solving",
+          "Budget Control & Financial Oversight",
+          "Regulatory Compliance (Bauamt)",
+          "Subcontractor & Stakeholder Coordination"
+        ]
+      },
+      "articles": {
+        "title": "Recent Insights",
+        "subtitle": "Sharing knowledge from the front lines of project management.",
+        "readMore": "Read Article"
+      }
+    },
+    "projects": {
+      "title": "Our Projects",
+      "filters": [
+        "All",
+        "Remodeling",
+        "Construction",
+        "Repairs",
+        "Design"
+      ],
+      "overlay": {
+        "zoomIn": "Zoom In",
+        "moreDetails": "More Details"
+      },
+      "cards": [
+        { "title": "Modern Kitchen Renovation", "category": "Remodeling", "description": "Complete overhaul of a residential kitchen." },
+        { "title": "Commercial Office Tower", "category": "Construction", "description": "Structural engineering and project management." },
+        { "title": "Historic Facade Repair", "category": "Repairs", "description": "Structural repairs for a historic building." },
+        { "title": "Residential Home Blueprint", "category": "Design", "description": "Architectural design and planning phase." },
+        { "title": "Open-Concept Living Space", "category": "Remodeling", "description": "Combining living and dining areas." },
+        { "title": "High-Rise Apartment Complex", "category": "Construction", "description": "Multi-family residential construction." },
+        { "title": "Foundation Integrity Check", "category": "Repairs", "description": "Foundation assessment and reinforcement." },
+        { "title": "Industrial Warehouse Layout", "category": "Design", "description": "Logistics and structural design for warehousing." },
+        { "title": "City Infrastructure Project", "category": "Construction", "description": "Public works and civil engineering management." }
+      ]
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "subtitle": "We're here to help and answer any question you might have. We look forward to hearing from you.",
+      "infoCards": {
+        "address": {
+          "title": "Address",
+          "value": "Taksim Square, Gümüşsuyu, Istanbul, Turkey"
+        },
+        "phone": {
+          "title": "Call Us",
+          "value": "+90 212 123 45 67"
+        },
+        "email": {
+          "title": "Email Us",
+          "value": "contact@istanbul-construction.com"
+        }
+      },
+      "form": {
+        "placeholders": {
+          "name": "Your Name",
+          "email": "Your Email",
+          "subject": "Subject",
+          "message": "Message"
+        },
+        "submitButton": "Send Message"
+      }
+    },
     "blog": {
       "title": "Blog",
       "readMore": "Read More",
