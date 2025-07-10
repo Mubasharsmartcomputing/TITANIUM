@@ -1,0 +1,372 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "consultant": "Berater",
+    "projects": "Projekte",
+    "blog": "Blog",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "search": "Suchen",
+    "language": "Sprache",
+    "welcome": "Willkommen bei Titanium Innovations",
+    "loading": "Lädt...",
+    "submit": "Absenden",
+    "cancel": "Abbrechen",
+    "previousSlide": "Vorherige Folie",
+    "nextSlide": "Nächste Folie",
+    "goToSlide": "Zu Folie {{index}} gehen",
+    "pauseSlideshow": "Diashow pausieren",
+    "playSlideshow": "Diashow abspielen"
+  },
+  "pages": {
+    "home": {
+      "title": "Willkommen in unserem Unternehmen",
+      "subtitle": "Wir bieten innovative Ingenieursdienstleistungen",
+      "cta": "Loslegen",
+      "heroTitle1": "Das Fundament von allem,",
+      "heroTitle2": "was Sie bauen möchten",
+      "heroDescription": "Bei Titanium Engineering Project Management bringen wir praktische Erfahrung im Bauwesen in Ihre Projekte ein. Von der Terminplanung und Baustellenkoordination bis hin zur Dokumentation und Behördenabstimmung - wir behandeln jedes Detail mit Präzision. Wir bedienen Bayern und ganz Deutschland und helfen Planungsbüros und Bauunternehmen dabei, mit Vertrauen zu bauen.",
+      
+
+"heroElements": [
+  { "title": "Kosten"},
+  { "title": "Zeit / Terminplan"},
+  { "title": "Qualität"}
+],
+"methodology": {
+  "title": "Unsere Methodik: Ein Fundament des Vertrauens",
+  "subtitle": "Wir bauen Erfolg auf vier Schlüsselsäulen auf und stellen sicher, dass Ihr Projekt mit Präzision, Integrität und klarer Kommunikation verwaltet wird.",
+  "cards": [
+    {
+      "title": "Bauphasenplanung und Terminsteuerung",
+      "heading": "Meisterhafte Phasenplanung & Terminsteuerung",
+      "description": "Wir erstellen detaillierte Roadmaps, die jeden Aspekt Ihres Projekts synchronisieren. Unsere fortschrittliche Terminplanung vermeidet Engpässe und optimiert den Arbeitsablauf.",
+      "points": [
+        "Fortschrittliche CPM-Terminplanung mit Meilenstein-Tracking",
+        "Wetteradaptive Zeitplananpassungen",
+        "Ressourcennivellierung und Konfliktlösung",
+        "Echtzeit-Visualisierung des Fortschritts"
+      ]
+    },
+    {
+      "title": "Nachunternehmerkoordination",
+      "heading": "Harmonisierung aller Gewerke durch Expertenkoordination",
+      "description": "Verwandeln Sie Chaos in Harmonie. Wir orchestrieren mehrere Gewerke nahtlos und stellen sicher, dass jeder Spezialist sein Fachwissen genau im richtigen Moment einbringt.",
+      "points": [
+        "Sequenzierung und Schnittstellenmanagement mehrerer Gewerke",
+        "Digitale Koordinationsplattformen und Kommunikationshubs",
+        "Leistungsbenchmarking und Qualitäts-Scorecards",
+        "Konfliktvermittlung und Lösungsprotokolle"
+      ]
+    },
+    {
+      "title": "Baudokumentation",
+      "heading": "Erstellung eines unveränderlichen digitalen Projektarchivs",
+      "description": "Unser umfassendes System erfasst jedes Detail, jede Entscheidung und jeden Meilenstein und schafft ein unveränderliches digitales Archiv für zukünftige Referenzen und rechtlichen Schutz.",
+      "points": [
+        "360°-Fotodokumentation mit Zeitstempel und Geotagging",
+        "Automatisierte Fortschrittsberichte mit KI-gestützten Einblicken",
+        "Compliance-Audit-Trails und behördliche Einreichungen",
+        "Cloud-basiertes Archiv mit sofortiger Suchfunktion"
+      ]
+    },
+    {
+      "title": "Unterstützung der Bauleitung",
+      "heading": "Stärkung Ihrer Bauleitungskompetenzen",
+      "description": "Erweitern Sie Ihre Managementkapazitäten mit unserer spezialisierten Unterstützung. Wir bieten zusätzliches Fachwissen und Personal, um komplexe Herausforderungen zu bewältigen.",
+      "points": [
+        "Technische Problemlösung und Ingenieurunterstützung",
+        "Implementierung von Sicherheitsprotokollen und Schulungen",
+        "Qualitätskontrollen und Testkoordination",
+        "Notfallreaktion und Krisenmanagement"
+      ]
+    },
+    {
+      "title": "Planung und Ausschreibung",
+      "heading": "Besten Wert durch strategische Ausschreibung sichern",
+      "description": "Navigieren Sie sicher durch die komplexe Welt der Bauvergabe. Unsere Expertise sichert Ihnen den besten Wert unter Einhaltung von Qualitäts- und Zeitvorgaben.",
+      "points": [
+        "Marktanalyse und wettbewerbsorientierte Angebotsstrategien",
+        "Entwicklung und Optimierung technischer Spezifikationen",
+        "Anbieterqualifizierung und Präqualifikationsprozesse",
+        "Vertragsgestaltung und Risikoverteilungsmodelle"
+      ]
+    },
+    {
+      "title": "Zusammenarbeit mit Behörden/Prüfern",
+      "heading": "Brücken schlagen zu Behörden und Prüfern",
+      "description": "Wir überbrücken die Lücke zwischen Bau-Realität und regulatorischen Anforderungen und gewährleisten die Einhaltung aller Standards bei positiven Behördenbeziehungen.",
+      "points": [
+        "Strategie für Genehmigungsanträge und Einreichungsmanagement",
+        "Beziehungsaufbau zu Prüfern und Kommunikationsprotokolle",
+        "Code-Interpretation und Konformitätsprüfung",
+        "Abweichungsanträge und Genehmigungsverhandlungen"
+      ]
+    },
+    {
+      "title": "Rechnungsprüfung",
+      "heading": "Schutz Ihres Budgets durch sorgfältige Prüfung",
+      "description": "Schützen Sie Ihr Budget durch sorgfältige Rechnungsprüfung. Unsere Finanzexperten prüfen jede Position, um Überberechnungen zu vermeiden und Vertragstreue zu sichern.",
+      "points": [
+        "Positionsweise Kostenprüfung gegen Verträge",
+        "Validierung von Änderungsaufträgen und Genehmigungsworkflows",
+        "Zahlungsmeilenstein-Tracking und Freigabeautorisierung",
+        "Budgetabweichungsanalyse und Prognosewarnungen"
+      ]
+    },
+    {
+      "title": "Projektmanagement",
+      "heading": "Projekte mit Management der nächsten Generation vereinen",
+      "description": "Erleben Sie Management der nächsten Generation, das alle Elemente zu einer kohärenten Strategie vereint. Wir liefern Projekte, die Erwartungen übertreffen.",
+      "points": [
+        "Integrierte Projektsteuerungssysteme und Dashboards",
+        "Stakeholder-Kommunikation und Berichtsprotokolle",
+        "Risikominderungsstrategien und Notfallplanung",
+        "Analyse nach Projektabschluss und Lessons Learned"
+      ]
+    }
+  ]
+},
+      "constructions": {
+        "title": "Unsere Kern-Bausektoren",
+        "subtitle": "Expertise in einer Vielzahl anspruchsvoller Bauumgebungen.",
+        "cards": [
+          { "title": "Wohnkomplexe", "description": "Unsere Expertise erstreckt sich auf Mehrfamilienhäuser, wo wir alle Gewerke koordinieren, um hochwertige Wohnräume zu schaffen, die sowohl Entwickler- als auch Bewohnererwartungen erfüllen." },
+          { "title": "Kommerzielle Bürotürme", "description": "Wir spezialisieren uns auf das End-to-End-Projektmanagement von Hochhäusern und gewährleisten strukturelle Integrität, pünktliche Lieferung und Einhaltung komplexer städtischer Vorschriften." },
+          { "title": "Industrie- und Logistikanlagen", "description": "Von massiven Lagerhäusern bis hin zu spezialisierten Fertigungsanlagen verwalten wir die einzigartigen Herausforderungen des Industriebaus mit Fokus auf Workflow-Effizienz und robuste Infrastruktur." },
+          { "title": "Öffentliche Infrastrukturprojekte", "description": "Wir bringen Präzisionsingenieurswesen und -management in wichtige öffentliche Arbeiten ein, einschließlich Brücken und Verkehrsknotenpunkten, und gewährleisten Haltbarkeit und langfristigen Wert für die Gemeinschaft." }
+        ]
+      },
+      "strategicPartner": {
+        "title": "Ein strategischer Partner, nicht nur ein Manager",
+        "description": "Über die tägliche Überwachung hinaus bieten wir die strategischen Erkenntnisse, die Ihr Projekt aufwerten. Wir nutzen 15 Jahre Ingenieurserfah rung, um bei jeder Gelegenheit Wert zu schaffen und Herausforderungen in Chancen für Innovation und Effizienz zu verwandeln.",
+        "imageAlt": "Strategische Projektplanung",
+        "services": [
+          { "title": "Strategische Planung", "description": "Projektziele mit langfristigen Geschäftszielen abstimmen." },
+          { "title": "Qualitäts- und Sicherheitsaudits", "description": "Implementierung strenger Kontrollen zur Gewährleistung von Exzellenz und Sicherheit." },
+          { "title": "Transparente Berichterstattung", "description": "Nutzung moderner Tools für Echtzeit-Fortschritts- und Budgetverfolgung." },
+          { "title": "Technologieintegration", "description": "Beratung und Implementierung von Tools wie BIM für erhöhte Effizienz." }
+        ]
+      },
+      "testimonials": {
+        "title": "Was unsere Kunden sagen",
+        "subtitle": "Starke Partnerschaften aufzubauen ist unser größtes Erfolgsmerkmal. Hier ist, was unsere geschätzten Kunden zu sagen haben.",
+        "prevAriaLabel": "Vorheriges Testimonial",
+        "nextAriaLabel": "Nächstes Testimonial",
+        "goToSetAriaLabel": "Zu Testimonial-Set {{index}} gehen",
+        "items": [
+          { "name": "Klaus Mueller", "role": "Geschäftsführer", "company": "Schmidt Architekten", "text": "Das Projektmanagement von Titanium Engineering ist unübertroffen. Ihre Terminplanung und Koordination hielten unser Millionen-Euro-Projekt im Zeitplan und unter Budget. Ein wahrer Partner." },
+          { "name": "Sabine Richter", "role": "Bauleitung", "company": "Bauer AG", "text": "Ihre Expertise im Umgang mit dem örtlichen Bauamt und den Vorschriften ersparte uns unzählige Stunden und potenzielle Strafen. Unglaublich professionell und gründlich von Anfang bis Ende." },
+          { "name": "Jürgen Klein", "role": "Leitender Planungsingenieur", "company": "Ingenieurbüro Klein", "text": "Das Detaillevel in ihrer Baustellendokumentation und Rechnungsprüfung gab uns völligen Seelenfrieden. Wir kannten immer den genauen finanziellen und physischen Zustand unseres Projekts." },
+          { "name": "Anja Weber", "role": "Projektleitung", "company": "Mayer Bauträger", "text": "Erstaunliche Ergebnisse! Ihre Managementunterstützung war entscheidend bei der Bewältigung unvorhergesehener Baustellenherausforderungen. Ihre Problemlösungsfähigkeiten sind außergewöhnlich." },
+          { "name": "Stefan Koch", "role": "Betriebsleiter", "company": "Hoffmann & Söhne", "text": "Das zuverlässigste Projektmanagement-Unternehmen, mit dem wir je gearbeitet haben. Ihr Engagement für Qualität und Transparenz zeigt sich in allem, was sie tun. Sehr empfehlenswert." }
+        ]
+      },
+      "recentBlogTitle": "Unsere neuesten Beiträge"
+    },
+    "about": {
+      "story": {
+        "title": "Geschmiedet durch 15 Jahre Ingenieursexzellenz.",
+        "subtitle": "Unsere Geschichte",
+        "paragraph": "Ich gründete Titanium Engineering Project Management mit einer einzigen, klaren Vision: das stärkste Glied in der Baukette zu sein. Der Name 'Titanium' repräsentiert nicht nur Stärke, sondern auch die hochleistungsfähige, korrosionsbeständige Natur unseres Managementprozesses. Wir überwachen nicht nur Projekte; wir schützen sie.",
+        "listItems": [
+          "Unerschütterliches Engagement für Projektzeitpläne.",
+          "Transparente Kommunikation mit allen Beteiligten.",
+          "Sorgfältige Budget- und Qualitätskontrolle."
+        ],
+        "videoLinkText": "Unser Firmenvideo ansehen"
+      },
+      "stats": {
+        "title": "Unsere Erfolgsbilanz",
+        "subtitle": "Bewährte Ergebnisse und Engagement für Exzellenz.",
+        "items": {
+          "experience": "Jahre Erfahrung",
+          "projects": "Abgeschlossene Projekte+",
+          "satisfaction": "Kundenzufriedenheit (%)",
+          "teamMembers": "Kern-Teammitglieder"
+        }
+      },
+      "team": {
+        "title": "Lernen Sie unser Team kennen",
+        "subtitle": "Die engagierten Fachkräfte hinter unserem Erfolg.",
+        "members": [
+          { "name": "Andreas Keller", "role": "Gründer & Leitender Bauingenieur", "description": "Mit 15 Jahren felderprobter Erfahrung führt Andreas jedes Projekt mit Präzision und Engagement für Exzellenz." },
+          { "name": "Lena Bauer", "role": "Projektkoordinatorin", "description": "Lena gewährleistet nahtlose Kommunikation und Koordination zwischen allen Beteiligten, von Subunternehmern bis zu Behörden." },
+          { "name": "Markus Wolf", "role": "Bauleiter", "description": "Markus überwacht fachmännisch alle Baustellenoperationen und garantiert Qualität, Sicherheit und Einhaltung des Projektzeitplans." },
+          { "name": "Anja Weber", "role": "Leitende Architektin", "description": "Anja setzt Vision in Realität um und gewährleistet architektonische Integrität und Designexzellenz während des gesamten Bauprozesses." },
+          { "name": "Stefan Koch", "role": "Finanzkontrolleur", "description": "Stefan verwaltet Projektfinanzen mit sorgfältiger Aufmerksamkeit und bietet transparente Budgetverfolgung und Rechnungskontrolle." },
+          { "name": "Jonas Richter", "role": "Sicherheits- und Compliance-Beauftragter", "description": "Jonas widmet sich der Aufrechterhaltung höchster Sicherheitsstandards und gewährleistet vollständige regulatorische Compliance auf jeder Baustelle." }
+        ]
+      }
+    },
+   "services": {
+  "title": "Unsere Dienstleistungen",
+  "readMore": "Mehr lesen",
+  "cards": [
+    { 
+      "title": "Phasen- & Terminplanung", 
+      "description": "Wir erstellen detaillierte Terminpläne und planen jede Bauphase, um sicherzustellen, dass Ihr Projekt termingerecht abgeschlossen wird." 
+    },
+    { 
+      "title": "Subunternehmerkoordination", 
+      "description": "Wir verwalten und koordinieren alle Subunternehmer vor Ort nahtlos und sorgen für einen effizienten Arbeitsablauf und hohe Qualität." 
+    },
+    { 
+      "title": "Baustellendokumentation", 
+      "description": "Wir bieten eine gründliche und konsistente Dokumentation aller Baufortschritte, Aktivitäten und wichtigen Meilensteine für eine klare Projektaufzeichnung." 
+    },
+    { 
+      "title": "Managementunterstützung", 
+      "description": "Wir bieten fachkundige, praktische Unterstützung für Ihr Baumanagement-Team und unterstützen bei täglichen Abläufen und Überwachung." 
+    },
+    { 
+      "title": "Planung & Ausschreibung", 
+      "description": "Wir übernehmen den kompletten Planungs- und Ausschreibungsprozess, von ersten Entwürfen bis zur Einholung wettbewerbsfähiger Unternehmensangebote." 
+    },
+    { 
+      "title": "Behörden- & Prüferverbindung", 
+      "description": "Wir fungieren als primärer Verbindungspartner zu Behörden und Prüfern, um Genehmigungen zu sichern und vollständige Compliance zu gewährleisten." 
+    },
+    { 
+      "title": "Rechnungsprüfung", 
+      "description": "Wir überprüfen und verifizieren alle projektbezogenen Rechnungen sorgfältig, um Genauigkeit zu gewährleisten und strenge Budgetkontrolle zu wahren." 
+    },
+    { 
+      "title": "Projektkontrolle", 
+      "description": "Implementierung robuster Projektkontrollsysteme zur Überwachung des Fortschritts, Risikomanagement und Steuerung des Projekts zum Erfolg." 
+    },
+    { 
+      "title": "Qualitätssicherung", 
+      "description": "Sicherstellen, dass der finale Bau höchste Qualitätsstandards erfüllt und Verwaltung eines reibungslosen Übergabeprozesses an Sie, den Kunden." 
+    }
+  ]
+},
+    "consultant": {
+      "profile": {
+        "name": "Andreas Keller",
+        "role": "Gründer & Leitender Bauingenieur, Titanium Engineering",
+        "bio": "Mit 15 Jahren felderprobter Erfahrung gründete ich Titanium Engineering, um die kritische Lücke zwischen brillantem Design und makelloser Ausführung zu schließen. Meine Leidenschaft liegt darin, Komplexität zu ordnen und sicherzustellen, dass jedes Projekt ein Zeugnis für Qualität, Effizienz und unerschütterliche Integrität ist. Mein praktischer Ansatz bedeutet, dass ich in jedes Projekt, das wir übernehmen, tief eingebunden bin und als direkter Partner für unsere Kunden fungiere.",
+        "ctaButton": "Kontaktieren Sie mich"
+      },
+      "skills": {
+        "title": "Kernkompetenzen",
+        "subtitle": "Spezialisierte Fähigkeiten zur Gewährleistung des Projekterfolgs.",
+        "items": [
+          "Projektplanung & -management",
+          "Risikominderung & Problemlösung",
+          "Budgetkontrolle & Finanzaufsicht",
+          "Regulatorische Compliance (Bauamt)",
+          "Subunternehmer- & Stakeholder-Koordination"
+        ]
+      },
+      "articles": {
+        "title": "Aktuelle Erkenntnisse",
+        "subtitle": "Wissen aus der Front des Projektmanagements teilen.",
+        "readMore": "Artikel lesen"
+      }
+    },
+    "projects": {
+      "title": "Unsere Projekte",
+      "filters": [
+        "Alle",
+        "Umbau",
+        "Neubau",
+        "Reparaturen",
+        "Design"
+      ],
+      "overlay": {
+        "zoomIn": "Vergrößern",
+        "moreDetails": "Weitere Details"
+      },
+      "cards": [
+        { "title": "Moderne Küchenrenovierung", "category": "Umbau", "description": "Komplette Überholung einer Wohnküche." },
+        { "title": "Kommerzieller Büroturm", "category": "Neubau", "description": "Strukturelles Engineering und Projektmanagement." },
+        { "title": "Historische Fassadenreparatur", "category": "Reparaturen", "description": "Strukturelle Reparaturen für ein historisches Gebäude." },
+        { "title": "Wohnhaus-Bauplan", "category": "Design", "description": "Architektonisches Design und Planungsphase." },
+        { "title": "Offener Wohnbereich", "category": "Umbau", "description": "Verbindung von Wohn- und Essbereichen." },
+        { "title": "Hochhaus-Wohnkomplex", "category": "Neubau", "description": "Mehrfamilienhausbau." },
+        { "title": "Fundamentintegritätsprüfung", "category": "Reparaturen", "description": "Fundamentbewertung und -verstärkung." },
+        { "title": "Industrielager-Layout", "category": "Design", "description": "Logistik- und Strukturdesign für Lagerhäuser." },
+        { "title": "Städtisches Infrastrukturprojekt", "category": "Neubau", "description": "Öffentliche Arbeiten und Bauingenieurswesen-Management." }
+      ]
+    },
+    "contact": {
+        "title": "Kontakt aufnehmen",
+    "subtitle": "Wir sind hier, um zu helfen und alle Fragen zu beantworten, die Sie haben könnten. Wir freuen uns darauf, von Ihnen zu hören.",
+    "infoCards": {
+      "address": {
+        "title": "Adresse",
+        "value": "Kurfürstendamm 21, 10719 Berlin, Deutschland"
+      },
+      "phone": {
+        "title": "Rufen Sie uns an",
+        "value": "+49 30 12345678"
+      },
+      "email": {
+        "title": "Senden Sie uns eine E-Mail",
+        "value": "kontakt@baugesellschaft-berlin.de"
+      }
+      },
+      "form": {
+        "placeholders": {
+          "name": "Ihr Name",
+          "email": "Ihre E-Mail",
+          "subject": "Betreff",
+          "message": "Nachricht"
+        },
+        "submitButton": "Nachricht senden"
+      }
+    },
+    "blog": {
+      "title": "Blog",
+      "readMore": "Mehr lesen",
+      "posts": [
+        { "date": "15. August", "title": "Warum ein makelloser Bauterminplan das wertvollste Gut Ihres Projekts ist", "author": "Jonas Richter", "category": "Projektmanagement", "excerpt": "Ein erfolgreiches Projekt läuft auf einem realistischen, optimierten und aktiv verwalteten Zeitplan. Wir erkunden, wie unsere Erfahrung sicherstellt, dass Meilensteine präzise erreicht werden." },
+        { "date": "22. August", "title": "Die Kunst der Kontrolle: Chaos durch Expertenkoordination von Subunternehmern eliminieren", "author": "Stefan Koch", "category": "Baustellenmanagement", "excerpt": "Der Schwung eines Projekts hängt von der nahtlosen Integration seiner vielen beweglichen Teile ab. Erfahren Sie, wie wir alle Gewerke synchronisieren, um Reibung zu eliminieren und Produktivität zu maximieren." },
+        { "date": "29. August", "title": "Navigation durch das Bauamt: Wie Experten-Behördenverbindung Ihr deutsches Projekt auf Kurs hält", "author": "Anja Weber", "category": "Regulatorische Compliance", "excerpt": "Die Navigation durch deutsche Bauvorschriften erfordert tiefe Expertise. Wir fungieren als offizielle Verbindung zum Bauamt und verwalten Papierkram, um kostspielige Verzögerungen zu vermeiden." },
+        { "date": "5. September", "title": "Der unsichtbare Held: Wie sorgfältige Baustellendokumentation Ihr Projekt schützt", "author": "Alex Schmidt", "category": "Risikomanagement", "excerpt": "Klare, konsistente Dokumentation ist die beste Verteidigung Ihres Projekts. Entdecken Sie unseren Prozess für die Verwaltung täglicher Protokolle und RFIs, um eine unanfechtbare Aufzeichnung zu erstellen." },
+        { "date": "17. September", "title": "Ihre Gewinnspanne schützen: Die Kraft rigoroser Rechnungsprüfung", "author": "Lena Bauer", "category": "Finanzkontrolle", "excerpt": "Ihre finanziellen Interessen sind von größter Bedeutung. Wir vertiefen uns in wachsame Rechnungsverifikation und wie unsere Projektkontrolle finanzielle Klarheit bietet und Budgetüberschreitungen verhindert." },
+        { "date": "28. September", "title": "Mehr als Aufsicht: Ihr Team mit On-Demand-Managementunterstützung verstärken", "author": "Markus Wolf", "category": "Teamunterstützung", "excerpt": "Ob Sie Ihr internes Team verstärken oder spezialisierte Aufsicht benötigen, flexible Unterstützung ist der Schlüssel. Erfahren Sie, wie unser 'vor Ort' Ansatz die Lösungen bietet, die Sie brauchen." }
+      ]
+    }
+  },
+  "footer": {
+    "companyName": "TITANIUM",
+    "address": {
+      "street": "Musterstraße 123",
+      "city": "80331 München",
+      "country": "Deutschland"
+    },
+    "phoneLabel": "Telefon:",
+    "emailLabel": "E-Mail:",
+    "socials": [
+      { "label": "Twitter" },
+      { "label": "Facebook" },
+      { "label": "Instagram" },
+      { "label": "LinkedIn" }
+    ],
+    "ourServices": {
+      "title": "Unsere Dienstleistungen",
+      "items": [
+        "Bauterminplanung",
+        "Subunternehmerkoordination",
+        "Baustellendokumentation",
+        "Managementunterstützung",
+        "Planung & Ausschreibung"
+      ]
+    },
+    "legal": {
+      "title": "Rechtliches",
+      "items": [
+        "Datenschutzrichtlinie",
+        "Nutzungsbedingungen",
+        "Impressum"
+      ]
+    },
+    "copyright": "© Copyright {{companyName}} Alle Rechte vorbehalten",
+    "scrollToTop": "Nach oben scrollen"
+  }
+}

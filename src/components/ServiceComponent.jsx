@@ -1,91 +1,172 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next'; // 1. Import hook
+import React from "react";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
-// --- IMPORT ICONS ---
-import { FaTasks, FaUsersCog, FaFileSignature, FaHardHat, FaClipboardList, FaLandmark } from 'react-icons/fa';
-import { HiArrowRight } from 'react-icons/hi';
+// --- IMPORT ICONS (No changes) ---
+import {
+  FaTasks,
+  FaUsersCog,
+  FaFileSignature,
+  FaHardHat,
+  FaClipboardList,
+  FaLandmark,
+  FaFileInvoiceDollar,
+  FaChartLine,
+  FaCheckCircle,
+} from "react-icons/fa";
+import { HiArrowRight } from "react-icons/hi";
 
-// 2. Data for non-translatable content. The order MUST match the JSON.
-const staticServicesData = [
-  { id: 1, icon: <FaTasks size={32} />, link: '/services/scheduling' },
-  { id: 2, icon: <FaUsersCog size={32} />, link: '/services/coordination' },
-  { id: 3, icon: <FaFileSignature size={32} />, link: '/services/documentation' },
-  { id: 4, icon: <FaHardHat size={32} />, link: '/services/support' },
-  { id: 5, icon: <FaClipboardList size={32} />, link: '/services/tendering' },
-  { id: 6, icon: <FaLandmark size={32} />, link: '/services/authorities' },
+// --- UNIFIED DATA FOR 9 SERVICES (No changes) ---
+const servicesData = [
+  {
+    id: 1,
+    icon: <FaTasks size={32} />,
+    title: "Phase & Schedule Planning",
+    description:
+      "We create detailed schedules and plan every construction phase to ensure your project is completed on time.",
+    link: "/services/scheduling",
+  },
+  {
+    id: 2,
+    icon: <FaUsersCog size={32} />,
+    title: "Subcontractor Coordination",
+    description:
+      "We seamlessly manage and coordinate all subcontractors on-site, ensuring an efficient workflow and high quality.",
+    link: "/services/coordination",
+  },
+  {
+    id: 3,
+    icon: <FaFileSignature size={32} />,
+    title: "Site Documentation",
+    description:
+      "We provide thorough and consistent documentation of all site progress, activities, and key milestones for a clear project record.",
+    link: "/services/documentation",
+  },
+  {
+    id: 4,
+    icon: <FaHardHat size={32} />,
+    title: "Management Support",
+    description:
+      "Offering expert, hands-on support to your construction management team, assisting with daily operations and oversight.",
+    link: "/services/support",
+  },
+  {
+    id: 5,
+    icon: <FaClipboardList size={32} />,
+    title: "Planning & Tendering",
+    description:
+      "Handling the complete planning and tendering process, from initial designs to soliciting competitive contractor bids.",
+    link: "/services/tendering",
+  },
+  {
+    id: 6,
+    icon: <FaLandmark size={32} />,
+    title: "Authority & Inspector Liaison",
+    description:
+      "We act as the primary liaison with government authorities and inspectors to secure permits and ensure full compliance.",
+    link: "/services/authorities",
+  },
+  {
+    id: 7,
+    icon: <FaFileInvoiceDollar size={32} />,
+    title: "Invoice Auditing",
+    description:
+      "We carefully review and verify all project-related invoices to ensure accuracy and maintain strict budget control.",
+    link: "/services/auditing",
+  },
+  {
+    id: 8,
+    icon: <FaChartLine size={32} />,
+    title: "Project Control",
+    description:
+      "Implementing robust project control systems to monitor progress, manage risks, and steer the project to success.",
+    link: "/services/project-control",
+  },
+  {
+    id: 9,
+    icon: <FaCheckCircle size={32} />,
+    title: "Quality Assurance",
+    description:
+      "Ensuring the final build meets the highest quality standards and managing a smooth handover process to you, the client.",
+    link: "/services/quality-assurance",
+  },
 ];
 
-// --- REUSABLE SERVICE CARD COMPONENT ---
-// Now accepts `readMoreText` prop
+// --- REUSABLE SERVICE CARD COMPONENT (No changes) ---
 const ServiceCard = ({ icon, title, description, link, readMoreText }) => (
   <div className="group bg-white p-8 rounded-4xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
     <div className="icon-wrapper mb-6">
-      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-red-100 text-red-500 transition-colors duration-300 group-hover:bg-red-500 group-hover:text-white">{icon}</div>
+      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-200 text-[#feb900] transition-colors duration-300 group-hover:bg-[#feb900] group-hover:text-white">
+        {icon}
+      </div>
     </div>
     <h3 className="text-2xl font-bold text-gray-800 mb-3">{title}</h3>
     <p className="text-gray-600 mb-6 flex-grow">{description}</p>
-    <a href={link} className="font-bold text-red-600 hover:text-red-700 flex items-center mt-auto self-start">
-      {/* Use the translated prop here */}
+    <a
+      href={link}
+      className="font-bold text-[#feb900] hover:text-[#d99f00] flex items-center mt-auto self-start"
+    >
       <span>{readMoreText}</span>
       <HiArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
     </a>
   </div>
 );
 
-// --- ALT SERVICES ICON BOX COMPONENT (Unused in this setup, but kept as is) ---
-const AltServiceIconBox = ({ icon, title, description }) => (
-    <div className="flex">
-        <div className="flex-shrink-0 mr-4">{icon}</div>
-        <div>
-            <h4 className="font-bold text-lg text-gray-800">{title}</h4>
-            <p className="text-gray-600">{description}</p>
-        </div>
-    </div>
-);
-
 // --- MAIN SERVICE CONTENT COMPONENT ---
 const ServiceComponent = () => {
-    const { t } = useTranslation(); // 3. Initialize hook
+  const { t } = useTranslation();
 
-    // 4. Dynamically create data by merging static info with translated text
-    const servicesData = t('pages.services.cards', { returnObjects: true }).map((card, index) => ({
-      ...staticServicesData[index], // Gets id, icon, link
-      ...card,                      // Gets title, description from JSON
-    }));
-
-    return (
-        <>
-            {/* Services Section */}
-            <section id="services" className="py-16 lg:py-24 gap-8 flex flex-col justify-center items-center text-center bg-gray-50">
-                <motion.h1 
-                    className="text-4xl font-bold text-gray-900"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
+  return (
+    <>
+      <section
+        id="services"
+        className="py-16 lg:py-24 gap-8 flex flex-col justify-center items-center text-center bg-gray-50"
+      >
+        <motion.h1
+          className="text-4xl font-bold text-gray-900"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {t("pages.services.title", { defaultValue: "Our Services" })}
+        </motion.h1>
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {servicesData.map(
+              (
+                service,
+                index // The `index` is the key! (0, 1, 2, ...)
+              ) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                    {/* 5. Translate the title */}
-                    {t('pages.services.title')}
-                </motion.h1>
-                <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {servicesData.map((service, index) => (
-                    <motion.div
-                        key={service.id}
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                    >
-                        {/* 6. Pass the translated "Read More" text to the card */}
-                        <ServiceCard {...service} readMoreText={t('pages.services.readMore')} />
-                    </motion.div>
-                    ))}
-                </div>
-                </div>
-            </section>
-        </>
-    );
+                  {/* 👇 THE FIX IS HERE. We use the `index` to match the JSON array. */}
+                  <ServiceCard
+                    icon={service.icon}
+                    link={service.link}
+                    title={t(`pages.services.cards.${index}.title`, {
+                      defaultValue: service.title,
+                    })}
+                    description={t(
+                      `pages.services.cards.${index}.description`,
+                      { defaultValue: service.description }
+                    )}
+                    readMoreText={t("pages.services.readMore", {
+                      defaultValue: "Read More",
+                    })}
+                  />
+                </motion.div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 };
 
 export default ServiceComponent;

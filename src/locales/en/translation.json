@@ -29,16 +29,106 @@
       "heroTitle1": "The Foundation of Everything",
       "heroTitle2": "You Want to Build",
       "heroDescription": "At Titanium Engineering Project Management, we bring hands-on experience in civil engineering to your projects. From scheduling and site coordination to documentation and authority liaison, we handle every detail with precision. Serving Bavaria and across Germany, we help planning offices and construction companies build with confidence.",
-      "methodology": {
-        "title": "Our Methodology: A Foundation of Trust",
-        "subtitle": "We build success on four key pillars, ensuring your project is managed with precision, integrity, and clear communication.",
-        "tabs": [
-          { "title": "Financial Control", "heading": "Mastering Financial Control for Project Success", "description": "We provide vigilant invoice verification and rigorous project controls to maintain financial integrity from start to finish.", "points": [ "Budget Adherence Tracking", "Value Engineering", "Invoice & Payment Verification" ] },
-          { "title": "Risk Mitigation", "heading": "Proactively Mitigating Risks, Ensuring Smooth Progress", "description": "Our proactive approach identifies potential issues before they become costly problems, ensuring a smoother project flow.", "points": [ "Proactive Problem Solving", "Safety & Compliance Audits", "Contractual Safeguards" ] },
-          { "title": "Quality Assurance", "heading": "Upholding Uncompromising Standards of Quality", "description": "We uphold the highest standards, ensuring that all materials, craftsmanship, and final results meet your exact specifications.", "points": [ "Material Quality Checks", "Workmanship Inspections", "Adherence to Blueprints" ] },
-          { "title": "Clear Communication", "heading": "Your Single, Cohesive Point of Contact", "description": "Serving as your single point of contact, we ensure all stakeholders are aligned and informed at every stage of the project.", "points": [ "Regular Progress Reports", "Stakeholder Meeting Facilitation", "Centralized Information Hub" ] }
-        ]
-      },
+    
+"heroElements": [
+  { "title": "Cost"},
+  { "title": "Time / Schedule" },
+  { "title": "Quality"}
+],
+"methodology": {
+  "title": "Our Methodology: A Foundation of Trust",
+  "subtitle": "We build success on four key pillars, ensuring your project is managed with precision, integrity, and clear communication.",
+  "cards": [
+    {
+      "title": "Construction phase planning and scheduling",
+      "heading": "Mastering Phase Planning & Scheduling",
+      "description": "We create detailed roadmaps that synchronize every project aspect. Our advanced scheduling prevents bottlenecks and optimizes workflow from groundbreaking to final handover.",
+      "points": [
+        "Advanced CPM scheduling with milestone tracking",
+        "Weather-adaptive timeline adjustments",
+        "Resource leveling and conflict resolution",
+        "Real-time progress visualization dashboards"
+      ]
+    },
+    {
+      "title": "Subcontractor coordination",
+      "heading": "Harmonizing Every Trade with Expert Coordination",
+      "description": "Transform chaos into harmony. We orchestrate multiple trades seamlessly, ensuring each specialist contributes their expertise at precisely the right moment.",
+      "points": [
+        "Multi-trade sequencing and interface management",
+        "Digital coordination platforms and communication hubs",
+        "Performance benchmarking and quality scorecards",
+        "Conflict mediation and resolution protocols"
+      ]
+    },
+    {
+      "title": "Construction site documentation",
+      "heading": "Creating an Immutable Digital Project Record",
+      "description": "Our comprehensive system captures every detail, decision, and milestone, creating an immutable digital record for future reference and legal protection.",
+      "points": [
+        "360° photo documentation with timestamp geolocation",
+        "Automated progress reports with AI-powered insights",
+        "Compliance audit trails and regulatory submissions",
+        "Cloud-based archive with instant search capabilities"
+      ]
+    },
+    {
+      "title": "Support for site management",
+      "heading": "Amplifying Your Site Management Capabilities",
+      "description": "Amplify your management capabilities with our specialized support. We provide additional expertise and manpower to handle complex challenges and maintain momentum.",
+      "points": [
+        "Technical problem-solving and engineering support",
+        "Safety protocol implementation and training",
+        "Quality control inspections and testing coordination",
+        "Emergency response and crisis management"
+      ]
+    },
+    {
+      "title": "Planning and tendering",
+      "heading": "Securing Best Value Through Strategic Tendering",
+      "description": "Navigate construction procurement with confidence. Our expertise ensures you secure the best value while maintaining quality standards and timeline commitments.",
+      "points": [
+        "Market analysis and competitive bidding strategies",
+        "Technical specification development and optimization",
+        "Vendor qualification and prequalification processes",
+        "Contract structuring and risk allocation frameworks"
+      ]
+    },
+    {
+      "title": "Collaboration with authorities/inspectors",
+      "heading": "Bridging Gaps with Authorities and Inspectors",
+      "description": "We bridge the gap between construction reality and regulatory needs, ensuring your project meets all compliance standards while maintaining positive relationships.",
+      "points": [
+        "Permit application strategy and submission management",
+        "Inspector relationship building and communication protocols",
+        "Code interpretation and compliance verification",
+        "Variance requests and approval negotiations"
+      ]
+    },
+    {
+      "title": "Invoice verification",
+      "heading": "Protecting Your Budget with Meticulous Verification",
+      "description": "Protect your budget with meticulous invoice verification. Our financial experts scrutinize every line item to prevent overcharges and ensure contractual compliance.",
+      "points": [
+        "Line-by-line cost verification against contracts",
+        "Change order validation and approval workflows",
+        "Payment milestone tracking and release authorization",
+        "Budget variance analysis and forecasting alerts"
+      ]
+    },
+    {
+      "title": "Project management",
+      "heading": "Unifying Projects with Next-Generation Management",
+      "description": "Experience next-gen management that unifies all elements into a coherent strategy. We deliver projects that exceed expectations while controlling time, cost, and quality.",
+      "points": [
+        "Integrated project control systems and dashboards",
+        "Stakeholder communication and reporting protocols",
+        "Risk mitigation strategies and contingency planning",
+        "Post-completion analysis and lessons learned"
+      ]
+    }
+  ]
+},
       "constructions": {
         "title": "Our Core Construction Sectors",
         "subtitle": "Expertise across a diverse range of demanding construction environments.",
@@ -111,18 +201,48 @@
         ]
       }
     },
-    "services": {
-      "title": "Our Services",
-      "readMore": "Read More",
-      "cards": [
-        { "title": "Construction Scheduling", "description": "We develop and manage critical path schedules, optimizing workflow and ensuring all project milestones are met with precision." },
-        { "title": "Subcontractor Coordination", "description": "We act as your central point of contact, synchronizing all trades to create a harmonious and efficient worksite." },
-        { "title": "Site Documentation", "description": "Meticulous, real-time documentation provides a comprehensive project record, ensuring clarity, accountability, and risk mitigation." },
-        { "title": "Management Support", "description": "We reinforce your existing team with expert oversight, technical guidance, and hands-on support to overcome any challenge." },
-        { "title": "Planning & Tendering", "description": "Our strategic approach to planning and tendering ensures you secure the most qualified partners at the best possible value." },
-        { "title": "Authority Cooperation", "description": "We expertly navigate German building regulations, managing all communications with authorities to keep your project moving." }
-      ]
+   "services": {
+  "title": "Our Services",
+  "readMore": "Read More",
+  "cards": [
+    { 
+      "title": "Phase & Schedule Planning", 
+      "description": "We create detailed schedules and plan every construction phase to ensure your project is completed on time." 
     },
+    { 
+      "title": "Subcontractor Coordination", 
+      "description": "We seamlessly manage and coordinate all subcontractors on-site, ensuring an efficient workflow and high quality." 
+    },
+    { 
+      "title": "Site Documentation", 
+      "description": "We provide thorough and consistent documentation of all site progress, activities, and key milestones for a clear project record." 
+    },
+    { 
+      "title": "Management Support", 
+      "description": "Offering expert, hands-on support to your construction management team, assisting with daily operations and oversight." 
+    },
+    { 
+      "title": "Planning & Tendering", 
+      "description": "Handling the complete planning and tendering process, from initial designs to soliciting competitive contractor bids." 
+    },
+    { 
+      "title": "Authority & Inspector Liaison", 
+      "description": "We act as the primary liaison with government authorities and inspectors to secure permits and ensure full compliance." 
+    },
+    { 
+      "title": "Invoice Auditing", 
+      "description": "We carefully review and verify all project-related invoices to ensure accuracy and maintain strict budget control." 
+    },
+    { 
+      "title": "Project Control", 
+      "description": "Implementing robust project control systems to monitor progress, manage risks, and steer the project to success." 
+    },
+    { 
+      "title": "Quality Assurance", 
+      "description": "Ensuring the final build meets the highest quality standards and managing a smooth handover process to you, the client." 
+    }
+  ]
+},
     "consultant": {
       "profile": {
         "name": "Andreas Keller",
@@ -173,21 +293,21 @@
       ]
     },
     "contact": {
-      "title": "Get In Touch",
-      "subtitle": "We're here to help and answer any question you might have. We look forward to hearing from you.",
-      "infoCards": {
-        "address": {
-          "title": "Address",
-          "value": "Taksim Square, Gümüşsuyu, Istanbul, Turkey"
-        },
-        "phone": {
-          "title": "Call Us",
-          "value": "+90 212 123 45 67"
-        },
-        "email": {
-          "title": "Email Us",
-          "value": "contact@istanbul-construction.com"
-        }
+     "title": "Get In Touch",
+    "subtitle": "We're here to help and answer any question you might have. We look forward to hearing from you.",
+    "infoCards": {
+      "address": {
+        "title": "Address",
+        "value": "Kurfürstendamm 21, 10719 Berlin, Germany"
+      },
+      "phone": {
+        "title": "Call Us",
+        "value": "+49 30 12345678"
+      },
+      "email": {
+        "title": "Email Us",
+        "value": "kontakt@baugesellschaft-berlin.de"
+      }
       },
       "form": {
         "placeholders": {

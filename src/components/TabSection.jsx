@@ -1,43 +1,73 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next'; // ✨ IMPORT THE HOOK
+import React from 'react';
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next'; // Already imported, great!
 
-// ✨ UPDATED: We only need the check icon for the new design
+// --- IMPORT ICONS & IMAGES (No changes here) ---
 import { BsCheck2All } from 'react-icons/bs';
+import features1 from '../assets/img/features-1.png';
+import features2 from '../assets/img/features-2.png';
+import features3 from '../assets/img/features-3.png';
+import features4 from '../assets/img/features-4.png';
+import features5 from '../assets/img/features-5.png';
+import features9 from '../assets/img/features-9.png';
+import construction1 from '../assets/img/constructions-1.png';
+import construction2 from '../assets/img/constructions-2.png';
 
-// --- IMPORT IMAGES (These are reused for the tabs) ---
-import features1 from '../assets/img/features-1.jpg'; // Corresponds to Financial Control
-import features2 from '../assets/img/features-2.jpg'; // Corresponds to Risk Mitigation
-import features3 from '../assets/img/features-3.jpg'; // Corresponds to Quality Assurance
-import features4 from '../assets/img/features-4.jpg'; // Corresponds to Clear Communication
-
-// ✨ This array holds static info that doesn't need translation (like IDs and images)
+// ✨ STEP 1: Simplify the static array. It only holds info that NEVER changes.
 const staticTabInfo = [
     { id: 1, image: features1 },
     { id: 2, image: features2 },
     { id: 3, image: features3 },
     { id: 4, image: features4 },
+    { id: 5, image: construction1 },
+    { id: 6, image: construction2 },
+    { id: 7, image: features5 },
+    { id: 8, image: features9 },
 ];
 
-// --- ✨ REFACTORED: Main Component ---
+// --- Reusable Methodology Card Component (No changes needed here) ---
+const MethodologyCard = ({ image, title, heading, description, points }) => {
+    return (
+        <div className="bg-white rounded-[2.5rem] shadow-lg overflow-hidden h-full">
+            <div className="grid grid-cols-1 xl:grid-cols-12 h-full">
+                <div className="xl:col-span-5">
+                    <div className="h-[250px] xl:h-full">
+                        <img src={image} alt={title} className="w-full h-full object-cover"/>
+                    </div>
+                </div>
+                <div className="xl:col-span-7 flex items-center">
+                    <div className="p-8 flex flex-col justify-between h-full">
+                        <div>
+                            <h4 className="text-2xl font-bold text-gray-800 mb-3 hover:text-[#feb900] transition-colors line-clamp-2">
+                                <a href="#">{heading}</a>
+                            </h4>
+                            <p className="italic text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">{description}</p>
+                        </div>
+                        <ul className="space-y-2 mt-4">
+                            {/* Check if points exists and is an array before mapping */}
+                            {Array.isArray(points) && points.map((point, index) => (
+                                <li key={index} className="flex items-start">
+                                    <BsCheck2All className="text-[#feb900] font-bold mr-3 mt-1 flex-shrink-0" size={16} />
+                                    <span className="text-gray-700 text-sm leading-tight">{point}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+// --- MAIN METHODOLOGY COMPONENT ---
 const TabSection = () => {
-    const { t } = useTranslation(); // ✨ INITIALIZE THE HOOK
-    const [activeTab, setActiveTab] = useState(1);
-
-    // ✨ DYNAMICALLY BUILD TABS DATA by combining static info with translated text
-    const tabsData = t('pages.home.methodology.tabs', { returnObjects: true }).map((tab, index) => ({
-        ...staticTabInfo[index], // gets id and image
-        ...tab,                 // gets title, heading, description, points from JSON
-    }));
-
-    const activeTabData = tabsData.find(tab => tab.id === activeTab);
+    const { t } = useTranslation(); // Already initialized, perfect!
 
     return (
-        // The entire component is now one cohesive section with a light gray background
         <section id="features" className="py-16 lg:py-24 bg-gray-50">
             <div className="container mx-auto px-4">
             
-                {/* ✨ NEW: Centered Section Title */}
+                {/* Section Title (Already translated, no changes needed) */}
                 <motion.div 
                   className="text-center mb-12"
                   initial={{ opacity: 0, y: -20 }}
@@ -49,59 +79,30 @@ const TabSection = () => {
                   <p className="text-lg text-gray-600 mt-2 max-w-3xl mx-auto">{t('pages.home.methodology.subtitle')}</p>
                 </motion.div>
 
-                {/* Tab Buttons (Functionality remains the same, styles are great) */}
-                <motion.ul
-                    className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                    {tabsData.map(tab => (
-                        <li key={tab.id}>
-                            <button
-                                onClick={() => setActiveTab(tab.id)}
-                                className={`w-full p-4 text-center rounded-lg transition-colors duration-300 font-semibold text-lg ${
-                                    activeTab === tab.id ? 'bg-red-500 text-white shadow-lg' : 'bg-gray-200 text-gray-700 hover:bg-red-500 hover:text-white'
-                                }`}
-                            >
-                                {/* ✨ Changed from h4 to span for better semantics, as it's a button label */}
-                                <span>{tab.title}</span>
-                            </button>
-                        </li>
+                {/* ✨ STEP 2: Use the t() function to get card content from JSON */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {staticTabInfo.map((item, index) => (
+                        <motion.div
+                            key={item.id}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="h-full"
+                        >
+                            <MethodologyCard 
+                                image={item.image}
+                                // The text is now pulled from your translation files using the index
+                                title={t(`pages.home.methodology.cards.${index}.title`)}
+                                heading={t(`pages.home.methodology.cards.${index}.heading`)}
+                                description={t(`pages.home.methodology.cards.${index}.description`)}
+                                // This tells i18next to return the array of points, not a string
+                                points={t(`pages.home.methodology.cards.${index}.points`, { returnObjects: true }) || []}
+                            />
+                        </motion.div>
                     ))}
-                </motion.ul>
-                
-                {/* Tab Content (Structure is the same, but it's now fed the new data) */}
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeTab}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.4 }}
-                    >
-                        {activeTabData && (
-                            <div className="grid lg:grid-cols-2 gap-12 items-center">
-                                <div className="lg:order-2">
-                                    <img src={activeTabData.image} alt={activeTabData.title} className="rounded-4xl shadow-xl w-[600px] h-auto" />
-                                </div>
-                                <div className="lg:order-1 flex flex-col justify-center">
-                                    <h3 className="text-3xl font-bold text-gray-800 mb-3">{activeTabData.heading}</h3>
-                                    <p className="italic text-gray-600 mb-4 leading-relaxed">{activeTabData.description}</p>
-                                    <ul className="space-y-3 mt-4">
-                                        {activeTabData.points.map((point, index) => (
-                                            <li key={index} className="flex items-start">
-                                                <BsCheck2All className="text-red-500 font-bold mr-3 mt-1 flex-shrink-0" size={24} />
-                                                <span className="text-gray-700">{point}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        )}
-                    </motion.div>
-                </AnimatePresence>
+                </div>
+
             </div>
         </section>
     );

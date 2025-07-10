@@ -10,6 +10,7 @@ export default function Header() {
   const [isLanguageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 
   const languages = [
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
     { code: 'en', name: 'English', flag: '🇺🇸' },
     { code: 'tr', name: 'Türkçe', flag: '🇹🇷' }
   ];
@@ -37,8 +38,8 @@ export default function Header() {
     { key: 'home', path: '/' },
     { key: 'about', path: '/about' },
     { key: 'services', path: '/services' },
-    { key: 'consultant', path: '/consultant' },
-    { key: 'projects', path: '/projects' },
+    // { key: 'consultant', path: '/consultant' },
+    // { key: 'projects', path: '/projects' },
     { key: 'blog', path: '/blog' },
     { key: 'contact', path: '/contact' },
   ];
@@ -50,11 +51,11 @@ export default function Header() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             
             {/* Logo */}
-            <NavLink to="/" className="flex items-center" onClick={closeMenu}>
+            <NavLink to="/">
               <img 
                 src={logo} 
                 alt="Titanium Engineering Logo" 
-                className="h-16 w-16 lg:h-22 md:w-22"
+                className="h-22 w-28 lg:h-36 md:w-48"
               />
             </NavLink>
 
@@ -67,8 +68,8 @@ export default function Header() {
                   className={({ isActive }) =>
                     `transition-colors duration-200 font-medium text-sm xl:text-base uppercase tracking-wider px-2 py-1 border-b-2
                      ${isActive
-                       ? 'text-red-600 border-red-600'
-                       : 'text-gray-700 border-transparent hover:text-red-600'
+                       ? 'text-[#feb900] border-[#feb900]'
+                       : 'text-gray-700 border-transparent hover:text-[#fcd97b]'
                      }`
                   }
                 >
@@ -83,7 +84,7 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={toggleLanguageDropdown}
-                  className="flex items-center space-x-2 text-gray-700 hover:text-red-600 transition-colors duration-200 px-2 py-1 rounded-md"
+                  className="flex items-center space-x-2 text-gray-700 hover:text-[#feb900] transition-colors duration-200 px-2 py-1 rounded-md"
                 >
                   <span className="text-sm font-medium">{i18n.language.toUpperCase()}</span>
                   <HiGlobeAlt size={16} />
@@ -97,8 +98,8 @@ export default function Header() {
                       <button
                         key={language.code}
                         onClick={() => handleLanguageChange(language.code)}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-red-50 hover:text-red-600 transition-colors duration-200 flex items-center space-x-2
-                          ${i18n.language === language.code ? 'bg-red-50 text-red-600' : 'text-gray-700'}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-red-50 hover:text-[#feb900] transition-colors duration-200 flex items-center space-x-2
+                          ${i18n.language === language.code ? 'bg-red-50 text-[#feb900]' : 'text-gray-700'}
                         `}
                       >
                         <span>{language.flag}</span>
@@ -110,7 +111,7 @@ export default function Header() {
               </div>
 
               <button 
-                className="text-red-600 hover:text-red-700 transition-colors duration-200"
+                className="text-[#feb900] hover:text-[#d3c07e] transition-colors duration-200"
                 title={t('common.search')}
               >
                 <HiSearch size={20} />
@@ -121,7 +122,7 @@ export default function Header() {
             <div className="lg:hidden">
               <button
                 onClick={handleMenuToggle}
-                className="text-gray-700 hover:text-red-600 transition-colors duration-200 p-2"
+                className="text-gray-700 hover:text-[#feb900] transition-colors duration-200 p-2"
                 aria-label="Toggle menu"
               >
                 {isMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
@@ -147,8 +148,8 @@ export default function Header() {
                 className={({ isActive }) =>
                   `block px-3 py-3 font-medium text-sm uppercase tracking-wider rounded-md transition-colors duration-200
                    ${isActive
-                     ? 'bg-red-500 text-white'
-                     : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+                     ? 'bg-[#feb900] text-white'
+                     : 'text-gray-700 hover:text-[#feb900] hover:bg-red-50'
                    }`
                 }
               >
@@ -168,8 +169,8 @@ export default function Header() {
                     onClick={() => handleLanguageChange(language.code)}
                     className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors duration-200 flex items-center space-x-2
                       ${i18n.language === language.code 
-                        ? 'bg-red-500 text-white' 
-                        : 'text-gray-700 hover:text-red-600 hover:bg-red-50'
+                        ? 'bg-[#feb900] text-white' 
+                        : 'text-gray-700 hover:text-[#d8c274] hover:bg-red-50'
                       }
                     `}
                   >
@@ -182,7 +183,7 @@ export default function Header() {
               {/* Search button */}
               <div className="flex justify-end pt-3 mt-3 border-t border-gray-200">
                 <button 
-                  className="text-red-600 hover:text-red-700 transition-colors duration-200"
+                  className="text-[#feb900] hover:text-[#d8c274] transition-colors duration-200"
                   title={t('common.search')}
                 >
                   <HiSearch size={20} />
@@ -211,4 +212,3 @@ export default function Header() {
     </>
   );
 }
-

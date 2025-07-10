@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaArrowUp } from 'react-icons/fa';
+import logo from '../../assets/img/FooterLogo.png';
 
 // --- IMPORT THE BACKGROUND IMAGE ---
 import footerBgImage from '../../assets/img/footer-bg.jpg';
+import { NavLink } from 'react-router-dom';
 
 // Static data for social links (icons and hrefs)
 const staticSocialLinks = [
@@ -64,8 +66,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 justify-center items-center sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           
           {/* Column 1: Company Info & Socials */}
-          <div className="lg:col-span-2 md:ml-32 ml-auto"> 
-            <h3 className="text-2xl font-bold text-white mb-6">{t('footer.companyName')}</h3>
+          <div className="lg:col-span-2 md:ml-32 ml-2"> 
+    <NavLink to="/" className="flex items-center">
+                 <img 
+                   src={logo} 
+                   alt="Titanium Engineering Logo" 
+                   className="h-22 w-28 lg:h-28 md:w-40"
+                 />
+               </NavLink>
             <div className="space-y-3 text-sm">
               <p className="text-gray-400">
                 {t('footer.address.street')}<br/>
@@ -133,7 +141,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         aria-label={t('footer.scrollToTop')}
-        className={`fixed bottom-6 right-6 w-11 h-11 bg-red-600 hover:bg-red-700 text-white rounded-full 
+        className={`fixed bottom-6 right-6 w-11 h-11 bg-[#feb900] hover:bg-[#fcd97b] text-white rounded-full 
                     shadow-lg transition-all duration-300 transform hover:scale-105 
                     flex items-center justify-center z-50
                     ${isScrollButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}

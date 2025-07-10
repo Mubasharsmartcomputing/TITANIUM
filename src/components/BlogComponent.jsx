@@ -8,11 +8,11 @@ import { HiArrowRight } from 'react-icons/hi';
 
 // --- IMPORT IMAGES ---
 import blogImg1 from '../assets/img/blog/blog-1.jpg';
-import blogImg2 from '../assets/img/blog/blog-2.jpg';
-import blogImg3 from '../assets/img/blog/blog-3.jpg';
-import blogImg4 from '../assets/img/blog/blog-4.jpg';
+import blogImg2 from '../assets/img/blog/blog-2.png';
+import blogImg6 from '../assets/img/blog/blog-3.png';
+import blogImg4 from '../assets/img/blog/blog-4.png';
 import blogImg5 from '../assets/img/blog/blog-5.jpg';
-import blogImg6 from '../assets/img/blog/blog-6.jpg';
+import blogImg3 from '../assets/img/blog/blog-6.jpg';
 
 // 2. Data for non-translatable content. The order MUST match the JSON.
 const staticBlogData = [
@@ -31,20 +31,20 @@ const BlogPostCard = ({ post, readMoreText }) => {
     <article className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full group">
       <div className="relative">
         <img src={post.image} alt={post.title} className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" />
-        <span className="absolute bottom-0 right-0 bg-red-500 text-white text-sm font-semibold px-4 py-2">{post.date}</span>
+        <span className="absolute bottom-0 right-0 bg-[#feb900] text-white text-sm font-semibold px-4 py-2">{post.date}</span>
       </div>
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-red-600 transition-colors">
+        <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-[#feb900] transition-colors">
           <a href={post.link}>{post.title}</a>
         </h3>
-        <div className="flex items-center text-sm text-gray-500 mb-4">
-          <div className="flex items-center"><FaUser className="mr-2 text-red-500" /><span>{post.author}</span></div>
+        <div className="flex items-center text-sm text-g[#feb900] mb-4">
+          <div className="flex items-center"><FaUser className="mr-2 text-[#feb900]" /><span>{post.author}</span></div>
           <span className="mx-3">/</span>
-          <div className="flex items-center"><FaFolderOpen className="mr-2 text-red-500" /><span>{post.category}</span></div>
+          <div className="flex items-center"><FaFolderOpen className="mr-2 text-[#feb900]" /><span>{post.category}</span></div>
         </div>
         <p className="text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
         <hr className="my-4"/>
-        <a href={post.link} className="font-bold text-red-600 hover:text-red-700 flex items-center self-start">
+        <a href={post.link} className="font-bold text-[#feb900] hover:text-gray-600 flex items-center self-start">
           {/* Use the translated prop here */}
           <span>{readMoreText}</span>
           <HiArrowRight className="ml-2" />

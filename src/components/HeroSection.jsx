@@ -1,174 +1,86 @@
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next'; // Import the hook
-import { FaChevronLeft, FaChevronRight, FaPause, FaPlay } from 'react-icons/fa';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { FaCalculator, FaClock, FaGem } from 'react-icons/fa';
 
-// --- IMPORT IMAGES (The Modern Way) ---
-// Make sure these paths are correct for your project structure
-import heroImg1 from '../assets/img/hero-carousel/hero-carousel-1.jpg';
-import heroImg4 from '../assets/img/hero-carousel/hero-carousel-4.jpg';
-import heroImg5 from '../assets/img/hero-carousel/hero-carousel-5.jpg';
+// Import your building/architecture image
+import heroStaticImg from '../assets/img/hero-carousel/hero-carousel-5.png';
 
+const HeroStatic = () => {
+  const { t } = useTranslation();
 
-const HeroCarousel = () => {
-  const { t } = useTranslation(); // Initialize the translation hook
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  // 1. Get the array of hero elements from your JSON file.
+  //    The { returnObjects: true } option is crucial for i18next to give us an array.
+  const heroElements = t('pages.home.heroElements', { returnObjects: true });
 
-  // --- UPDATED CAROUSEL IMAGES ARRAY ---
-  // Now uses the imported image variables
-  const carouselImages = [
-    heroImg1,
-    heroImg4,
-    heroImg5,
+  // 2. Create a matching array of icons. The order MUST match the JSON order.
+  const icons = [
+    <FaCalculator className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />,
+    <FaClock className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />,
+    <FaGem className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
   ];
 
-  // Auto-play functionality
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-    }, 5000); // 5 seconds interval
-
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, carouselImages.length]);
-
-  // Navigation functions
-  const goToSlide = (index) => {
-    setCurrentSlide(index);
-  };
-
-  const goToPrevious = () => {
-    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
-  };
-
-  const goToNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-  };
-
-  const handleGetStarted = () => {
-    document.getElementById('get-started')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <section id="hero" className="relative h-screen overflow-hidden bg-gray-900">
-      {/* Carousel Images */}
+    <section id="hero" className="relative min-h-screen overflow-hidden bg-gray-900">
+      {/* Static Background Image */}
       <div className="absolute inset-0">
-        {carouselImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img
-              src={image}
-              alt={`Hero slide ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
-            {/* Dark overlay for better text contrast */}
-            <div className="absolute inset-0 bg-black/50"></div>
-          </div>
-        ))}
-      </div>
-
-      {/* Animated birds/elements overlay */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 opacity-20">
-          {[...Array(15)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute text-gray-300 text-xs animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 2}s`
-              }}
-            >
-              ✈
-            </div>
-          ))}
-        </div>
+        <img
+          src={heroStaticImg}
+          alt="Modern buildings and architecture"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 h-full flex items-center justify-center">
+      <div className="relative z-10 min-h-screen flex items-center justify-center py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              {t('pages.home.heroTitle1')}
-              <br />
-              <span className="text-white">{t('pages.home.heroTitle2')}</span>
+          <div className="text-center max-w-5xl mx-auto">
+            {/* Main Title */}
+            <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-tight">
+              <span className="block mb-2">{t('pages.home.heroTitle1')}</span>
+              <span className="block text-white">{t('pages.home.heroTitle2')}</span>
             </h1>
 
-            {/* Red accent line (Corrected color) */}
-            <div className="w-20 h-1 bg-red-500 mx-auto mb-8"></div>
+            {/* Yellow accent line */}
+            <div className="w-16 sm:w-20 lg:w-24 h-1 bg-[#feb900] mx-auto mb-6 sm:mb-8"></div>
 
-            <p className="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
+            {/* Description */}
+            <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-200 mb-12 sm:mb-16 max-w-4xl mx-auto leading-relaxed px-4">
               {t('pages.home.heroDescription')}
             </p>
 
-            {/* Get Started Button */}
-            <button
-              onClick={handleGetStarted}
-              className="bg-red-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              {t('pages.home.cta')}
-            </button>
-           
+            {/* 
+              ****************************************************
+              *** MODIFIED SECTION - NOW FULLY DYNAMIC ***
+              ****************************************************
+              Instead of three separate divs, we now map over the heroElements array.
+              This makes the code cleaner and ensures it changes with the language.
+            */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-6xl mx-auto">
+              {heroElements.map((element, index) => (
+                <div key={element.title} className="text-center group">
+                  <div className="mb-4 sm:mb-6 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
+                    <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-200 text-[#feb900] transition-colors duration-300 group-hover:bg-[#feb900] group-hover:text-white">
+                      {/* Get the correct icon from our array using its index */}
+                      {icons[index]}
+                    </div>
+                  </div>
+                  {/* Use the dynamic title from the JSON file */}
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3">
+                    {element.title}
+                  </h3>
+                  {/* Use the dynamic subtitle from the JSON file */}
+                  <p className="text-gray-300 text-sm sm:text-base lg:text-lg">
+                    {element.subtitle}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Carousel Navigation Controls */}
-      <div className="absolute inset-0 flex items-center justify-between px-4 sm:px-8 z-20 pointer-events-none">
-        <button
-          onClick={goToPrevious}
-          className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white/30 pointer-events-auto"
-          aria-label={t('common.previousSlide')}
-        >
-          <FaChevronLeft className="w-6 h-6 sm:w-7 sm:h-7" />
-        </button>
-        <button
-          onClick={goToNext}
-          className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-white/30 pointer-events-auto"
-          aria-label={t('common.nextSlide')}
-        >
-          <FaChevronRight className="w-6 h-6 sm:w-7 sm:h-7" />
-        </button>
-      </div>
-
-      {/* Carousel Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="flex space-x-3">
-          {carouselImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 ${
-                index === currentSlide
-                  ? 'bg-red-500 scale-125' // (Corrected color)
-                  : 'bg-white/50 hover:bg-white/70'
-              }`}
-              aria-label={t('common.goToSlide', { index: index + 1 })}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Auto-play control */}
-      <div className="absolute top-4 right-4 z-20">
-        <button
-          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-          className="w-10 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/50"
-          aria-label={isAutoPlaying ? t('common.pauseSlideshow') : t('common.playSlideshow')}
-        >
-          {isAutoPlaying ? <FaPause className="w-4 h-4" /> : <FaPlay className="w-4 h-4" />}
-        </button>
       </div>
     </section>
   );
 };
 
-export default HeroCarousel;
+export default HeroStatic;

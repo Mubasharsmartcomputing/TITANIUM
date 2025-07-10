@@ -9,7 +9,7 @@ import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 const InfoCard = ({ icon, title, children }) => (
   <div className="bg-white p-6 rounded-2xl shadow-xl flex flex-col items-center text-center h-full">
     <div className="icon-wrapper mb-4">
-      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-red-500 transition-colors duration-300 group-hover:bg-red-500 group-hover:text-white">
+      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-[#feb900] transition-colors duration-300 group-hover:bg-[#feb900] group-hover:text-white">
         {icon}
       </div>
     </div>
@@ -50,9 +50,11 @@ const ContactPage = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
+              {/* --- 1. UPDATED GERMAN ADDRESS (MUNICH) --- */}
               <InfoCard icon={<FiMapPin className="h-6 w-6" />} title={t('pages.contact.infoCards.address.title')}>
                 <p>{t('pages.contact.infoCards.address.value')}</p>
               </InfoCard>
+              {/* --- GERMAN ADDRESS END --- */}
             </motion.div>
             
             <motion.div 
@@ -88,14 +90,16 @@ const ContactPage = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7 }}
             >
+              {/* --- 2. UPDATED GOOGLE MAP FOR MUNICH --- */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192697.7728347898!2d28.87209618991487!3d41.00498229971274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2sIstanbul%2C%20Turkey!5e0!3m2!1sen!2sus!4v1676962243765!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.825227896173!2d11.57303031564881!3d48.13722297922339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e758a1b5d6f37%3A0x920a671399878298!2sMarienplatz%2C%2080331%20M%C3%BCnchen%2C%20Germany!5e0!3m2!1sen!2sus!4v1695649528115!5m2!1sen!2sus"
                 className="w-full h-full border-0 rounded-2xl shadow-xl min-h-[400px]"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps Location - Istanbul, Turkey"
+                title="Google Maps Location - Munich, Germany"
               ></iframe>
+              {/* --- GERMAN MAP END --- */}
             </motion.div>
 
             <motion.div 
@@ -107,17 +111,17 @@ const ContactPage = () => {
             >
               <form action="#" method="post" className="space-y-6 flex flex-col h-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <input type="text" name="name" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.name')} required />
-                  <input type="email" name="email" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.email')} required />
+                  <input type="text" name="name" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#feb900] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.name')} required />
+                  <input type="email" name="email" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#feb900] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.email')} required />
                 </div>
                 <div>
-                  <input type="text" name="subject" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.subject')} required />
+                  <input type="text" name="subject" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#feb900] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.subject')} required />
                 </div>
                 <div className="flex-grow">
-                  <textarea name="message" rows="6" className="w-full h-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-400 focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.message')} required></textarea>
+                  <textarea name="message" rows="6" className="w-full h-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#feb900] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.message')} required></textarea>
                 </div>
                 <div className="text-center">
-                  <button type="submit" className="bg-red-500 text-white font-bold py-3 px-8 rounded-full hover:bg-red-600 transition-colors duration-300">{t('pages.contact.form.submitButton')}</button>
+                  <button type="submit" className="bg-[#feb900] text-white font-bold py-3 px-8 rounded-full hover:bg-[#d8ba67] transition-colors duration-300">{t('pages.contact.form.submitButton')}</button>
                 </div>
               </form>
             </motion.div>

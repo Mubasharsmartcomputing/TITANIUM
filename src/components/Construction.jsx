@@ -43,7 +43,7 @@ const ConstructionCard = ({ image, title, description }) => {
                 </div>
                 <div className="xl:col-span-7 flex items-center">
                     <div className="p-8">
-                        <h4 className="text-2xl font-bold text-gray-800 mb-3 hover:text-red-600 transition-colors">
+                        <h4 className="text-2xl font-bold text-gray-800 mb-3 hover:text-[#feb900] transition-colors">
                             <a href="#">{title}</a>
                         </h4>
                         <p className="text-gray-600">{description}</p>

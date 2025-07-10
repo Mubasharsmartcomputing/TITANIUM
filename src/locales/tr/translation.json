@@ -29,16 +29,107 @@
       "heroTitle1": "İnşa Etmek İstediğiniz Her Şeyin",
       "heroTitle2": "Temeli",
       "heroDescription": "Titanium Mühendislik Proje Yönetimi olarak, inşaat mühendisliğindeki uygulamalı deneyimimizi projelerinize taşıyoruz. Zamanlama ve saha koordinasyonundan dokümantasyon ve resmi makamlarla ilişkilere kadar her ayrıntıyı hassasiyetle yönetiyoruz. Bavyera'da ve Almanya genelinde hizmet vererek, planlama ofislerinin ve inşaat şirketlerinin güvenle inşa etmelerine yardımcı oluyoruz.",
-      "methodology": {
-        "title": "Metodolojimiz: Güvenin Temeli",
-        "subtitle": "Başarıyı dört temel üzerine inşa ediyor, projenizin hassasiyet, dürüstlük ve net iletişimle yönetilmesini sağlıyoruz.",
-        "tabs": [
-          { "title": "Finansal Kontrol", "heading": "Proje Başarısı için Finansal Kontrolde Uzmanlaşma", "description": "Baştan sona finansal bütünlüğü korumak için titiz fatura doğrulaması ve sıkı proje kontrolleri sağlıyoruz.", "points": ["Bütçeye Uyum Takibi", "Değer Mühendisliği", "Fatura ve Ödeme Doğrulaması"] },
-          { "title": "Risk Azaltma", "heading": "Riskleri Proaktif Olarak Azaltma, Sorunsuz İlerleme Sağlama", "description": "Proaktif yaklaşımımız, potansiyel sorunları maliyetli problemlere dönüşmeden önce belirleyerek daha sorunsuz bir proje akışı sağlar.", "points": ["Proaktif Problem Çözme", "Güvenlik ve Uygunluk Denetimleri", "Sözleşmesel Güvenceler"] },
-          { "title": "Kalite Güvencesi", "heading": "Tavizsiz Kalite Standartlarını Sürdürme", "description": "Tüm malzemelerin, işçiliğin ve nihai sonuçların tam olarak şartnamenize uygun olmasını sağlayarak en yüksek standartları koruyoruz.", "points": ["Malzeme Kalite Kontrolleri", "İşçilik Denetimleri", "Projelere Uygunluk"] },
-          { "title": "Açık İletişim", "heading": "Tek ve Bütüncül İletişim Noktanız", "description": "Tek iletişim noktanız olarak hizmet vererek, projenin her aşamasında tüm paydaşların uyumlu ve bilgili olmasını sağlıyoruz.", "points": ["Düzenli İlerleme Raporları", "Paydaş Toplantılarını Kolaylaştırma", "Merkezi Bilgi Platformu"] }
-        ]
-      },
+    
+
+"heroElements": [
+  { "title": "Maliyet"},
+  { "title": "Zaman / Program"},
+  { "title": "Kalite"}
+],
+"methodology": {
+  "title": "Metodolojimiz: Güvenin Temeli",
+  "subtitle": "Başarıyı dört temel üzerine inşa ediyor, projenizin hassasiyet, dürüstlük ve net iletişimle yönetilmesini sağlıyoruz.",
+  "cards": [
+    {
+      "title": "İnşaat fazı planlama ve zamanlama",
+      "heading": "Faz Planlama ve Zamanlamada Uzmanlaşma",
+      "description": "Her proje yönünü senkronize eden ayrıntılı yol haritaları oluşturuyoruz. Gelişmiş zamanlama metodolojimiz, temel atımından son teslime kadar darboğazları önler ve iş akışını optimize eder.",
+      "points": [
+        "Kilometre taşı takibi ile gelişmiş CPM zamanlaması",
+        "Hava durumuna uyarlanabilir zaman çizelgesi ayarlamaları",
+        "Kaynak dengeleme ve çatışma çözümü",
+        "Gerçek zamanlı ilerleme görselleştirme panoları"
+      ]
+    },
+    {
+      "title": "Taşeron koordinasyonu",
+      "heading": "Uzman Koordinasyonu ile Her Ticareti Uyumlaştırma",
+      "description": "Kaosu uyuma dönüştürün. Birden fazla ticareti sorunsuz bir şekilde düzenleyerek, her uzmanın uzmanlığını tam doğru anda katkıda bulunmasını sağlıyoruz.",
+      "points": [
+        "Çoklu ticaret sıralaması ve arayüz yönetimi",
+        "Dijital koordinasyon platformları ve iletişim merkezleri",
+        "Performans karşılaştırması ve kalite puan kartları",
+        "Çatışma arabuluculuğu ve çözüm protokolleri"
+      ]
+    },
+    {
+      "title": "Şantiye dokümantasyonu",
+      "heading": "Değişmez Bir Dijital Proje Kaydı Oluşturma",
+      "description": "Kapsamlı sistemimiz her ayrıntıyı, kararı ve kilometre taşını yakalayarak gelecekteki referans ve yasal koruma için değişmez bir dijital kayıt oluşturur.",
+      "points": [
+        "Zaman damgası ve coğrafi etiketleme ile 360° fotoğraf dokümantasyonu",
+        "Yapay zeka destekli içgörülerle otomatik ilerleme raporları",
+        "Uygunluk denetim izleri ve yasal başvurular",
+        "Anında arama özellikli bulut tabanlı arşiv"
+      ]
+    },
+    {
+      "title": "Şantiye yönetimine destek",
+      "heading": "Şantiye Yönetim Yeteneklerinizi Güçlendirme",
+      "description": "Yönetim yeteneklerinizi özel desteğimizle güçlendirin. Karmaşık zorlukların üstesinden gelmek ve ivmeyi korumak için ek uzmanlık ve insan gücü sağlıyoruz.",
+      "points": [
+        "Teknik problem çözme ve mühendislik desteği",
+        "Güvenlik protokolü uygulaması ve eğitimi",
+        "Kalite kontrol denetimleri ve test koordinasyonu",
+        "Acil durum müdahalesi ve kriz yönetimi"
+      ]
+    },
+    {
+      "title": "Planlama ve ihale",
+      "heading": "Stratejik İhale ile En İyi Değeri Güvence Altına Alma",
+      "description": "İnşaat tedarik dünyasında güvenle gezinin. Uzmanlığımız, kalite standartlarını ve zaman taahhütlerini korurken en iyi değeri elde etmenizi sağlar.",
+      "points": [
+        "Pazar analizi ve rekabetçi teklif stratejileri",
+        "Teknik şartname geliştirme ve optimizasyonu",
+        "Tedarikçi yeterlilik ve ön yeterlilik süreçleri",
+        "Sözleşme yapılandırma ve risk dağılım çerçeveleri"
+      ]
+    },
+    {
+      "title": "Yetkililer/denetçilerle işbirliği",
+      "heading": "Yetkililer ve Denetçilerle Köprü Kurma",
+      "description": "İnşaat gerçekliği ile yasal gereklilikler arasındaki boşluğu doldurarak, projenizin tüm uyum standartlarını karşılamasını sağlarken olumlu ilişkiler sürdürüyoruz.",
+      "points": [
+        "İzin başvuru stratejisi ve sunum yönetimi",
+        "Denetçi ilişki kurma ve iletişim protokolleri",
+        "Yönetmelik yorumlama ve uygunluk doğrulaması",
+        "Varyans talepleri ve onay müzakereleri"
+      ]
+    },
+    {
+      "title": "Fatura doğrulaması",
+      "heading": "Bütçenizi Titiz Doğrulama ile Koruma",
+      "description": "Bütçenizi titiz fatura doğrulaması ile koruyun. Finans uzmanlarımız, fazla ücretlendirmeleri önlemek ve sözleşmeye uygunluğu sağlamak için her kalemi inceler.",
+      "points": [
+        "Sözleşmelere göre satır satır maliyet doğrulaması",
+        "Değişiklik emri doğrulama ve onay iş akışları",
+        "Ödeme kilometre taşı takibi ve serbest bırakma yetkisi",
+        "Bütçe sapma analizi ve tahmin uyarıları"
+      ]
+    },
+    {
+      "title": "Proje yönetimi",
+      "heading": "Projeleri Yeni Nesil Yönetimle Birleştirme",
+      "description": "Tüm unsurları tutarlı bir stratejide birleştiren yeni nesil yönetimi deneyimleyin. Zaman, maliyet ve kaliteyi kontrol altında tutarak beklentileri aşan projeler sunuyoruz.",
+      "points": [
+        "Entegre proje kontrol sistemleri ve panoları",
+        "Paydaş iletişimi ve raporlama protokolleri",
+        "Risk azaltma stratejileri ve acil durum planlaması",
+        "Proje sonrası analiz ve öğrenilen dersler"
+      ]
+    }
+  ]
+},
       "constructions": {
         "title": "Ana İnşaat Sektörlerimiz",
         "subtitle": "Zorlu inşaat ortamlarının geniş bir yelpazesinde uzmanlık.",
@@ -112,41 +203,48 @@
       }
     },
     "services": {
-      "title": "Hizmetlerimiz",
-      "readMore": "Devamını Oku",
-      "cards": [
-        { "title": "İnşaat Programlama", "description": "Kritik yol programları geliştirip yönetiyor, iş akışını optimize ediyor ve tüm proje kilometre taşlarının hassasiyetle karşılanmasını sağlıyoruz." },
-        { "title": "Alt Yüklenici Koordinasyonu", "description": "Merkezi iletişim noktanız olarak hareket ediyor, uyumlu ve verimli bir çalışma sahası yaratmak için tüm meslek gruplarını senkronize ediyoruz." },
-        { "title": "Saha Dokümantasyonu", "description": "Titiz, gerçek zamanlı dokümantasyon, netlik, hesap verebilirlik ve risk azaltma sağlayarak kapsamlı bir proje kaydı sunar." },
-        { "title": "Yönetim Desteği", "description": "Mevcut ekibinizi uzman denetimi, teknik rehberlik ve her türlü zorluğun üstesinden gelmek için uygulamalı destekle güçlendiriyoruz." },
-        { "title": "Planlama ve İhale", "description": "Planlama ve ihaleye yönelik stratejik yaklaşımımız, en nitelikli ortakları mümkün olan en iyi değerde güvence altına almanızı sağlar." },
-        { "title": "Resmi Kurumlarla İşbirliği", "description": "Alman inşaat yönetmeliklerinde ustalıkla yol alıyor, projenizin ilerlemesini sağlamak için yetkililerle tüm iletişimi yönetiyoruz." }
-      ]
+  "title": "Hizmetlerimiz",
+  "readMore": "Devamını Oku",
+  "cards": [
+    { 
+      "title": "Faz ve Program Planlama", 
+      "description": "Projenizin zamanında tamamlanmasını sağlamak için detaylı programlar oluşturuyor ve her inşaat fazını planlıyoruz." 
     },
-    "consultant": {
-      "profile": {
-        "name": "Andreas Keller",
-        "role": "Kurucu ve Lider İnşaat Mühendisi, Titanium Engineering",
-        "bio": "15 yıllık saha deneyimimle, parlak tasarım ile kusursuz uygulama arasındaki kritik boşluğu doldurmak için Titanium Engineering'i kurdum. Tutkum, karmaşıklığa düzen getirmek ve her projenin kalite, verimlilik ve sarsılmaz dürüstlüğün bir kanıtı olmasını sağlamaktır. Uygulamalı yaklaşımım, üstlendiğimiz her projede derinden yer aldığım ve müşterilerimize doğrudan bir ortak olarak hizmet ettiğim anlamına gelir.",
-        "ctaButton": "İletişime Geçin"
-      },
-      "skills": {
-        "title": "Temel Uzmanlık Alanları",
-        "subtitle": "Proje başarısını garanti altına alan özel beceriler.",
-        "items": [
-          "Proje Zamanlama ve Yönetimi",
-          "Risk Azaltma ve Problem Çözme",
-          "Bütçe Kontrolü ve Mali Denetim",
-          "Mevzuat Uyumu (Bauamt)",
-          "Alt Yüklenici ve Paydaş Koordinasyonu"
-        ]
-      },
-      "articles": {
-        "title": "Son Analizler",
-        "subtitle": "Proje yönetiminin ön saflarından bilgi paylaşımı.",
-        "readMore": "Makaleyi Oku"
-      }
+    { 
+      "title": "Alt Yüklenici Koordinasyonu", 
+      "description": "Sahada tüm alt yüklenicileri sorunsuz bir şekilde yönetiyor ve koordine ediyor, verimli iş akışı ve yüksek kalite sağlıyoruz." 
     },
+    { 
+      "title": "Saha Dokümantasyonu", 
+      "description": "Net bir proje kaydı için tüm saha ilerlemesi, faaliyetleri ve önemli kilometre taşlarının kapsamlı ve tutarlı dokümantasyonunu sağlıyoruz." 
+    },
+    { 
+      "title": "Yönetim Desteği", 
+      "description": "İnşaat yönetim ekibinize uzman, uygulamalı destek sunuyor, günlük operasyonlar ve denetim konularında yardımcı oluyoruz." 
+    },
+    { 
+      "title": "Planlama ve İhale", 
+      "description": "İlk tasarımlardan rekabetçi yüklenici tekliflerinin alınmasına kadar eksiksiz planlama ve ihale sürecini yönetiyoruz." 
+    },
+    { 
+      "title": "Resmi Kurumlar ve Müfettiş İrtibatı", 
+      "description": "İzinlerin alınması ve tam uyumun sağlanması için devlet kurumları ve müfettişlerle birincil irtibat noktası olarak hareket ediyoruz." 
+    },
+    { 
+      "title": "Fatura Denetimi", 
+      "description": "Projeyle ilgili tüm faturaları dikkatli bir şekilde inceliyor ve doğruluyoruz, doğruluk ve sıkı bütçe kontrolü sağlıyoruz." 
+    },
+    { 
+      "title": "Proje Kontrolü", 
+      "description": "İlerlemeyi izlemek, riskleri yönetmek ve projeyi başarıya yönlendirmek için güçlü proje kontrol sistemleri uyguluyoruz." 
+    },
+    { 
+      "title": "Kalite Güvencesi", 
+      "description": "Nihai yapının en yüksek kalite standartlarını karşılamasını sağlıyor ve size, müşteriye sorunsuz bir teslim süreci yönetiyoruz." 
+    }
+  ]
+},
+  
     "projects": {
       "title": "Projelerimiz",
       "filters": [
@@ -174,20 +272,20 @@
     },
     "contact": {
       "title": "Bize Ulaşın",
-      "subtitle": "Yardımcı olmak ve aklınıza takılan her türlü soruyu yanıtlamak için buradayız. Sizden haber bekliyoruz.",
-      "infoCards": {
-        "address": {
-          "title": "Adres",
-          "value": "Taksim Meydanı, Gümüşsuyu, İstanbul, Türkiye"
-        },
-        "phone": {
-          "title": "Bizi Arayın",
-          "value": "+90 212 123 45 67"
-        },
-        "email": {
-          "title": "Bize E-posta Gönderin",
-          "value": "contact@istanbul-construction.com"
-        }
+    "subtitle": "Yardımcı olmak ve aklınıza takılan her türlü soruyu yanıtlamak için buradayız. Sizden haber bekliyoruz.",
+    "infoCards": {
+      "address": {
+        "title": "Adres",
+        "value": "Kurfürstendamm 21, 10719 Berlin, Deutschland"
+      },
+      "phone": {
+        "title": "Bizi Arayın",
+        "value": "+49 30 12345678"
+      },
+      "email": {
+        "title": "Bize E-posta Gönderin",
+        "value": "kontakt@baugesellschaft-berlin.de"
+      }
       },
       "form": {
         "placeholders": {
