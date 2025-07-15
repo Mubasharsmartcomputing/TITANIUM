@@ -14,9 +14,9 @@ const HeroStatic = () => {
 
   // 2. Create a matching array of icons. The order MUST match the JSON order.
   const icons = [
-    <FaCalculator className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />,
-    <FaClock className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />,
-    <FaGem className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+    <FaCalculator className="w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />,
+    <FaClock className="w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />,
+    <FaGem className="w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
   ];
 
   return (
@@ -51,26 +51,25 @@ const HeroStatic = () => {
 
             {/* 
               ****************************************************
-              *** MODIFIED SECTION - NOW FULLY DYNAMIC ***
+              *** IMPROVED RESPONSIVE GRID SECTION ***
               ****************************************************
-              Instead of three separate divs, we now map over the heroElements array.
-              This makes the code cleaner and ensures it changes with the language.
+              Better mobile responsiveness with proper spacing and sizing
             */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10 max-w-6xl mx-auto px-4 sm:px-0">
               {heroElements.map((element, index) => (
                 <div key={element.title} className="text-center group">
-                  <div className="mb-4 sm:mb-6 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
-                    <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-200 text-[#feb900] transition-colors duration-300 group-hover:bg-[#feb900] group-hover:text-white">
+                  <div className="mb-6 sm:mb-6 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
+                    <div className="flex items-center justify-center h-20 w-20 sm:h-16 sm:w-16 lg:h-18 lg:w-18 rounded-full bg-gray-200 text-[#feb900] transition-colors duration-300 group-hover:bg-[#feb900] group-hover:text-white shadow-lg">
                       {/* Get the correct icon from our array using its index */}
                       {icons[index]}
                     </div>
                   </div>
                   {/* Use the dynamic title from the JSON file */}
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2 sm:mb-3">
+                  <h3 className="text-xl sm:text-xl md:text-lg lg:text-2xl font-bold text-white mb-3 sm:mb-3 px-2">
                     {element.title}
                   </h3>
                   {/* Use the dynamic subtitle from the JSON file */}
-                  <p className="text-gray-300 text-sm sm:text-base lg:text-lg">
+                  <p className="text-gray-300 text-base sm:text-base md:text-sm lg:text-lg leading-relaxed px-2 max-w-xs mx-auto">
                     {element.subtitle}
                   </p>
                 </div>

@@ -9,7 +9,7 @@ import { BsCheckCircle, BsPlayCircle, BsEmojiSmile, BsJournalRichtext, BsHeadset
 import { FaUsers, FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 // --- IMPORT IMAGES ---
-import aboutImg from '../assets/img/about.jpg';
+import aboutImg from '../assets/img/about.png';
 
 // 2. Data for non-translatable content. The order MUST match the JSON.
 // const staticTeamData = [
