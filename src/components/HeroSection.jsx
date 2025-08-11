@@ -20,7 +20,7 @@ const HeroStatic = () => {
   ];
 
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden bg-gray-900">
+    <section id="hero" className="relative bg-[#FDF9F1] min-h-screen overflow-hidden ">
       {/* Static Background Image */}
       <div className="absolute inset-0">
         <img

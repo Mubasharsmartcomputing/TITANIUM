@@ -10,7 +10,7 @@ import ServiceComponent from '../components/ServiceComponent'; // Adjust path if
 // --- MAIN SERVICES PAGE COMPONENT ---
 const ServicesPage = () => {
   return (
-    <main className="bg-white">
+    <main>
       
      
       {/* RENDER THE SEPARATE SERVICE CONTENT COMPONENT */}

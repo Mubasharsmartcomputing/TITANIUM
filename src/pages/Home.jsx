@@ -8,7 +8,7 @@ import TabSection from "../components/TabSection";
 
 const Home = () => {
     return (
-         <div>
+         <div className="bg-[#FDF9F1]">
             <HeroSection/>
             <TabSection/> 
             {/* <Constructions/> */}

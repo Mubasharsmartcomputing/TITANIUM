@@ -4,15 +4,14 @@ import React from 'react';
 
 import Testimonials from '../components/Testimonials';   // Adjust path if needed
 
-// --- IMPORT IMAGES ---
-import pageTitleBg from '../assets/img/page-title-bg.jpg';
+// --- IMPORT IMAGES ---import pageTitleBg from '../assets/img/page-title-bg.jpg';
 import AboutComponent from '../components/AboutComponent';
 
 
 // --- MAIN ABOUT PAGE COMPONENT ---
 const About = () => {
   return (
-    <main className="bg-white">
+    <main>
      
 
       {/* RENDER THE SEPARATE ABOUT CONTENT COMPONENT */}

@@ -64,7 +64,7 @@ const TabSection = () => {
     const { t } = useTranslation(); // Already initialized, perfect!
 
     return (
-        <section id="features" className="py-16 lg:py-24 bg-gray-50">
+        <section id="features" className="py-16 lg:py-24 bg-[#FDF9F1]">
             <div className="container mx-auto px-4">
             
                 {/* Section Title (Already translated, no changes needed) */}

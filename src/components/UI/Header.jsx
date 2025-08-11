@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { HiGlobeAlt, HiSearch, HiMenu, HiX, HiChevronDown } from "react-icons/hi";
-import logo from '../../assets/img/Logo_for_Titanium_Innovations_Company-removebg-preview.png';
+import logo from '../../assets/img/Logo_for_Titanium_Engineering_Project_Management.png';
 
 export default function Header() {
   const { t, i18n } = useTranslation();
@@ -48,14 +48,14 @@ export default function Header() {
     <>
       <header className="bg-white shadow-md sticky top-0 z-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between h-20 lg:h-20">
             
             {/* Logo */}
             <NavLink to="/">
               <img 
                 src={logo} 
                 alt="Titanium Engineering Logo" 
-                className="h-22 w-28 lg:h-36 md:w-48"
+                className="h-26 w-28 lg:h-36 md:w-40"
               />
             </NavLink>
 

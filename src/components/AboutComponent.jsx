@@ -76,7 +76,7 @@ const AboutComponent = () => {
   return (
     <>
       {/* Our Story Section */}
-      <section id="about" className="py-16 lg:py-24">
+      <section id="about" className="py-16 bg-[#FDF9F1] lg:py-24">
         <div className="container mx-auto px-4">
           <div className="relative">
             <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">

@@ -120,7 +120,7 @@ const ServiceComponent = () => {
     <>
       <section
         id="services"
-        className="py-16 lg:py-24 gap-8 flex flex-col justify-center items-center text-center bg-gray-50"
+        className="py-16 bg-[#FDF9F1] lg:py-24 gap-8 flex flex-col justify-center items-center text-center"
       >
         <motion.h1
           className="text-4xl font-bold text-gray-900"

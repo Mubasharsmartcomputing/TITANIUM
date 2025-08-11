@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaArrowUp } from 'react-icons/fa';
-import logo from '../../assets/img/FooterLogo.png';
+import logo from '../../assets/img/Logo_for_Titanium_Engineering_Project_Management.png';
 
 // --- IMPORT THE BACKGROUND IMAGE ---
 import footerBgImage from '../../assets/img/footer-bg.jpg';
