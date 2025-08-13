@@ -67,7 +67,7 @@ const Footer = () => {
           
           {/* Column 1: Company Info & Socials */}
           <div className="lg:col-span-2 md:ml-32 ml-2"> 
-    <NavLink to="/" className="flex items-center">
+    <NavLink to="/" className="flex items-start pr-20">
                  <img 
                    src={logo} 
                    alt="Titanium Engineering Logo" 
@@ -82,10 +82,10 @@ const Footer = () => {
               </p>
               <div className="space-y-1">
                 <p className="text-gray-400">
-                  <span className="font-semibold text-white">{t('footer.phoneLabel')}</span> +49 (0)89 1234567
+                  <span className="font-semibold text-white">{t('footer.phoneLabel')}</span> +49 176 62499547
                 </p>
                 <p className="text-gray-400">
-                  <span className="font-semibold text-white">{t('footer.emailLabel')}</span> info@titanium-pm.de
+                  <span className="font-semibold text-white">{t('footer.emailLabel')}</span> info@titaniumengineeringpm.com
                 </p>
               </div>
             </div>

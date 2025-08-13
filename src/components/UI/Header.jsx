@@ -55,7 +55,7 @@ export default function Header() {
               <img 
                 src={logo} 
                 alt="Titanium Engineering Logo" 
-                className="h-26 w-28 lg:h-36 md:w-40"
+                className="h-20 w-24 lg:h-32 lg:w-36"
               />
             </NavLink>
 
@@ -68,8 +68,8 @@ export default function Header() {
                   className={({ isActive }) =>
                     `transition-colors duration-200 font-medium text-sm xl:text-base uppercase tracking-wider px-2 py-1 border-b-2
                      ${isActive
-                       ? 'text-[#feb900] border-[#feb900]'
-                       : 'text-gray-700 border-transparent hover:text-[#fcd97b]'
+                       ? 'text-[#FFD700] border-[#FFD700]'
+                       : 'text-gray-700 border-transparent hover:text-[#FFD700]'
                      }`
                   }
                 >
@@ -84,7 +84,7 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={toggleLanguageDropdown}
-                  className="flex items-center space-x-2 text-gray-700 hover:text-[#feb900] transition-colors duration-200 px-2 py-1 rounded-md"
+                  className="flex items-center space-x-2 text-gray-700 hover:text-[#FFD700] transition-colors duration-200 px-2 py-1 rounded-md"
                 >
                   <span className="text-sm font-medium">{i18n.language.toUpperCase()}</span>
                   <HiGlobeAlt size={16} />
@@ -111,7 +111,7 @@ export default function Header() {
               </div>
 
               <button 
-                className="text-[#feb900] hover:text-[#d3c07e] transition-colors duration-200"
+                className="text-[#FFD700] hover:text-[#d3c07e] transition-colors duration-200"
                 title={t('common.search')}
               >
                 <HiSearch size={20} />

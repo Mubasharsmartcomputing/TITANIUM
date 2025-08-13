@@ -306,7 +306,9 @@
       },
       "email": {
         "title": "Email Us",
-        "value": "kontakt@baugesellschaft-berlin.de"
+        "value": "info@titaniumengineeringpm.com"
+
+
       }
       },
       "form": {
@@ -365,7 +367,7 @@
         "Imprint"
       ]
     },
-    "copyright": "© Copyright {{companyName}} All Rights Reserved",
+    "copyright": "© Copyright www.titaniumengineeringpm.com  All Rights Reserved",
     "scrollToTop": "Scroll to top"
   }
 }

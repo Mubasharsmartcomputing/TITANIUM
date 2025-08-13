@@ -42,7 +42,7 @@ const HeroStatic = () => {
             </h1>
 
             {/* Yellow accent line */}
-            <div className="w-16 sm:w-20 lg:w-24 h-1 bg-[#feb900] mx-auto mb-6 sm:mb-8"></div>
+            <div className="w-16 sm:w-20 lg:w-24 h-1 bg-[#FFD700] mx-auto mb-6 sm:mb-8"></div>
 
             {/* Description */}
             <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-200 mb-12 sm:mb-16 max-w-4xl mx-auto leading-relaxed px-4">
@@ -59,7 +59,7 @@ const HeroStatic = () => {
               {heroElements.map((element, index) => (
                 <div key={element.title} className="text-center group">
                   <div className="mb-6 sm:mb-6 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
-                    <div className="flex items-center justify-center h-20 w-20 sm:h-16 sm:w-16 lg:h-18 lg:w-18 rounded-full bg-gray-200 text-[#feb900] transition-colors duration-300 group-hover:bg-[#feb900] group-hover:text-white shadow-lg">
+                    <div className="flex items-center justify-center h-20 w-20 sm:h-16 sm:w-16 lg:h-12 lg:w-12 rounded-full bg-gray-600 text-[#FFD700] transition-colors duration-300 group-hover:bg-[#FFD700] group-hover:text-gray-800 shadow-lg">
                       {/* Get the correct icon from our array using its index */}
                       {icons[index]}
                     </div>
