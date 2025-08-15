@@ -47,7 +47,7 @@ const MethodologyCard = ({ image, title, heading, description, points }) => {
                             {/* Check if points exists and is an array before mapping */}
                             {Array.isArray(points) && points.map((point, index) => (
                                 <li key={index} className="flex items-start">
-                                    <BsCheck2All className="text-[#feb900] font-bold mr-3 mt-1 flex-shrink-0" size={16} />
+                                    <BsCheck2All className="text-[#FFD700] font-bold mr-3 mt-1 flex-shrink-0" size={16} />
                                     <span className="text-gray-700 text-sm leading-tight">{point}</span>
                                 </li>
                             ))}

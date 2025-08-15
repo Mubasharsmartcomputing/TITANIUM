@@ -20,32 +20,25 @@ const HeroStatic = () => {
   ];
 
   return (
-    <section id="hero" className="relative bg-[#FDF9F1] min-h-screen overflow-hidden ">
-      {/* Static Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src={heroStaticImg}
-          alt="Modern buildings and architecture"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60"></div>
-      </div>
+    <section id="hero" className="relative bg-gradient-to-br from-white via-gray-100 to-[#FFD700] min-h-screen overflow-hidden ">
+      {/* Titanium and Gold Pattern Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-gray-300/20 via-[#FFD700]/10 to-white/30"></div>
 
       {/* Hero Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center py-16 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-5xl mx-auto">
             {/* Main Title */}
-            <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 sm:mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-6 sm:mb-8 leading-tight tracking-tight">
               <span className="block mb-2">{t('pages.home.heroTitle1')}</span>
-              <span className="block text-white">{t('pages.home.heroTitle2')}</span>
+              <span className="block text-gray-800">{t('pages.home.heroTitle2')}</span>
             </h1>
 
             {/* Yellow accent line */}
             <div className="w-16 sm:w-20 lg:w-24 h-1 bg-[#FFD700] mx-auto mb-6 sm:mb-8"></div>
 
             {/* Description */}
-            <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-200 mb-12 sm:mb-16 max-w-4xl mx-auto leading-relaxed px-4">
+            <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-700 mb-12 sm:mb-16 max-w-4xl mx-auto leading-relaxed px-4">
               {t('pages.home.heroDescription')}
             </p>
 
@@ -59,17 +52,17 @@ const HeroStatic = () => {
               {heroElements.map((element, index) => (
                 <div key={element.title} className="text-center group">
                   <div className="mb-6 sm:mb-6 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
-                    <div className="flex items-center justify-center h-20 w-20 sm:h-16 sm:w-16 lg:h-12 lg:w-12 rounded-full bg-gray-600 text-[#FFD700] transition-colors duration-300 group-hover:bg-[#FFD700] group-hover:text-gray-800 shadow-lg">
+                    <div className="flex items-center justify-center h-20 w-20 sm:h-16 sm:w-16 lg:h-12 lg:w-12 rounded-full bg-white text-[#FFD700] transition-colors duration-300 group-hover:bg-[#FFD700] group-hover:text-white shadow-lg border-2 border-gray-300">
                       {/* Get the correct icon from our array using its index */}
                       {icons[index]}
                     </div>
                   </div>
                   {/* Use the dynamic title from the JSON file */}
-                  <h3 className="text-xl sm:text-xl md:text-lg lg:text-2xl font-bold text-white mb-3 sm:mb-3 px-2">
+                  <h3 className="text-xl sm:text-xl md:text-lg lg:text-2xl font-bold text-gray-800 mb-3 sm:mb-3 px-2">
                     {element.title}
                   </h3>
                   {/* Use the dynamic subtitle from the JSON file */}
-                  <p className="text-gray-300 text-base sm:text-base md:text-sm lg:text-lg leading-relaxed px-2 max-w-xs mx-auto">
+                  <p className="text-gray-600 text-base sm:text-base md:text-sm lg:text-lg leading-relaxed px-2 max-w-xs mx-auto">
                     {element.subtitle}
                   </p>
                 </div>

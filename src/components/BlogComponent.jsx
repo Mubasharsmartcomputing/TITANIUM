@@ -31,20 +31,20 @@ const BlogPostCard = ({ post, readMoreText }) => {
     <article className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full group">
       <div className="relative">
         <img src={post.image} alt={post.title} className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" />
-        <span className="absolute bottom-0 right-0 bg-[#feb900] text-white text-sm font-semibold px-4 py-2">{post.date}</span>
+        <span className="absolute bottom-0 right-0 bg-[#FFD700] text-white text-sm font-semibold px-4 py-2">{post.date}</span>
       </div>
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-[#feb900] transition-colors">
+        <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-[#FFD700] transition-colors">
           <a href={post.link}>{post.title}</a>
         </h3>
-        <div className="flex items-center text-sm text-g[#feb900] mb-4">
-          <div className="flex items-center"><FaUser className="mr-2 text-[#feb900]" /><span>{post.author}</span></div>
+        <div className="flex items-center text-sm text-g[#FFD700] mb-4">
+          <div className="flex items-center"><FaUser className="mr-2 text-[#FFD700]" /><span>{post.author}</span></div>
           <span className="mx-3">/</span>
-          <div className="flex items-center"><FaFolderOpen className="mr-2 text-[#feb900]" /><span>{post.category}</span></div>
+          <div className="flex items-center"><FaFolderOpen className="mr-2 text-[#FFD700]" /><span>{post.category}</span></div>
         </div>
         <p className="text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
         <hr className="my-4"/>
-        <a href={post.link} className="font-bold text-[#feb900] hover:text-gray-600 flex items-center self-start">
+        <a href={post.link} className="font-bold text-[#FFD700] hover:text-gray-600 flex items-center self-start">
           {/* Use the translated prop here */}
           <span>{readMoreText}</span>
           <HiArrowRight className="ml-2" />
