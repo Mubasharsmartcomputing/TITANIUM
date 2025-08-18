@@ -61,6 +61,7 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+<<<<<<< HEAD
               {navItems.map((item) => (
                 <NavLink
                   key={item.key}
@@ -76,6 +77,26 @@ export default function Header() {
                   {t(`nav.${item.key}`)}
                 </NavLink>
               ))}
+=======
+              {navItems.map((item) => {
+                const isSpecialItem = item.key === 'about' || item.key === 'services';
+                return (
+                  <NavLink
+                    key={item.key}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `transition-colors duration-200 font-medium text-sm xl:text-base uppercase tracking-wider px-2 py-1 border-b-2
+                       ${isActive
+                         ? isSpecialItem ? 'text-[#FFD700] border-[#FFD700]' : 'text-[#feb900] border-[#feb900]'
+                         : isSpecialItem ? 'text-gray-700 border-transparent hover:text-[#FFD700]' : 'text-gray-700 border-transparent hover:text-[#feb900]'
+                       }`
+                    }
+                  >
+                    {t(`nav.${item.key}`)}
+                  </NavLink>
+                );
+              })}
+>>>>>>> 0a7185db85303d7b274afad3fbb69b7ef8ccdd95
             </nav>
 
             {/* Desktop Right Side Icons */}
@@ -140,6 +161,7 @@ export default function Header() {
           `}
         >
           <nav className="px-4 pt-2 pb-6 space-y-1">
+<<<<<<< HEAD
             {navItems.map((item) => (
               <NavLink
                 key={item.key}
@@ -156,6 +178,27 @@ export default function Header() {
                 {t(`nav.${item.key}`)}
               </NavLink>
             ))}
+=======
+            {navItems.map((item) => {
+              const isSpecialItem = item.key === 'about' || item.key === 'services';
+              return (
+                <NavLink
+                  key={item.key}
+                  to={item.path}
+                  onClick={closeMenu}
+                  className={({ isActive }) =>
+                    `block px-3 py-3 font-medium text-sm uppercase tracking-wider rounded-md transition-colors duration-200
+                     ${isActive
+                       ? isSpecialItem ? 'bg-[#FFD700] text-white' : 'bg-[#feb900] text-white'
+                       : isSpecialItem ? 'text-gray-700 hover:text-[#FFD700] hover:bg-red-50' : 'text-gray-700 hover:text-[#feb900] hover:bg-red-50'
+                     }`
+                  }
+                >
+                  {t(`nav.${item.key}`)}
+                </NavLink>
+              );
+            })}
+>>>>>>> 0a7185db85303d7b274afad3fbb69b7ef8ccdd95
             
             {/* Mobile Language Switcher */}
             <div className="pt-4 mt-4 border-t border-gray-200 px-3">
