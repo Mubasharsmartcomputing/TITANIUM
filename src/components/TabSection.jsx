@@ -38,7 +38,7 @@ const MethodologyCard = ({ image, title, heading, description, points }) => {
                 <div className="xl:col-span-7 flex items-center">
                     <div className="p-8 flex flex-col justify-between h-full">
                         <div>
-                            <h4 className="text-2xl font-bold text-gray-800 mb-3 hover:text-[#feb900] transition-colors line-clamp-2">
+                            <h4 className="text-2xl font-bold text-gray-800 mb-3 hover:text-[#C3A666] transition-colors line-clamp-2">
                                 <a href="#">{heading}</a>
                             </h4>
                             <p className="italic text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">{description}</p>
@@ -47,7 +47,7 @@ const MethodologyCard = ({ image, title, heading, description, points }) => {
                             {/* Check if points exists and is an array before mapping */}
                             {Array.isArray(points) && points.map((point, index) => (
                                 <li key={index} className="flex items-start">
-                                    <BsCheck2All className="text-[#feb900] font-bold mr-3 mt-1 flex-shrink-0" size={16} />
+                                    <BsCheck2All className="text-[#C3A666] font-bold mr-3 mt-1 flex-shrink-0" size={16} />
                                     <span className="text-gray-700 text-sm leading-tight">{point}</span>
                                 </li>
                             ))}

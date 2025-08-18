@@ -141,7 +141,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         aria-label={t('footer.scrollToTop')}
-        className={`fixed bottom-6 right-6 w-11 h-11 bg-[#feb900] hover:bg-[#fcd97b] text-white rounded-full 
+        className={`fixed bottom-6 right-6 w-11 h-11 bg-[#9D7638] hover:bg-[#9D7638] text-white rounded-full 
                     shadow-lg transition-all duration-300 transform hover:scale-105 
                     flex items-center justify-center z-50
                     ${isScrollButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}

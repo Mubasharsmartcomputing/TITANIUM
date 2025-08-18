@@ -4,6 +4,7 @@ import { FaCalculator, FaClock, FaGem } from 'react-icons/fa';
 
 // Import your building/architecture image
 import heroStaticImg from '../assets/img/hero-carousel/hero-carousel-5.png';
+import homeBanner from '../assets/img/homeBanner.png';
 
 const HeroStatic = () => {
   const { t } = useTranslation();
@@ -21,14 +22,10 @@ const HeroStatic = () => {
 
   return (
     <section id="hero" className="relative bg-[#FDF9F1] min-h-screen overflow-hidden ">
-      {/* Static Background Image */}
+      {/* Home Banner Background */}
       <div className="absolute inset-0">
-        <img
-          src={heroStaticImg}
-          alt="Modern buildings and architecture"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60"></div>
+        <img src={homeBanner} alt="Home Banner" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
       </div>
 
       {/* Hero Content */}
@@ -42,7 +39,7 @@ const HeroStatic = () => {
             </h1>
 
             {/* Yellow accent line */}
-            <div className="w-16 sm:w-20 lg:w-24 h-1 bg-[#FFD700] mx-auto mb-6 sm:mb-8"></div>
+            <div className="w-16 sm:w-20 lg:w-24 h-1 bg-[#C3A666] mx-auto mb-6 sm:mb-8"></div>
 
             {/* Description */}
             <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-200 mb-12 sm:mb-16 max-w-4xl mx-auto leading-relaxed px-4">
@@ -57,9 +54,9 @@ const HeroStatic = () => {
             */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 lg:gap-10 max-w-6xl mx-auto px-4 sm:px-0">
               {heroElements.map((element, index) => (
-                <div key={element.title} className="text-center group">
-                  <div className="mb-6 sm:mb-6 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
-                    <div className="flex items-center justify-center h-20 w-20 sm:h-16 sm:w-16 lg:h-12 lg:w-12 rounded-full bg-gray-600 text-[#FFD700] transition-colors duration-300 group-hover:bg-[#FFD700] group-hover:text-gray-800 shadow-lg">
+                <div key={element.title} className="text-center">
+                  <div className="mb-6 sm:mb-6 flex justify-center">
+                    <div className="flex items-center justify-center h-20 w-20 sm:h-16 sm:w-16 lg:h-12 lg:w-12 rounded-full bg-[#535357] text-white">
                       {/* Get the correct icon from our array using its index */}
                       {icons[index]}
                     </div>

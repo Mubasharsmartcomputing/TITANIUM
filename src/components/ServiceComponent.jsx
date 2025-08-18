@@ -96,7 +96,7 @@ const servicesData = [
 const ServiceCard = ({ icon, title, description, link, readMoreText }) => (
   <div className="group bg-white p-8 rounded-4xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
     <div className="icon-wrapper mb-6">
-      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-200 text-[#feb900] transition-colors duration-300 group-hover:bg-[#feb900] group-hover:text-white">
+      <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-200 text-[#C3A666] transition-colors duration-300 group-hover:bg-[#C3A666] group-hover:text-white">
         {icon}
       </div>
     </div>
@@ -104,7 +104,7 @@ const ServiceCard = ({ icon, title, description, link, readMoreText }) => (
     <p className="text-gray-600 mb-6 flex-grow">{description}</p>
     <a
       href={link}
-      className="font-bold text-[#feb900] hover:text-[#d99f00] flex items-center mt-auto self-start"
+      className="font-bold text-[#C3A666] hover:text-[#C3A666] flex items-center mt-auto self-start"
     >
       <span>{readMoreText}</span>
       <HiArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
