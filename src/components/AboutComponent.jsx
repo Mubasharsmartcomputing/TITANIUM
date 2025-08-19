@@ -100,11 +100,11 @@ const AboutComponent = () => {
                 {/* 6. Use translated text */}
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">{t('pages.about.story.title')}</h2>
                 <div className="our-story">
-                  <h3 className="text-[#FFD700] font-bold text-2xl mb-3">{t('pages.about.story.subtitle')}</h3>
+                  <h3 className="text-[#90692E] font-bold text-2xl mb-3">{t('pages.about.story.subtitle')}</h3>
                   <p className="text-gray-600 mb-4">{t('pages.about.story.paragraph')}</p>
                   <ul className="space-y-2 mb-6">
                     {storyListItems.map((item, index) => (
-                      <li key={index} className="flex items-start"><BsCheckCircle className="text-[#FFD700] mr-3 mt-1 flex-shrink-0" /><span>{item}</span></li>
+                      <li key={index} className="flex items-start"><BsCheckCircle className="text-[#90692E] mr-3 mt-1 flex-shrink-0" /><span>{item}</span></li>
                     ))}
                   </ul>
                   {/*  */}

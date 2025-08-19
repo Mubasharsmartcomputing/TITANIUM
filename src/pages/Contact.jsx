@@ -9,11 +9,7 @@ import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 const InfoCard = ({ icon, title, children }) => (
   <div className="p-6 bg-white rounded-2xl shadow-xl flex flex-col items-center text-center h-full">
     <div className="icon-wrapper mb-4">
-<<<<<<< HEAD
-      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-[#C3A666] transition-colors duration-300 group-hover:bg-[#C3A666] group-hover:text-white">
-=======
-      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-[#FFD700] transition-colors duration-300 group-hover:bg-[#FFD700] group-hover:text-white">
->>>>>>> 0a7185db85303d7b274afad3fbb69b7ef8ccdd95
+      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-[#90692E] transition-colors duration-300 group-hover:bg-[#90692E] group-hover:text-white">
         {icon}
       </div>
     </div>
@@ -115,31 +111,17 @@ const ContactPage = () => {
             >
               <form action="#" method="post" className="space-y-6 flex flex-col h-full">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<<<<<<< HEAD
-                  <input type="text" name="name" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C3A666] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.name')} required />
-                  <input type="email" name="email" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C3A666] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.email')} required />
+                  <input type="text" name="name" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#90692E] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.name')} required />
+                  <input type="email" name="email" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#90692E] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.email')} required />
                 </div>
                 <div>
-                  <input type="text" name="subject" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C3A666] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.subject')} required />
+                  <input type="text" name="subject" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#90692E] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.subject')} required />
                 </div>
                 <div className="flex-grow">
-                  <textarea name="message" rows="6" className="w-full h-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#C3A666] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.message')} required></textarea>
+                  <textarea name="message" rows="6" className="w-full h-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#90692E] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.message')} required></textarea>
                 </div>
                 <div className="text-center">
-                  <button type="submit" className="bg-[#C3A666] text-white font-bold py-3 px-8 rounded-full hover:bg-[#C3A666] transition-colors duration-300">{t('pages.contact.form.submitButton')}</button>
-=======
-                  <input type="text" name="name" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#FFD700] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.name')} required />
-                  <input type="email" name="email" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#FFD700] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.email')} required />
-                </div>
-                <div>
-                  <input type="text" name="subject" className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#FFD700] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.subject')} required />
-                </div>
-                <div className="flex-grow">
-                  <textarea name="message" rows="6" className="w-full h-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#FFD700] focus:border-transparent transition" placeholder={t('pages.contact.form.placeholders.message')} required></textarea>
-                </div>
-                <div className="text-center">
-                  <button type="submit" className="bg-[#FFD700] text-white font-bold py-3 px-8 rounded-full hover:bg-[#d8ba67] transition-colors duration-300">{t('pages.contact.form.submitButton')}</button>
->>>>>>> 0a7185db85303d7b274afad3fbb69b7ef8ccdd95
+                  <button type="submit" className="bg-[#90692E] text-white font-bold py-3 px-8 rounded-full hover:bg-[#d8ba67] transition-colors duration-300">{t('pages.contact.form.submitButton')}</button>
                 </div>
               </form>
             </motion.div>
