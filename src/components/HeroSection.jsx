@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { FaCalculator, FaClock, FaGem } from 'react-icons/fa';
 
 // Import your building/architecture image
-import homeBanner from '../assets/img/homebanner.png';
+import homeBanner from '../assets/img/homeBanner.png';
 
 const HeroStatic = () => {
   const { t } = useTranslation();
