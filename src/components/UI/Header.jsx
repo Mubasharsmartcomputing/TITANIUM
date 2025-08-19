@@ -68,8 +68,8 @@ export default function Header() {
                   className={({ isActive }) =>
                     `transition-colors duration-200 font-medium text-sm xl:text-base uppercase tracking-wider px-2 py-1 border-b-2
                      ${isActive
-                       ? 'text-[#90692E] border-[#90692E]'
-                       : 'text-gray-700 border-transparent hover:text-[#90692E]'
+                       ? 'text-[#B49562] border-[#B49562]'
+                       : 'text-gray-700 border-transparent hover:text-[#B49562]'
                      }`
                   }
                 >
@@ -84,7 +84,7 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={toggleLanguageDropdown}
-                  className="flex items-center space-x-2 text-gray-700 hover:text-[#90692E] transition-colors duration-200 px-2 py-1 rounded-md"
+                  className="flex items-center space-x-2 text-gray-700 hover:text-[#B49562] transition-colors duration-200 px-2 py-1 rounded-md"
                 >
                   <span className="text-sm font-medium">{i18n.language.toUpperCase()}</span>
                   <HiGlobeAlt size={16} />
@@ -98,8 +98,8 @@ export default function Header() {
                       <button
                         key={language.code}
                         onClick={() => handleLanguageChange(language.code)}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-red-50 hover:text-[#90692E] transition-colors duration-200 flex items-center space-x-2
-                          ${i18n.language === language.code ? 'bg-red-50 text-[#90692E]' : 'text-gray-700'}
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-red-50 hover:text-[#B49562] transition-colors duration-200 flex items-center space-x-2
+                          ${i18n.language === language.code ? 'bg-red-50 text-[#B49562]' : 'text-gray-700'}
                         `}
                       >
                         <span>{language.flag}</span>
@@ -111,7 +111,7 @@ export default function Header() {
               </div>
 
               <button 
-                className="text-[#90692E] hover:text-[#90692E] transition-colors duration-200"
+                className="text-[#B49562] hover:text-[#B49562] transition-colors duration-200"
                 title={t('common.search')}
               >
                 <HiSearch size={20} />
@@ -122,7 +122,7 @@ export default function Header() {
             <div className="lg:hidden">
               <button
                 onClick={handleMenuToggle}
-                className="text-gray-700 hover:text-[#90692E] transition-colors duration-200 p-2"
+                className="text-gray-700 hover:text-[#B49562] transition-colors duration-200 p-2"
                 aria-label="Toggle menu"
               >
                 {isMenuOpen ? <HiX size={24} /> : <HiMenu size={24} />}
@@ -148,8 +148,8 @@ export default function Header() {
                 className={({ isActive }) =>
                   `block px-3 py-3 font-medium text-sm uppercase tracking-wider rounded-md transition-colors duration-200
                    ${isActive
-                     ? 'bg-[#90692E] text-white'
-                     : 'text-gray-700 hover:text-[#90692E] hover:bg-red-50'
+                     ? 'bg-[#B49562] text-white'
+                     : 'text-gray-700 hover:text-[#B49562] hover:bg-red-50'
                    }`
                 }
               >
@@ -169,8 +169,8 @@ export default function Header() {
                     onClick={() => handleLanguageChange(language.code)}
                     className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors duration-200 flex items-center space-x-2
                       ${i18n.language === language.code 
-                        ? 'bg-[#90692E] text-white' 
-                        : 'text-gray-700 hover:text-[#90692E] hover:bg-red-50'
+                        ? 'bg-[#B49562] text-white' 
+                        : 'text-gray-700 hover:text-[#B49562] hover:bg-red-50'
                       }
                     `}
                   >
@@ -183,7 +183,7 @@ export default function Header() {
               {/* Search button */}
               <div className="flex justify-end pt-3 mt-3 border-t border-gray-200">
                 <button 
-                  className="text-[#90692E] hover:text-[#90692E] transition-colors duration-200"
+                  className="text-[#B49562] hover:text-[#B49562] transition-colors duration-200"
                   title={t('common.search')}
                 >
                   <HiSearch size={20} />

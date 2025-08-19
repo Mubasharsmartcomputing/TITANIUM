@@ -11,9 +11,9 @@ const HeroStatic = () => {
   const heroElements = t('pages.home.heroElements', { returnObjects: true });
 
   const icons = [
-    <FaCalculator className="w-8 h-8" />,
-    <FaClock className="w-8 h-8" />,
-    <FaGem className="w-8 h-8" />
+    <FaCalculator className="w-12 h-12" />,
+    <FaClock className="w-12 h-12" />,
+    <FaGem className="w-12 h-12" />
   ];
 
   return (
@@ -35,9 +35,9 @@ const HeroStatic = () => {
           <div className="max-w-5xl mx-auto">
             
             {/* Main Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-4xl font-extrabold tracking-tight text-shadow-md">
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-shadow-md">
               <span className="block mb-2 text-gray-100">{t('pages.home.heroTitle1')}</span>
-              <span className="block" style={{ color: '#90692E' }}>{t('pages.home.heroTitle2')}</span>
+              <span className="block" style={{ color: '#B49562' }}>{t('pages.home.heroTitle2')}</span>
             </h1>
 
             {/* 
@@ -49,52 +49,27 @@ const HeroStatic = () => {
             */}
             <div 
               className="w-16 sm:w-20 h-1 mx-auto my-6 sm:my-8" 
-              style={{ backgroundColor: '#90692E' }}
+              style={{ backgroundColor: '#B49562' }}
             ></div>
 
             {/* Description - Clean and readable */}
             <p className="text-lg sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed mb-16">
               {t('pages.home.heroDescription')}
             </p>
-          </div>
 
-          {/* Elegant & Brand-Aligned Grid Section */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            {heroElements.map((element, index) => (
-              <div 
-                key={element.title} 
-                className="
-                  group text-center p-8
-                  bg-black/30 backdrop-blur-sm
-                  border border-gray-500/30 
-                  rounded-lg shadow-xl 
-                  transition-all duration-300 
-                  hover:border-brand-gold/60 hover:bg-black/50 hover:-translate-y-2"
-              >
-                {/* Styled Icon Container */}
-                <div className="mb-6 flex justify-center">
-                  <div className="
-                    w-20 h-20 rounded-full 
-                    flex items-center justify-center 
-                    bg-brand-gold/10
-                    border-2 border-brand-gold/40
-                    text-brand-gold
-                    transition-all duration-300
-                    group-hover:bg-brand-gold/20 group-hover:scale-110"
-                  >
+            {/* Icons Section */}
+            <div className="flex justify-center items-center space-x-20 mb-10 ">
+              {heroElements.map((element, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl text-[#B49562] mb-3">
                     {icons[index]}
                   </div>
+                  <h3 className="text-lg font-semibold">
+                    {element.title}
+                  </h3>
                 </div>
-                
-                <h3 className="text-xl lg:text-2xl font-semibold text-gray-100 mb-3">
-                  {element.title}
-                </h3>
-                
-                <p className="text-gray-300 leading-relaxed">
-                  {element.subtitle}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
