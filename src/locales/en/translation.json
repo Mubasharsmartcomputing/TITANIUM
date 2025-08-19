@@ -32,7 +32,7 @@
     
 "heroElements": [
   { "title": "Cost"},
-  { "title": "Time / Schedule" },
+  { "title": "Time" },
   { "title": "Quality"}
 ],
 "methodology": {
