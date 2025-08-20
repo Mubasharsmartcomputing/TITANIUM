@@ -4,7 +4,7 @@ import { FaCalculator, FaClock, FaGem } from 'react-icons/fa';
 
 // Import your building/architecture images
 import homeBanner from '../assets/img/homeBanner.jpg'; // Assuming this is your subtle background pattern
-import rightImage from '../assets/img/hero-carousel/rightimage.png';
+import rightImage from '../assets/img/rightimage.png';
 
 const HeroStatic = () => {
   const { t } = useTranslation();
