@@ -4,7 +4,7 @@ import { FaCalculator, FaClock, FaGem } from 'react-icons/fa';
 
 // Import your building/architecture images
 import homeBanner from '../assets/img/homeBanner.jpg'; // Assuming this is your subtle background pattern
-import rightImage from '../assets/img/hero-carousel/rightImage.png';
+import rightImage from '../assets/img/hero-carousel/rightimage.png';
 
 const HeroStatic = () => {
   const { t } = useTranslation();
@@ -17,9 +17,9 @@ const HeroStatic = () => {
   const iconColor = "#B49562"; // Using the brand gold for consistency
 
   const icons = [
-    <FaCalculator size={iconSize} color={iconColor} />,
-    <FaClock size={iconSize} color={iconColor} />,
-    <FaGem size={iconSize} color={iconColor} />
+    <FaCalculator className="h-6 w-6" />,
+    <FaClock className="h-6 w-6" />,
+    <FaGem className="h-6 w-6" />
   ];
 
   return (
@@ -55,34 +55,38 @@ const HeroStatic = () => {
               ></div>
 
               {/* Description */}
-              <p className="text-base text-gray-600 leading-relaxed max-w-xl">
+              <p className="text-base text-gray-600 leading-relaxed max-w-xl mb-12">
                 {t('pages.home.heroDescription')}
               </p>
+
+              {/* Icons at bottom of left content */}
+              <div className="flex gap-8">
+                {heroElements.map((element, index) => (
+                  <div key={index} className="flex flex-col items-center text-center group">
+                    <div className="mb-2">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gray-200 text-[#B49562] transition-colors duration-300 group-hover:bg-[#B49562] group-hover:text-white">
+                        {icons[index]}
+                      </div>
+                    </div>
+                    <h3 className="text-sm font-semibold text-gray-800">
+                      {element.title}
+                    </h3>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Right Side - Image */}
             <div className="flex justify-center lg:justify-end">
               <img 
-                src={rightImage} 
+                src={rightImage}
                 alt="Building Illustration" 
-                className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto transition-transform duration-300 ease-in-out hover:scale-105" 
+                className="w-full max-w-xl md:max-w-2xl lg:max-w-6xl xl:max-w-6xl h-auto transition-transform duration-300 ease-in-out hover:scale-105" 
               />
             </div>
           </div>
 
-          {/* Bottom Section - Icons */}
-          <div className="flex justify-center items-center gap-8 sm:gap-16">
-            {heroElements.map((element, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="mb-4 transition-transform">
-                  {icons[index]}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800">
-                  {element.title}
-                </h3>
-              </div>
-            ))}
-          </div>
+
 
         </div>
       </div>

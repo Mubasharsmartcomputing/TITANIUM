@@ -9,7 +9,7 @@ import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 const InfoCard = ({ icon, title, children }) => (
   <div className="p-6 bg-white rounded-2xl shadow-xl flex flex-col items-center text-center h-full">
     <div className="icon-wrapper mb-4">
-      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gray-200 text-[#90692E] transition-colors duration-300 group-hover:bg-[#90692E] group-hover:text-white">
+      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gray-300 text-[#90692E] transition-colors duration-300 group-hover:bg-[#90692E] group-hover:text-white">
         {icon}
       </div>
     </div>
