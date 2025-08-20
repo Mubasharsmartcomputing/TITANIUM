@@ -38,16 +38,16 @@ const MethodologyCard = ({ image, title, heading, description, points }) => {
                 <div className="xl:col-span-7 flex items-center">
                     <div className="p-8 flex flex-col justify-between h-full">
                         <div>
-                            <h4 className="text-2xl font-bold text-gray-800 mb-3 hover:text-[#C3A666] transition-colors line-clamp-2">
+                            <h4 className="text-lg font-semibold text-gray-800 mb-3 hover:text-[#C3A666] transition-colors line-clamp-2">
                                 <a href="#">{heading}</a>
                             </h4>
-                            <p className="italic text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">{description}</p>
+                            <p className="text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">{description}</p>
                         </div>
                         <ul className="space-y-2 mt-4">
                             {/* Check if points exists and is an array before mapping */}
                             {Array.isArray(points) && points.map((point, index) => (
                                 <li key={index} className="flex items-start">
-                                    <BsCheck2All className="text-[#FFD700] font-bold mr-3 mt-1 flex-shrink-0" size={16} />
+                                    <BsCheck2All className="text-[#C3A666] font-bold mr-3 mt-1 flex-shrink-0" size={16} />
                                     <span className="text-gray-700 text-sm leading-tight">{point}</span>
                                 </li>
                             ))}
@@ -64,7 +64,7 @@ const TabSection = () => {
     const { t } = useTranslation(); // Already initialized, perfect!
 
     return (
-        <section id="features" className="py-16 lg:py-24 bg-[#FDF9F1]">
+        <section id="features" className="py-16 lg:py-24 bg-gray-200">
             <div className="container mx-auto px-4">
             
                 {/* Section Title (Already translated, no changes needed) */}
@@ -75,8 +75,8 @@ const TabSection = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h2 className="text-4xl font-bold text-gray-800">{t('pages.home.methodology.title')}</h2>
-                  <p className="text-lg text-gray-600 mt-2 max-w-3xl mx-auto">{t('pages.home.methodology.subtitle')}</p>
+                  <h2 className="text-3xl font-bold text-gray-800">{t('pages.home.methodology.title')}</h2>
+                  <p className="text-base text-gray-600 mt-2 max-w-3xl mx-auto">{t('pages.home.methodology.subtitle')}</p>
                 </motion.div>
 
                 {/* ✨ STEP 2: Use the t() function to get card content from JSON */}

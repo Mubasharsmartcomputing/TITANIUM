@@ -11,7 +11,7 @@ import AboutComponent from '../components/AboutComponent';
 // --- MAIN ABOUT PAGE COMPONENT ---
 const About = () => {
   return (
-    <main>
+    <main className="bg-gray-200">
      
 
       {/* RENDER THE SEPARATE ABOUT CONTENT COMPONENT */}

@@ -7,7 +7,7 @@ import BlogComponent from '../components/BlogComponent'; // Adjust path if neede
 
 const BlogPage = () => {
   return (
-    <main className="bg-gray-50">
+    <main>
       
       
       {/* RENDER THE SEPARATE BLOG CONTENT COMPONENT */}

@@ -9,7 +9,7 @@ import { FiMapPin, FiPhone, FiMail } from 'react-icons/fi';
 const InfoCard = ({ icon, title, children }) => (
   <div className="p-6 bg-white rounded-2xl shadow-xl flex flex-col items-center text-center h-full">
     <div className="icon-wrapper mb-4">
-      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 text-[#90692E] transition-colors duration-300 group-hover:bg-[#90692E] group-hover:text-white">
+      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gray-200 text-[#90692E] transition-colors duration-300 group-hover:bg-[#90692E] group-hover:text-white">
         {icon}
       </div>
     </div>
@@ -22,7 +22,7 @@ const ContactPage = () => {
   const { t } = useTranslation(); // 2. Initialize hook
 
   return (
-    <main className="bg-[#FDF9F1]">
+    <main className="bg-gray-200">
       <section id="contact" className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
 

@@ -33,8 +33,8 @@ const BlogPostCard = ({ post, readMoreText }) => {
         <img src={post.image} alt={post.title} className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" />
         <span className="absolute bottom-0 right-0 bg-[#B49562] text-white text-sm font-semibold px-4 py-2">{post.date}</span>
       </div>
-      <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-gray-800 mb-3 hover:text-[#B49562] transition-colors">
+      <div className="p-6 flex flex-col flex-grow text-start">
+        <h3 className="text-lg font-semibold text-gray-800 mb-3 hover:text-[#B49562] transition-colors">
           <a href={post.link}>{post.title}</a>
         </h3>
         <div className="flex items-center text-sm text-g[#B49562] mb-4">
@@ -42,7 +42,7 @@ const BlogPostCard = ({ post, readMoreText }) => {
           <span className="mx-3">/</span>
           <div className="flex items-center"><FaFolderOpen className="mr-2 text-[#B49562]" /><span>{post.category}</span></div>
         </div>
-        <p className="text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
+        <p className="text-base text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
         <hr className="my-4"/>
         <a href={post.link} className="font-bold text-[#B49562] hover:text-gray-600 flex items-center self-start">
           {/* Use the translated prop here */}
@@ -69,9 +69,9 @@ const BlogComponent = ({ postLimit, titleKey = 'pages.blog.title' }) => {
     const postsToShow = postLimit ? blogData.slice(0, postLimit) : blogData;
 
     return (
-        <section id="blog-posts" className="py-16 bg-[#FDF9F1] gap-8 flex flex-col justify-center items-center text-center lg:py-24">
+        <section id="blog-posts" className="py-16 bg-gray-200 gap-8 flex flex-col justify-center items-center text-center lg:py-24">
             <motion.h1 
-                className="text-4xl font-bold text-gray-900"
+                className="text-3xl font-bold text-gray-900"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}

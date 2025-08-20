@@ -94,14 +94,14 @@ const servicesData = [
 
 // --- REUSABLE SERVICE CARD COMPONENT (No changes) ---
 const ServiceCard = ({ icon, title, description, link, readMoreText }) => (
-  <div className="group bg-white p-8 rounded-4xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col">
+  <div className="group bg-white p-8 rounded-4xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full flex flex-col text-start">
     <div className="icon-wrapper mb-6">
       <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-200 text-[#B49562] transition-colors duration-300 group-hover:bg-[#B49562] group-hover:text-white">
         {icon}
       </div>
     </div>
-    <h3 className="text-2xl font-bold text-gray-800 mb-3">{title}</h3>
-    <p className="text-gray-600 mb-6 flex-grow">{description}</p>
+    <h3 className="text-lg font-semibold text-gray-800 mb-3">{title}</h3>
+    <p className="text-base text-gray-600 mb-6 flex-grow">{description}</p>
     <a
       href={link}
       className="font-bold text-[#B49562] hover:text-[#d99f00] flex items-center mt-auto self-start"
@@ -120,10 +120,10 @@ const ServiceComponent = () => {
     <>
       <section
         id="services"
-        className="py-16 bg-[#FDF9F1] lg:py-24 gap-8 flex flex-col justify-center items-center text-center"
+        className="py-16 bg-gray-200 lg:py-24 gap-8 flex flex-col justify-center items-center text-center"
       >
         <motion.h1
-          className="text-4xl font-bold text-gray-900"
+          className="text-3xl font-bold text-gray-900"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

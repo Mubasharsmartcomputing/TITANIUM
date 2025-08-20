@@ -36,47 +36,17 @@ const StatItem = ({ icon, end, label, color }) => {
   );
 };
 
-// --- Reusable Team Member Card ---
-// const TeamMember = ({ image, name, role, description, socials }) => (
-//     <motion.div 
-//         className="text-center group"
-//         initial={{ opacity: 0, y: 50 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         viewport={{ once: true, amount: 0.3 }}
-//         transition={{ duration: 0.5 }}
-//     >
-//         <div className="relative overflow-hidden rounded-lg mb-6 shadow-lg">
-//             <img src={image} alt={name} className="w-full h-auto rounded-4xl shadow-xl " />
-//             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-4xl shadow-xl  flex items-center justify-center space-x-4">
-//                 {socials.map(social => (
-//                     <a key={social.name} href={social.url} className="text-white hover:text-[#feb900] transition-colors p-2 bg-black/20 rounded-full">
-//                         <social.icon size={20} />
-//                     </a>
-//                 ))}
-//             </div>
-//         </div>
-//         <h4 className="text-xl font-bold text-gray-800">{name}</h4>
-//         <span className="block text-sm text-gray-500 mb-2">{role}</span>
-//         <p className="text-sm text-gray-600 mt-2 px-4">{description}</p>
-//     </motion.div>
-// );
+
 
 const AboutComponent = () => {
     const { t } = useTranslation(); // 3. Initialize hook
 
-    // 4. Dynamically create team data by merging static info with translated text
-    // const teamData = t('pages.about.team.members', { returnObjects: true }).map((member, index) => ({
-    //   ...staticTeamData[index], 
-    //   ...member, 
-    // }));
-
-    // 5. Get the list items for the story section
-    const storyListItems = t('pages.about.story.listItems', { returnObjects: true });
+       const storyListItems = t('pages.about.story.listItems', { returnObjects: true });
 
   return (
     <>
       {/* Our Story Section */}
-      <section id="about" className="py-16 bg-[#FDF9F1] lg:py-24">
+      <section id="about" className="py-16 bg-gray-200 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="relative">
             <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
@@ -115,47 +85,7 @@ const AboutComponent = () => {
         </div>
       </section>
 
-      {/* Stats Counter Section */}
-      {/* <section id="stats-counter" className="py-16 lg:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-4xl font-bold text-gray-800">{t('pages.about.stats.title')}</h2>
-            <p className="text-lg text-gray-600 mt-2">{t('pages.about.stats.subtitle')}</p>
-          </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <StatItem icon={<BsEmojiSmile />} end={15} label={t('pages.about.stats.items.experience')} color="text-[#feb900]" />
-            <StatItem icon={<BsJournalRichtext />} end={50} label={t('pages.about.stats.items.projects')} color="text-[#feb900]" />
-            <StatItem icon={<BsHeadset />} end={99} label={t('pages.about.stats.items.satisfaction')} color="text-[#feb900]" />
-            <StatItem icon={<FaUsers />} end={6} label={t('pages.about.stats.items.teamMembers')} color="text-[#feb900]" />
-          </div>
-        </div>
-      </section> */}
       
-      {/* Team Section */}
-      {/* <section id="team" className="py-16 lg:py-24 ">
-        <div className="container mx-auto px-4">
-            <motion.div 
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-                <h2 className="text-4xl font-bold text-gray-800">{t('pages.about.team.title')}</h2>
-                <p className="text-lg text-gray-600 mt-2">{t('pages.about.team.subtitle')}</p>
-            </motion.div>
-             <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8 lg:gap-12">
-       
-                {teamData.map((member, index) => <TeamMember key={index} {...member} />)}
-            </div>
-        </div>
-      </section> */}
     </>
   );
 };

@@ -66,7 +66,7 @@ export default function Header() {
                   key={item.key}
                   to={item.path}
                   className={({ isActive }) =>
-                    `transition-colors duration-200 font-medium text-sm xl:text-base uppercase tracking-wider px-2 py-1 border-b-2
+                    `transition-colors duration-200 font-semibold text-sm uppercase tracking-wider px-2 py-1 border-b-2
                      ${isActive
                        ? 'text-[#B49562] border-[#B49562]'
                        : 'text-gray-700 border-transparent hover:text-[#B49562]'
@@ -146,7 +146,7 @@ export default function Header() {
                 to={item.path}
                 onClick={closeMenu}
                 className={({ isActive }) =>
-                  `block px-3 py-3 font-medium text-sm uppercase tracking-wider rounded-md transition-colors duration-200
+                  `block px-3 py-3 font-semibold text-sm uppercase tracking-wider rounded-md transition-colors duration-200
                    ${isActive
                      ? 'bg-[#B49562] text-white'
                      : 'text-gray-700 hover:text-[#B49562] hover:bg-red-50'
