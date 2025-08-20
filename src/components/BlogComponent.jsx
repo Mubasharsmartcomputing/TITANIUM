@@ -70,15 +70,6 @@ const BlogComponent = ({ postLimit, titleKey = 'pages.blog.title' }) => {
 
     return (
         <section id="blog-posts" className="py-16 bg-gray-200 gap-8 flex flex-col justify-center items-center text-center lg:py-24">
-            <motion.h1 
-                className="text-3xl font-bold text-gray-900"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                >
-                {/* 5. Translate the title using the provided key */}
-                {t(titleKey)}
-            </motion.h1>
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {postsToShow.map((post, index) => (

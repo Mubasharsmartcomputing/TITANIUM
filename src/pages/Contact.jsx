@@ -25,21 +25,6 @@ const ContactPage = () => {
     <main className="bg-gray-200">
       <section id="contact" className="py-16 lg:py-24">
         <div className="container mx-auto px-4">
-
-          {/* ✨ Centered Section Title Block */}
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            {/* 3. Use translated text */}
-            <h2 className="text-4xl font-bold text-gray-800">{t('pages.contact.title')}</h2>
-            <p className="text-lg text-gray-600 mt-2 max-w-2xl mx-auto">
-              {t('pages.contact.subtitle')}
-            </p>
-          </motion.div>
           
           {/* --- Info Cards --- */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
