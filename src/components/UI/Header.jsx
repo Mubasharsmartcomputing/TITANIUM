@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import { HiGlobeAlt, HiSearch, HiMenu, HiX, HiChevronDown } from "react-icons/hi";
-import logo from '../../assets/img/rightImag.png';
+import logo from '../../assets/img/Logo_for_Titanium_Engineering_Project_Management.png';
 
 export default function Header() {
   const { t, i18n } = useTranslation();
