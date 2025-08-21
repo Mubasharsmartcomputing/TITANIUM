@@ -125,7 +125,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {legalLinks.map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-gray-900 hover:text-[#B49562] transition-colors duration-300 text-sm">
+                  <a href="/" className="text-gray-900 hover:text-[#B49562] transition-colors duration-300 text-sm">
                     {item}
                   </a>
                 </li>
