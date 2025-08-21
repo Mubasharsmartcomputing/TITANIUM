@@ -1,18 +1,15 @@
 import './App.css'
 import './i18n' // Import i18n configuration - ADD THIS LINE
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import { lazy, Suspense } from 'react'
+import Home from './pages/Home'
+import About from './pages/About'
+import Blog from './pages/Blog'
+import Contact from './pages/Contact'
 import { ErrorPage } from './pages/ErrorPage'
 import { AppLayout } from './components/layout/AppLayout'
-
-// Lazy load pages
-const Home = lazy(() => import('./pages/Home'))
-const About = lazy(() => import('./pages/About'))
-const Blog = lazy(() => import('./pages/Blog'))
-const Contact = lazy(() => import('./pages/Contact'))
-const Services = lazy(() => import('./pages/Services'))
-const Consultant = lazy(() => import('./pages/Consultant'))
-const Projects = lazy(() => import('./pages/Projects'))
+import Services from './pages/Services'
+import Consultant from './pages/Consultant'
+import Projects from './pages/Projects'
 
 const router = createBrowserRouter([
   {
@@ -22,31 +19,31 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Suspense fallback={<div>Loading...</div>}><Home/></Suspense>,
+        element: <Home/>,
       },
       {
         path: '/about',
-        element: <Suspense fallback={<div>Loading...</div>}><About/></Suspense>,
+        element: <About/>,
       },
       {
         path: '/blog',
-        element: <Suspense fallback={<div>Loading...</div>}><Blog/></Suspense>,
+        element: <Blog/>,
       },
       {
         path: '/contact',
-        element: <Suspense fallback={<div>Loading...</div>}><Contact/></Suspense>,
+        element: <Contact/>,
       },
       {
         path: '/services',
-        element: <Suspense fallback={<div>Loading...</div>}><Services/></Suspense>,
+        element: <Services/>,
       },
       {
         path: '/consultant',
-        element: <Suspense fallback={<div>Loading...</div>}><Consultant/></Suspense>,
+        element: <Consultant/>,
       },
       {
         path: '/projects',
-        element: <Suspense fallback={<div>Loading...</div>}><Projects/></Suspense>,
+        element: <Projects/>,
       }
     ]
   }
