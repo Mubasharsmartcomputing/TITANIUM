@@ -69,7 +69,7 @@ const BlogComponent = ({ postLimit, titleKey = 'pages.blog.title', showTitle = t
     const postsToShow = postLimit ? blogData.slice(0, postLimit) : blogData;
 
     return (
-        <section id="blog-posts" className="pb-10 bg-gray-200 gap-8 flex flex-col justify-center items-center text-center lg:py-20">
+        <section id="blog-posts" className="pb-10 bg-gray-200 gap-8 flex flex-col justify-center items-center text-center my-10 md:my-0 lg:py-20">
             {showTitle && (
                 <motion.h1 
                     className="text-4xl font-bold text-gray-900"
