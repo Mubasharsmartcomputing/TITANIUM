@@ -49,7 +49,7 @@ const Footer = () => {
   }));
 
   return (
-    <footer className="relative bg-gray-300 text-gray-800 overflow-hidden">
+    <footer className="relative bg-gray-300 text-gray-900 overflow-hidden">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0">
         <div
@@ -61,35 +61,22 @@ const Footer = () => {
       </div>
       
       {/* Main Footer Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 justify-center items-center sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 items-start">
           
-          {/* Column 1: Company Info & Socials */}
-          <div className="lg:col-span-2 md:ml-32 ml-2"> 
-    <NavLink to="/" className="flex items-start pr-20">
-                 <img 
-                   src={logo} 
-                   alt="Titanium Engineering Logo" 
-                   className="h-22 w-28 lg:h-28 md:w-40"
-                 />
-               </NavLink>
-            <div className="space-y-3 text-sm">
-              <p className="text-gray-600">
-                {t('footer.address.street')}<br/>
-                {t('footer.address.city')}<br/>
-                {t('footer.address.country')}
-              </p>
-              <div className="space-y-1">
-                <p className="text-gray-600">
-                  <span className="font-semibold text-gray-800">{t('footer.phoneLabel')}</span> +49 176 62499547
-                </p>
-                <p className="text-gray-600">
-                  <span className="font-semibold text-gray-800">{t('footer.emailLabel')}</span> info@titaniumengineeringpm.com
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex space-x-2 mt-6">
+          {/* Column 1: Logo & Company Description */}
+          <div>
+            <NavLink to="/" className="block">
+              <img 
+                src={logo} 
+                alt="Titanium Engineering Logo" 
+                className="h-20 w-24 lg:h-32 lg:w-36"
+              />
+            </NavLink>
+            <p className="text-sm text-gray-900 leading-relaxed mb-4">
+              Professional engineering project management services across Germany.
+            </p>
+            <div className="flex space-x-2">
               {socialLinks.map((social) => (
                 <a key={social.label} href={social.href} aria-label={social.label} className="w-9 h-9 bg-white border border-gray-300 rounded flex items-center justify-center text-[#B49562] hover:bg-[#B49562] hover:text-white hover:border-[#B49562] transition-all duration-300 shadow-sm">
                   <social.icon className="w-4 h-4" />
@@ -98,14 +85,33 @@ const Footer = () => {
             </div>
           </div>
 
-          
-          {/* Column 2: Our Services */}
+          {/* Column 2: Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold text-gray-800 mb-6">{t('footer.contact.title')}</h4>
+            <div className="space-y-3 text-sm">
+              <p className="text-gray-900">
+                {t('footer.address.street')}<br/>
+                {t('footer.address.city')}<br/>
+                {t('footer.address.country')}
+              </p>
+              <div className="space-y-1">
+                <p className="text-gray-900">
+                  <span className="font-semibold text-gray-800">{t('footer.phoneLabel')}</span> +49 176 62499547
+                </p>
+                <p className="text-gray-600">
+                  <span className="font-semibold text-gray-800">{t('footer.emailLabel')}</span> info@titaniumengineeringpm.com
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Column 3: Our Services */}
           <div>
             <h4 className="text-lg font-semibold text-gray-800 mb-6">{t('footer.ourServices.title')}</h4>
             <ul className="space-y-2">
               {ourServices.map((service) => (
                 <li key={service}>
-                  <a href="/services" className="text-gray-600 hover:text-[#B49562] transition-colors duration-300 text-sm">
+                  <a href="/services" className="text-gray-900 hover:text-[#B49562] transition-colors duration-300 text-sm">
                     {service}
                   </a>
                 </li>
@@ -113,13 +119,13 @@ const Footer = () => {
             </ul>
           </div>
          
-          {/* Column 3: Legal */}
+          {/* Column 4: Legal */}
           <div>
             <h4 className="text-lg font-semibold text-gray-800 mb-6">{t('footer.legal.title')}</h4>
             <ul className="space-y-2">
               {legalLinks.map((item) => (
                 <li key={item}>
-                  <a href="#" className="text-gray-600 hover:text-[#B49562] transition-colors duration-300 text-sm">
+                  <a href="#" className="text-gray-900 hover:text-[#B49562] transition-colors duration-300 text-sm">
                     {item}
                   </a>
                 </li>
@@ -129,8 +135,8 @@ const Footer = () => {
         </div>
 
         {/* --- Bottom Copyright Section --- */}
-        <div className="border-t border-gray-300 mt-12 pt-6 text-center">
-          <p className="text-base text-gray-600">
+        <div className="border-t border-gray-300 mt-8 text-center">
+          <p className="text-base text-gray-900">
             {t('footer.copyright', { companyName: t('footer.companyName') })}
           </p>
         </div>

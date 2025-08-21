@@ -312,6 +312,10 @@
   },
   "footer": {
     "companyName": "TITANIUM",
+    "companyDescription": "Titanium Mühendislik Proje Yönetimi olarak, inşaat mühendisliğindeki uygulamalı deneyimimizi projelerinize taşıyoruz. Zamanlama ve saha koordinasyonundan dokümantasyon ve resmi makamlarla ilişkilere kadar her ayrıntıyı hassasiyetle yönetiyoruz.",
+    "contact": {
+      "title": "İletişim Bilgileri"
+    },
     "address": {
       "street": "Musterstraße 123",
       "city": "80331 München",

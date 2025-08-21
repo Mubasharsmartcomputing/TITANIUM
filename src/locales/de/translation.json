@@ -335,6 +335,10 @@
   },
   "footer": {
     "companyName": "TITANIUM",
+    "companyDescription": "Bei Titanium Engineering Project Management bringen wir praktische Erfahrung im Bauwesen in Ihre Projekte ein. Von der Terminplanung und Baustellenkoordination bis hin zur Dokumentation und Behördenabstimmung - wir behandeln jedes Detail mit Präzision.",
+    "contact": {
+      "title": "Kontaktinformationen"
+    },
     "address": {
       "street": "Musterstraße 123",
       "city": "80331 München",

@@ -11,7 +11,7 @@ const BlogPage = () => {
       
       
       {/* RENDER THE SEPARATE BLOG CONTENT COMPONENT */}
-      <BlogComponent />
+      <BlogComponent showTitle={false} />
 
     </main>
   );

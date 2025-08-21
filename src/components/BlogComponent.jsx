@@ -56,7 +56,7 @@ const BlogPostCard = ({ post, readMoreText }) => {
 
 // --- MODIFIED BlogComponent ---
 // Now accepts `titleKey` instead of a hardcoded string
-const BlogComponent = ({ postLimit, titleKey = 'pages.blog.title' }) => {
+const BlogComponent = ({ postLimit, titleKey = 'pages.blog.title', showTitle = true }) => {
     const { t } = useTranslation(); // 3. Initialize hook
 
     // 4. Dynamically create data by merging static info with translated text
@@ -69,7 +69,17 @@ const BlogComponent = ({ postLimit, titleKey = 'pages.blog.title' }) => {
     const postsToShow = postLimit ? blogData.slice(0, postLimit) : blogData;
 
     return (
-        <section id="blog-posts" className="py-16 bg-gray-200 gap-8 flex flex-col justify-center items-center text-center lg:py-24">
+        <section id="blog-posts" className="pb-10 bg-gray-200 gap-8 flex flex-col justify-center items-center text-center lg:py-20">
+            {showTitle && (
+                <motion.h1 
+                    className="text-4xl font-bold text-gray-900"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    {t(titleKey)}
+                </motion.h1>
+            )}
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {postsToShow.map((post, index) => (

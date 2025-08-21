@@ -336,6 +336,10 @@
   },
   "footer": {
     "companyName": "TITANIUM",
+    "companyDescription": "At Titanium Engineering Project Management, we bring hands-on experience in civil engineering to your projects. From scheduling and site coordination to documentation and authority liaison, we handle every detail with precision.",
+    "contact": {
+      "title": "Contact Info"
+    },
     "address": {
       "street": "Musterstraße 123",
       "city": "80331 München",

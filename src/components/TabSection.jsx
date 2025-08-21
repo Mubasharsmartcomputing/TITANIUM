@@ -64,7 +64,7 @@ const TabSection = () => {
     const { t } = useTranslation(); // Already initialized, perfect!
 
     return (
-        <section id="features" className="py-16 lg:py-24 bg-gray-200">
+        <section id="features" className="pt-16 lg:py-24 bg-gray-200">
             <div className="container mx-auto px-4">
             
                 {/* Section Title (Already translated, no changes needed) */}
@@ -75,8 +75,8 @@ const TabSection = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h2 className="text-3xl font-bold text-gray-800">{t('pages.home.methodology.title')}</h2>
-                  <p className="text-base text-gray-600 mt-2 max-w-3xl mx-auto">{t('pages.home.methodology.subtitle')}</p>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t('pages.home.methodology.title')}</h2>
+                  <p className="text-base text-gray-800 mt-2 max-w-3xl mx-auto">{t('pages.home.methodology.subtitle')}</p>
                 </motion.div>
 
                 {/* ✨ STEP 2: Use the t() function to get card content from JSON */}

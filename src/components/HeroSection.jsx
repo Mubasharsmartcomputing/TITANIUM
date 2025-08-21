@@ -38,13 +38,13 @@ const HeroStatic = () => {
         <div className="container mx-auto">
 
           {/* Top Section: Text & Image */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20 lg:mb-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             {/* Left Side - Text Content */}
             <div className="text-left">
               {/* Main Title */}
-              <h1 className="text-4xl font-bold tracking-tight mb-6">
-                <span className="block mb-2 text-gray-700">{t('pages.home.heroTitle1')}</span>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+                <span className="block mb-2 text-gray-800">{t('pages.home.heroTitle1')}</span>
                 <span className="block" style={{ color: '#B49562' }}>{t('pages.home.heroTitle2')}</span>
               </h1>
 
@@ -55,12 +55,12 @@ const HeroStatic = () => {
               ></div>
 
               {/* Description */}
-              <p className="text-base text-gray-600 leading-relaxed max-w-xl mb-12">
+              <p className="text-base text-gray-900 leading-relaxed max-w-xl mb-12">
                 {t('pages.home.heroDescription')}
               </p>
-
-              {/* Icons at bottom of left content */}
-              <div className="flex gap-8">
+            
+             {/* Icons at bottom of image */}
+              <div className="flex justify-start gap-8">
                 {heroElements.map((element, index) => (
                   <div key={index} className="flex flex-col items-center text-center group">
                     <div className="mb-2">
@@ -68,22 +68,26 @@ const HeroStatic = () => {
                         {icons[index]}
                       </div>
                     </div>
-                    <h3 className="text-sm font-semibold text-gray-800">
+                    <h3 className="text-sm font-semibold text-gray-900">
                       {element.title}
                     </h3>
                   </div>
                 ))}
               </div>
+              
             </div>
 
             {/* Right Side - Image */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex flex-col md:mb-20 mb-4">
               <img 
                 src={rightImage}
                 alt="Building Illustration" 
                 className="w-full max-w-2xl md:max-w-2xl lg:max-w-6xl xl:max-w-6xl h-auto transition-transform duration-300 ease-in-out hover:scale-105" 
               />
+
+              
             </div>
+           
           </div>
 
 

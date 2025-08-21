@@ -14,7 +14,7 @@ const Home = () => {
             {/* <Constructions/> */}
             {/* <StrategicPartnerSection/> */}
             {/* <Testimonials/> */}
-            <BlogComponent postLimit={3} title="Blog" />
+            <BlogComponent postLimit={3} titleKey="pages.home.recentBlogTitle" />
         </div>
     );
 }
