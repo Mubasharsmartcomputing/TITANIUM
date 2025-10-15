@@ -41,69 +41,91 @@
   "subtitle": "Konut, ticari, endüstriyel, ulaşım ve kültürel yapılardan altyapı projelerine kadar tüm inşaat kategorilerinde projeler gerçekleştiriyoruz. Deneyimli ekibimizle, her ölçekte projede kaliteli, güvenli ve sürdürülebilir çözümler sunuyoruz.",
   "cards": [
     {
-      "title": "Modern Konut Projeleri",
-      "heading": "Modern Konut Projeleri",
-      "description": "Her büyüklükteki konut inşaatı projelerinin profesyonel planlanması ve uygulanması.",
+      "title": "İnşaat fazı planlama ve zamanlama",
+      "heading": "Faz Planlama ve Zamanlamada Uzmanlaşma",
+      "description": "Her proje yönünü senkronize eden ayrıntılı yol haritaları oluşturuyoruz. Gelişmiş zamanlama metodolojimiz, temel atımından son teslime kadar darboğazları önler ve iş akışını optimize eder.",
       "points": [
-        "Özel Tasarım Tek Ailelik Evler",
-        "Fonksiyonel Çok Ailelik Yapılar",
-        "Kapsamlı Konut Kompleksleri"
+        "Kilometre taşı takibi ile gelişmiş CPM zamanlaması",
+        "Hava durumuna uyarlanabilir zaman çizelgesi ayarlamaları",
+        "Kaynak dengeleme ve çatışma çözümü",
+        "Gerçek zamanlı ilerleme görselleştirme panoları"
       ]
     },
     {
-      "title": "Ticari Yapılar",
-      "heading": "Ticari Yapılar",
-      "description": "Ticari ve iş yeri inşaat projeleri için kapsamlı çözümler.",
+      "title": "Taşeron koordinasyonu",
+      "heading": "Uzman Koordinasyonu ile Her Ticareti Uyumlaştırma",
+      "description": "Kaosu uyuma dönüştürün. Birden fazla ticareti sorunsuz bir şekilde düzenleyerek, her uzmanın uzmanlığını tam doğru anda katkıda bulunmasını sağlıyoruz.",
       "points": [
-        "Ofisler ve Ofis Binaları",
-        "Alışveriş Merkezleri",
-        "Oteller",
-        "Depolar"
+        "Çoklu ticaret sıralaması ve arayüz yönetimi",
+        "Dijital koordinasyon platformları ve iletişim merkezleri",
+        "Performans karşılaştırması ve kalite puan kartları",
+        "Çatışma arabuluculuğu ve çözüm protokolleri"
       ]
     },
     {
-      "title": "Endüstriyel Yapılar",
-      "heading": "Endüstriyel Yapılar",
-      "description": "Endüstriyel tesisler ve üretim alanlarının uzmanlaşmış planlanması ve uygulanması.",
+      "title": "Şantiye dokümantasyonu",
+      "heading": "Değişmez Bir Dijital Proje Kaydı Oluşturma",
+      "description": "Kapsamlı sistemimiz her ayrıntıyı, kararı ve kilometre taşını yakalayarak gelecekteki referans ve yasal koruma için değişmez bir dijital kayıt oluşturur.",
       "points": [
-        "Üretim Tesisleri",
-        "Fabrika Hangarları",
-        "Lojistik Merkezleri",
-        "Teknik Tesisler"
+        "Zaman damgası ve coğrafi etiketleme ile 360° fotoğraf dokümantasyonu",
+        "Yapay zeka destekli içgörülerle otomatik ilerleme raporları",
+        "Uygunluk denetim izleri ve yasal başvurular",
+        "Anında arama özellikli bulut tabanlı arşiv"
       ]
     },
     {
-      "title": "Kamu Binaları",
-      "heading": "Kamu Binaları",
-      "description": "Toplum için kamu inşaat projelerinin sorumlu bir şekilde uygulanması.",
+      "title": "Şantiye yönetimine destek",
+      "heading": "Şantiye Yönetim Yeteneklerinizi Güçlendirme",
+      "description": "Yönetim yeteneklerinizi özel desteğimizle güçlendirin. Karmaşık zorlukların üstesinden gelmek ve ivmeyi korumak için ek uzmanlık ve insan gücü sağlıyoruz.",
       "points": [
-        "Okullar, Üniversiteler",
-        "Hastaneler",
-        "Kütüphaneler",
-        "Müzeler",
-        "Spor tesisleri (stadyumlar, arenalar)"
+        "Teknik problem çözme ve mühendislik desteği",
+        "Güvenlik protokolü uygulaması ve eğitimi",
+        "Kalite kontrol denetimleri ve test koordinasyonu",
+        "Acil durum müdahalesi ve kriz yönetimi"
       ]
     },
     {
-      "title": "Ulaşım Yapıları",
-      "heading": "Ulaşım Yapıları",
-      "description": "Karmaşık altyapı ve ulaşım projeleri için uzman bilgisi.",
+      "title": "Planlama ve ihale",
+      "heading": "Stratejik İhale ile En İyi Değeri Güvence Altına Alma",
+      "description": "İnşaat tedarik dünyasında güvenle gezinin. Uzmanlığımız, kalite standartlarını ve zaman taahhütlerini korurken en iyi değeri elde etmenizi sağlar.",
       "points": [
-        "Köprüler",
-        "Tüneller",
-        "Yollar, otoyollar",
-        "Tren istasyonları, havaalanı"
+        "Pazar analizi ve rekabetçi teklif stratejileri",
+        "Teknik şartname geliştirme ve optimizasyonu",
+        "Tedarikçi yeterlilik ve ön yeterlilik süreçleri",
+        "Sözleşme yapılandırma ve risk dağılım çerçeveleri"
       ]
     },
     {
-      "title": "Camiler",
-      "heading": "Camiler",
-      "description": "Dini yapılar ve toplum merkezlerinin hassas ve uzman planlanması.",
+      "title": "Yetkililer/denetçilerle işbirliği",
+      "heading": "Yetkililer ve Denetçilerle Köprü Kurma",
+      "description": "İnşaat gerçekliği ile yasal gereklilikler arasındaki boşluğu doldurarak, projenizin tüm uyum standartlarını karşılamasını sağlarken olumlu ilişkiler sürdürüyoruz.",
       "points": [
-        "Yeni cami inşaatı",
-        "Yenileme ve Genişletme",
-        "Toplum Merkezleri",
-        "İç Mekan İnşaatı"
+        "İzin başvuru stratejisi ve sunum yönetimi",
+        "Denetçi ilişki kurma ve iletişim protokolleri",
+        "Yönetmelik yorumlama ve uygunluk doğrulaması",
+        "Varyans talepleri ve onay müzakereleri"
+      ]
+    },
+    {
+      "title": "Fatura doğrulaması",
+      "heading": "Bütçenizi Titiz Doğrulama ile Koruma",
+      "description": "Bütçenizi titiz fatura doğrulaması ile koruyun. Finans uzmanlarımız, fazla ücretlendirmeleri önlemek ve sözleşmeye uygunluğu sağlamak için her kalemi inceler.",
+      "points": [
+        "Sözleşmelere göre satır satır maliyet doğrulaması",
+        "Değişiklik emri doğrulama ve onay iş akışları",
+        "Ödeme kilometre taşı takibi ve serbest bırakma yetkisi",
+        "Bütçe sapma analizi ve tahmin uyarıları"
+      ]
+    },
+    {
+      "title": "Proje yönetimi",
+      "heading": "Projeleri Yeni Nesil Yönetimle Birleştirme",
+      "description": "Tüm unsurları tutarlı bir stratejide birleştiren yeni nesil yönetimi deneyimleyin. Zaman, maliyet ve kaliteyi kontrol altında tutarak beklentileri aşan projeler sunuyoruz.",
+      "points": [
+        "Entegre proje kontrol sistemleri ve panoları",
+        "Paydaş iletişimi ve raporlama protokolleri",
+        "Risk azaltma stratejileri ve acil durum planlaması",
+        "Proje sonrası analiz ve öğrenilen dersler"
       ]
     }
   ]

@@ -26,106 +26,84 @@
       "title": "Willkommen in unserem Unternehmen",
       "subtitle": "Wir bieten innovative Ingenieursdienstleistungen",
       "cta": "Loslegen",
-      "heroTitle1": "Das Fundament von allem,",
-      "heroTitle2": "was Sie bauen möchten",
-      "heroDescription": "Bei Titanium Engineering Project Management bringen wir praktische Erfahrung im Bauwesen in Ihre Projekte ein. Von der Terminplanung und Baustellenkoordination bis hin zur Dokumentation und Behördenabstimmung - wir behandeln jedes Detail mit Präzision. Wir bedienen Bayern und ganz Deutschland und helfen Planungsbüros und Bauunternehmen dabei, mit Vertrauen zu bauen.",
+      "heroTitle1": "Projektmanagement für",
+      "heroTitle2": "erfolgreiche Bauprojekte",
+      "heroDescription": "Wir bringen Stabilität in Ihre Bauprojekte – mit Terminplanung, Kostensteuerung und Qualitätssicherung.",
       
 
 "heroElements": [
+  { "title": "Terminplan"},
   { "title": "Kosten"},
-  { "title": "Zeit"},
   { "title": "Qualität"}
 ],
 "methodology": {
-  "title": "Unsere Methodik: Ein Fundament des Vertrauens",
-  "subtitle": "Wir bauen Erfolg auf vier Schlüsselsäulen auf und stellen sicher, dass Ihr Projekt mit Präzision, Integrität und klarer Kommunikation verwaltet wird.",
+  "title": "Baukompetenz in allen Bereichen",
+  "subtitle": "Wir realisieren Projekte in allen Baukategorien – von Wohn- und Gewerbebauten bis hin zu Industrie-, Verkehrs- und Kulturbauten.",
   "cards": [
     {
-      "title": "Bauphasenplanung und Terminsteuerung",
-      "heading": "Meisterhafte Phasenplanung & Terminsteuerung",
-      "description": "Wir erstellen detaillierte Roadmaps, die jeden Aspekt Ihres Projekts synchronisieren. Unsere fortschrittliche Terminplanung vermeidet Engpässe und optimiert den Arbeitsablauf.",
+      "title": "Wohngebäude",
+      "heading": "Wohngebäude",
+      "description": "Professionelle Planung und Umsetzung von Wohnbauprojekten aller Größenordnungen.",
       "points": [
-        "Fortschrittliche CPM-Terminplanung mit Meilenstein-Tracking",
-        "Wetteradaptive Zeitplananpassungen",
-        "Ressourcennivellierung und Konfliktlösung",
-        "Echtzeit-Visualisierung des Fortschritts"
+        "Einfamilienhäuser",
+        "Mehrfamilienhäuser",
+        "Wohnanlagen"
       ]
     },
     {
-      "title": "Nachunternehmerkoordination",
-      "heading": "Harmonisierung aller Gewerke durch Expertenkoordination",
-      "description": "Verwandeln Sie Chaos in Harmonie. Wir orchestrieren mehrere Gewerke nahtlos und stellen sicher, dass jeder Spezialist sein Fachwissen genau im richtigen Moment einbringt.",
+      "title": "Gewerbliche Gebäude",
+      "heading": "Gewerbliche Gebäude",
+      "description": "Umfassende Lösungen für kommerzielle und gewerbliche Bauprojekte.",
       "points": [
-        "Sequenzierung und Schnittstellenmanagement mehrerer Gewerke",
-        "Digitale Koordinationsplattformen und Kommunikationshubs",
-        "Leistungsbenchmarking und Qualitäts-Scorecards",
-        "Konfliktvermittlung und Lösungsprotokolle"
+        "Büros / Bürogebäude",
+        "Einkaufszentren",
+        "Hotels",
+        "Lagerhallen"
       ]
     },
     {
-      "title": "Baudokumentation",
-      "heading": "Erstellung eines unveränderlichen digitalen Projektarchivs",
-      "description": "Unser umfassendes System erfasst jedes Detail, jede Entscheidung und jeden Meilenstein und schafft ein unveränderliches digitales Archiv für zukünftige Referenzen und rechtlichen Schutz.",
+      "title": "Industriebauten",
+      "heading": "Industriebauten",
+      "description": "Spezialisierte Planung und Ausführung von Industrieanlagen und Produktionsstätten.",
       "points": [
-        "360°-Fotodokumentation mit Zeitstempel und Geotagging",
-        "Automatisierte Fortschrittsberichte mit KI-gestützten Einblicken",
-        "Compliance-Audit-Trails und behördliche Einreichungen",
-        "Cloud-basiertes Archiv mit sofortiger Suchfunktion"
+        "Fabriken",
+        "Produktionshallen",
+        "Logistikzentren",
+        "Technische Anlagen"
       ]
     },
     {
-      "title": "Unterstützung der Bauleitung",
-      "heading": "Stärkung Ihrer Bauleitungskompetenzen",
-      "description": "Erweitern Sie Ihre Managementkapazitäten mit unserer spezialisierten Unterstützung. Wir bieten zusätzliches Fachwissen und Personal, um komplexe Herausforderungen zu bewältigen.",
+      "title": "Öffentliche Gebäude",
+      "heading": "Öffentliche Gebäude",
+      "description": "Verantwortungsvolle Umsetzung öffentlicher Bauprojekte für die Gemeinschaft.",
       "points": [
-        "Technische Problemlösung und Ingenieurunterstützung",
-        "Implementierung von Sicherheitsprotokollen und Schulungen",
-        "Qualitätskontrollen und Testkoordination",
-        "Notfallreaktion und Krisenmanagement"
+        "Schulen, Universitäten",
+        "Krankenhäuser",
+        "Bibliotheken",
+        "Museen",
+        "Sportstätten (Stadien, Hallen)"
       ]
     },
     {
-      "title": "Planung und Ausschreibung",
-      "heading": "Besten Wert durch strategische Ausschreibung sichern",
-      "description": "Navigieren Sie sicher durch die komplexe Welt der Bauvergabe. Unsere Expertise sichert Ihnen den besten Wert unter Einhaltung von Qualitäts- und Zeitvorgaben.",
+      "title": "Verkehrsbauten",
+      "heading": "Verkehrsbauten",
+      "description": "Expertenwissen für komplexe Infrastruktur- und Verkehrsprojekte.",
       "points": [
-        "Marktanalyse und wettbewerbsorientierte Angebotsstrategien",
-        "Entwicklung und Optimierung technischer Spezifikationen",
-        "Anbieterqualifizierung und Präqualifikationsprozesse",
-        "Vertragsgestaltung und Risikoverteilungsmodelle"
+        "Brücken",
+        "Tunnel",
+        "Straßen, Autobahnen",
+        "Bahnhöfe, Flughäfen"
       ]
     },
     {
-      "title": "Zusammenarbeit mit Behörden/Prüfern",
-      "heading": "Brücken schlagen zu Behörden und Prüfern",
-      "description": "Wir überbrücken die Lücke zwischen Bau-Realität und regulatorischen Anforderungen und gewährleisten die Einhaltung aller Standards bei positiven Behördenbeziehungen.",
+      "title": "Moscheen",
+      "heading": "Moscheen",
+      "description": "Sensible und fachkundige Planung religiöser Bauten und Gemeindezentren.",
       "points": [
-        "Strategie für Genehmigungsanträge und Einreichungsmanagement",
-        "Beziehungsaufbau zu Prüfern und Kommunikationsprotokolle",
-        "Code-Interpretation und Konformitätsprüfung",
-        "Abweichungsanträge und Genehmigungsverhandlungen"
-      ]
-    },
-    {
-      "title": "Rechnungsprüfung",
-      "heading": "Schutz Ihres Budgets durch sorgfältige Prüfung",
-      "description": "Schützen Sie Ihr Budget durch sorgfältige Rechnungsprüfung. Unsere Finanzexperten prüfen jede Position, um Überberechnungen zu vermeiden und Vertragstreue zu sichern.",
-      "points": [
-        "Positionsweise Kostenprüfung gegen Verträge",
-        "Validierung von Änderungsaufträgen und Genehmigungsworkflows",
-        "Zahlungsmeilenstein-Tracking und Freigabeautorisierung",
-        "Budgetabweichungsanalyse und Prognosewarnungen"
-      ]
-    },
-    {
-      "title": "Projektmanagement",
-      "heading": "Projekte mit Management der nächsten Generation vereinen",
-      "description": "Erleben Sie Management der nächsten Generation, das alle Elemente zu einer kohärenten Strategie vereint. Wir liefern Projekte, die Erwartungen übertreffen.",
-      "points": [
-        "Integrierte Projektsteuerungssysteme und Dashboards",
-        "Stakeholder-Kommunikation und Berichtsprotokolle",
-        "Risikominderungsstrategien und Notfallplanung",
-        "Analyse nach Projektabschluss und Lessons Learned"
+        "Neubau von Moscheen",
+        "Sanierung und Erweiterung",
+        "Gemeindezentren",
+        "Innenausbau"
       ]
     }
   ]
@@ -169,13 +147,15 @@
     },
     "about": {
       "story": {
-        "title": "Geschmiedet durch 15 Jahre Ingenieursexzellenz.",
+        "title": "Ihr Bauprojekt, unser gemeinsamer Erfolg",
         "subtitle": "Unsere Geschichte",
-        "paragraph": "Ich gründete Titanium Engineering Project Management mit einer einzigen, klaren Vision: das stärkste Glied in der Baukette zu sein. Der Name 'Titanium' repräsentiert nicht nur Stärke, sondern auch die hochleistungsfähige, korrosionsbeständige Natur unseres Managementprozesses. Wir überwachen nicht nur Projekte; wir schützen sie.",
+        "paragraph": "Titanium Engineering Project Management verbindet Praxiserfahrung im Bauwesen mit präziser Projektsteuerung. Wir unterstützen Planungsbüros und Bauunternehmen in Bayern und deutschlandweit.",
         "listItems": [
-          "Unerschütterliches Engagement für Projektzeitpläne.",
-          "Transparente Kommunikation mit allen Beteiligten.",
-          "Sorgfältige Budget- und Qualitätskontrolle."
+          "Transparente Kommunikation – Klare und offene Abstimmungen mit allen Beteiligten",
+          "Lösungsorientiert – Schnelle und effektive Problemlösungen bei Herausforderungen",
+          "Flexibilität – Anpassung an dynamische Projektanforderungen",
+          "Präzision – Sorgfältige Planung und Steuerung jedes Projektschrittes",
+          "Zuverlässig – Verantwortungsvoller Umgang mit Terminen, Ressourcen und Budget"
         ],
         "videoLinkText": "Unser Firmenvideo ansehen"
       },
@@ -204,43 +184,34 @@
     },
    "services": {
   "title": "Unsere Dienstleistungen",
-  "readMore": "Mehr lesen",
   "cards": [
     { 
       "title": "Phasen- & Terminplanung", 
-      "description": "Wir erstellen detaillierte Terminpläne und planen jede Bauphase, um sicherzustellen, dass Ihr Projekt termingerecht abgeschlossen wird." 
+      "description": "Wir erstellen detaillierte Terminpläne nach den HOAI-Leistungsphasen für einen strukturierten Ablauf und einen termingerechten Projektabschluss." 
     },
     { 
-      "title": "Subunternehmerkoordination", 
-      "description": "Wir verwalten und koordinieren alle Subunternehmer vor Ort nahtlos und sorgen für einen effizienten Arbeitsablauf und hohe Qualität." 
+      "title": "Nachunternehmerkoordination", 
+      "description": "Wir übernehmen die effiziente Nachunternehmerkoordination für strukturierte Prozesse und höchste Qualitätsstandards." 
     },
     { 
-      "title": "Baustellendokumentation", 
-      "description": "Wir bieten eine gründliche und konsistente Dokumentation aller Baufortschritte, Aktivitäten und wichtigen Meilensteine für eine klare Projektaufzeichnung." 
+      "title": "Unterstützung der Bauleitung", 
+      "description": "Wir unterstützen die Bauleitung effektiv, um Abläufe zu optimieren und den Projekterfolg zu sichern." 
     },
     { 
-      "title": "Managementunterstützung", 
-      "description": "Wir bieten fachkundige, praktische Unterstützung für Ihr Baumanagement-Team und unterstützen bei täglichen Abläufen und Überwachung." 
+      "title": "Planung, Ausschreibung", 
+      "description": "Wir unterstützen den Planungsprozess und die Erstellung von Ausschreibungsunterlagen für wettbewerbsfähige Unternehmensangebote." 
     },
     { 
-      "title": "Planung & Ausschreibung", 
-      "description": "Wir übernehmen den kompletten Planungs- und Ausschreibungsprozess, von ersten Entwürfen bis zur Einholung wettbewerbsfähiger Unternehmensangebote." 
-    },
-    { 
-      "title": "Behörden- & Prüferverbindung", 
-      "description": "Wir fungieren als primärer Verbindungspartner zu Behörden und Prüfern, um Genehmigungen zu sichern und vollständige Compliance zu gewährleisten." 
+      "title": "Zusammenarbeit mit Behörden", 
+      "description": "Wir bieten kompetente Unterstützung bei behördlichen Abläufen und Genehmigungen." 
     },
     { 
       "title": "Rechnungsprüfung", 
-      "description": "Wir überprüfen und verifizieren alle projektbezogenen Rechnungen sorgfältig, um Genauigkeit zu gewährleisten und strenge Budgetkontrolle zu wahren." 
+      "description": "Wir prüfen und verifizieren projektbezogene Rechnungen sorgfältig, um Genauigkeit sicherzustellen und eine strikte Budgetkontrolle zu gewährleisten." 
     },
     { 
-      "title": "Projektkontrolle", 
-      "description": "Implementierung robuster Projektkontrollsysteme zur Überwachung des Fortschritts, Risikomanagement und Steuerung des Projekts zum Erfolg." 
-    },
-    { 
-      "title": "Qualitätssicherung", 
-      "description": "Sicherstellen, dass der finale Bau höchste Qualitätsstandards erfüllt und Verwaltung eines reibungslosen Übergabeprozesses an Sie, den Kunden." 
+      "title": "Projektsteuerung", 
+      "description": "Wir übernehmen die gezielte Projektsteuerung, um Bauprojekte effizient, termingerecht und erfolgreich umzusetzen." 
     }
   ]
 },

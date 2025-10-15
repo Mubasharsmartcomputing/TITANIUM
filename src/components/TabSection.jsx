@@ -21,12 +21,10 @@ const staticTabInfo = [
     { id: 4, image: features4 },
     { id: 5, image: construction1 },
     { id: 6, image: construction2 },
-    { id: 7, image: features5 },
-    { id: 8, image: features9 },
 ];
 
-// --- Reusable Methodology Card Component (No changes needed here) ---
-const MethodologyCard = ({ image, title, heading, description, points }) => {
+// --- Reusable Methodology Card Component ---
+const MethodologyCard = ({ image, title, heading, description, points, isIndustrial }) => {
     return (
         <div className="bg-white rounded-[2.5rem] shadow-lg overflow-hidden h-full">
             <div className="grid grid-cols-1 xl:grid-cols-12 h-full">
@@ -41,9 +39,9 @@ const MethodologyCard = ({ image, title, heading, description, points }) => {
                             <h4 className="text-lg font-semibold text-gray-800 mb-3 hover:text-[#C3A666] transition-colors line-clamp-2">
                                 <a href="#">{heading}</a>
                             </h4>
-                            <p className="text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">{description}</p>
+                            <p className={`text-gray-600 leading-relaxed text-sm line-clamp-3 ${isIndustrial ? 'mb-2' : 'mb-4'}`}>{description}</p>
                         </div>
-                        <ul className="space-y-2 mt-4">
+                        <ul className={`space-y-2 ${isIndustrial ? 'mt-2' : 'mt-4'}`}>
                             {/* Check if points exists and is an array before mapping */}
                             {Array.isArray(points) && points.map((point, index) => (
                                 <li key={index} className="flex items-start">
@@ -98,6 +96,7 @@ const TabSection = () => {
                                 description={t(`pages.home.methodology.cards.${index}.description`)}
                                 // This tells i18next to return the array of points, not a string
                                 points={t(`pages.home.methodology.cards.${index}.points`, { returnObjects: true }) || []}
+                                isIndustrial={index === 2}
                             />
                         </motion.div>
                     ))}

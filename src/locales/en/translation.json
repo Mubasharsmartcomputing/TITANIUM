@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About",
+    "about": "About Us",
     "services": "Services",
     "consultant": "Consultant",
     "projects": "Projects",
@@ -26,105 +26,83 @@
       "title": "Welcome to Our Company",
       "subtitle": "We provide innovative engineering solutions",
       "cta": "Get Started",
-      "heroTitle1": "The Foundation of Everything",
-      "heroTitle2": "You Want to Build",
-      "heroDescription": "At Titanium Engineering Project Management, we bring hands-on experience in civil engineering to your projects. From scheduling and site coordination to documentation and authority liaison, we handle every detail with precision. Serving Bavaria and across Germany, we help planning offices and construction companies build with confidence.",
+      "heroTitle1": "Project management for",
+      "heroTitle2": "successful construction projects",
+      "heroDescription": "We bring stability to your construction projects – with scheduling, cost control, and quality assurance.",
     
 "heroElements": [
+  { "title": "Scheduling"},
   { "title": "Cost"},
-  { "title": "Time" },
   { "title": "Quality"}
 ],
 "methodology": {
-  "title": "Our Methodology: A Foundation of Trust",
-  "subtitle": "We build success on four key pillars, ensuring your project is managed with precision, integrity, and clear communication.",
+  "title": "Construction expertise in all areas",
+  "subtitle": "We implement projects in all construction categories – from residential and commercial buildings to industrial, transportation, and cultural structures.",
   "cards": [
     {
-      "title": "Construction phase planning and scheduling",
-      "heading": "Mastering Phase Planning & Scheduling",
-      "description": "We create detailed roadmaps that synchronize every project aspect. Our advanced scheduling prevents bottlenecks and optimizes workflow from groundbreaking to final handover.",
+      "title": "Residential buildings",
+      "heading": "Residential buildings",
+      "description": "Professional planning and implementation of residential construction projects of all sizes.",
       "points": [
-        "Advanced CPM scheduling with milestone tracking",
-        "Weather-adaptive timeline adjustments",
-        "Resource leveling and conflict resolution",
-        "Real-time progress visualization dashboards"
+        "Single-family homes",
+        "Multi-family buildings",
+        "Residential complexes"
       ]
     },
     {
-      "title": "Subcontractor coordination",
-      "heading": "Harmonizing Every Trade with Expert Coordination",
-      "description": "Transform chaos into harmony. We orchestrate multiple trades seamlessly, ensuring each specialist contributes their expertise at precisely the right moment.",
+      "title": "Commercial Buildings",
+      "heading": "Commercial Buildings",
+      "description": "Comprehensive solutions for commercial and business construction projects.",
       "points": [
-        "Multi-trade sequencing and interface management",
-        "Digital coordination platforms and communication hubs",
-        "Performance benchmarking and quality scorecards",
-        "Conflict mediation and resolution protocols"
+        "Offices / Office Buildings",
+        "Shopping centers",
+        "Hotels",
+        "Warehouses"
       ]
     },
     {
-      "title": "Construction site documentation",
-      "heading": "Creating an Immutable Digital Project Record",
-      "description": "Our comprehensive system captures every detail, decision, and milestone, creating an immutable digital record for future reference and legal protection.",
+      "title": "Industrial buildings",
+      "heading": "Industrial buildings",
+      "description": "Specialized planning and execution of industrial facilities and production sites.",
       "points": [
-        "360° photo documentation with timestamp geolocation",
-        "Automated progress reports with AI-powered insights",
-        "Compliance audit trails and regulatory submissions",
-        "Cloud-based archive with instant search capabilities"
+        "Factories",
+        "Factory halls",
+        "Logistics centers",
+        "Technical facilities"
       ]
     },
     {
-      "title": "Support for site management",
-      "heading": "Amplifying Your Site Management Capabilities",
-      "description": "Amplify your management capabilities with our specialized support. We provide additional expertise and manpower to handle complex challenges and maintain momentum.",
+      "title": "Public Buildings",
+      "heading": "Public Buildings",
+      "description": "Responsible implementation of public construction projects for the community.",
       "points": [
-        "Technical problem-solving and engineering support",
-        "Safety protocol implementation and training",
-        "Quality control inspections and testing coordination",
-        "Emergency response and crisis management"
+        "Schools, Universities",
+        "Hospitals",
+        "Libraries",
+        "Museums",
+        "Sports venues (stadiums, arenas)"
       ]
     },
     {
-      "title": "Planning and tendering",
-      "heading": "Securing Best Value Through Strategic Tendering",
-      "description": "Navigate construction procurement with confidence. Our expertise ensures you secure the best value while maintaining quality standards and timeline commitments.",
+      "title": "Transportation Structures",
+      "heading": "Transportation Structures",
+      "description": "Expert knowledge for complex infrastructure and transportation projects.",
       "points": [
-        "Market analysis and competitive bidding strategies",
-        "Technical specification development and optimization",
-        "Vendor qualification and prequalification processes",
-        "Contract structuring and risk allocation frameworks"
+        "Bridges",
+        "Tunnels",
+        "Roads, highways",
+        "Train stations, airports"
       ]
     },
     {
-      "title": "Collaboration with authorities/inspectors",
-      "heading": "Bridging Gaps with Authorities and Inspectors",
-      "description": "We bridge the gap between construction reality and regulatory needs, ensuring your project meets all compliance standards while maintaining positive relationships.",
+      "title": "Mosques",
+      "heading": "Mosques",
+      "description": "Sensitive and expert planning of religious buildings and community centers.",
       "points": [
-        "Permit application strategy and submission management",
-        "Inspector relationship building and communication protocols",
-        "Code interpretation and compliance verification",
-        "Variance requests and approval negotiations"
-      ]
-    },
-    {
-      "title": "Invoice verification",
-      "heading": "Protecting Your Budget with Meticulous Verification",
-      "description": "Protect your budget with meticulous invoice verification. Our financial experts scrutinize every line item to prevent overcharges and ensure contractual compliance.",
-      "points": [
-        "Line-by-line cost verification against contracts",
-        "Change order validation and approval workflows",
-        "Payment milestone tracking and release authorization",
-        "Budget variance analysis and forecasting alerts"
-      ]
-    },
-    {
-      "title": "Project management",
-      "heading": "Unifying Projects with Next-Generation Management",
-      "description": "Experience next-gen management that unifies all elements into a coherent strategy. We deliver projects that exceed expectations while controlling time, cost, and quality.",
-      "points": [
-        "Integrated project control systems and dashboards",
-        "Stakeholder communication and reporting protocols",
-        "Risk mitigation strategies and contingency planning",
-        "Post-completion analysis and lessons learned"
+        "New mosque construction",
+        "Renovation and Expansion",
+        "Community Centers",
+        "Interior construction"
       ]
     }
   ]
@@ -168,13 +146,15 @@
     },
     "about": {
       "story": {
-        "title": "Forged by 15 Years of Engineering Excellence.",
+        "title": "Your construction project, our shared success",
         "subtitle": "Our Story",
-        "paragraph": "I founded Titanium Engineering Project Management with a single, clear vision: to be the strongest link in the construction chain. The name \"Titanium\" represents not only strength but also the high-performance, corrosion-resistant nature of our management process. We don't just oversee projects; we protect them.",
+        "paragraph": "Titanium Engineering Project Management combines practical experience in the construction industry with precise project management. We support planning offices and construction companies in Bavaria and throughout Germany.",
         "listItems": [
-          "Unwavering commitment to project timelines.",
-          "Transparent communication with all stakeholders.",
-          "Meticulous budget and quality control."
+          "Transparent communication – clear and open coordination with all stakeholders",
+          "Solution-oriented – Quick and effective problem-solving for challenges",
+          "Flexibility – adaptation to dynamic project requirements",
+          "Precision – meticulous planning and control at every project stage",
+          "Reliable – responsible handling of deadlines, resources and budget"
         ],
         "videoLinkText": "Watch Our Company Video"
       },
@@ -203,43 +183,34 @@
     },
    "services": {
   "title": "Our Services",
-  "readMore": "Read More",
   "cards": [
     { 
       "title": "Phase & Schedule Planning", 
-      "description": "We create detailed schedules and plan every construction phase to ensure your project is completed on time." 
+      "description": "We develop precise schedules aligned with HOAI performance phases, ensuring efficient workflows and on-time project delivery." 
     },
     { 
       "title": "Subcontractor Coordination", 
-      "description": "We seamlessly manage and coordinate all subcontractors on-site, ensuring an efficient workflow and high quality." 
+      "description": "We manage efficient subcontractor coordination to ensure structured processes and the highest quality standards." 
     },
     { 
-      "title": "Site Documentation", 
-      "description": "We provide thorough and consistent documentation of all site progress, activities, and key milestones for a clear project record." 
-    },
-    { 
-      "title": "Management Support", 
-      "description": "Offering expert, hands-on support to your construction management team, assisting with daily operations and oversight." 
+      "title": "Construction Management Support", 
+      "description": "We effectively support construction management to optimize workflows and ensure project success." 
     },
     { 
       "title": "Planning & Tendering", 
-      "description": "Handling the complete planning and tendering process, from initial designs to soliciting competitive contractor bids." 
+      "description": "We support the planning process and the preparation of tender documents to secure competitive contractor offers." 
     },
     { 
-      "title": "Authority & Inspector Liaison", 
-      "description": "We act as the primary liaison with government authorities and inspectors to secure permits and ensure full compliance." 
+      "title": "Collaboration with Authorities", 
+      "description": "We provide expert support for regulatory processes and permit approvals." 
     },
     { 
-      "title": "Invoice Auditing", 
-      "description": "We carefully review and verify all project-related invoices to ensure accuracy and maintain strict budget control." 
+      "title": "Invoice Verification", 
+      "description": "We carefully review and verify project-related invoices to ensure accuracy and maintain strict budget control." 
     },
     { 
-      "title": "Project Control", 
-      "description": "Implementing robust project control systems to monitor progress, manage risks, and steer the project to success." 
-    },
-    { 
-      "title": "Quality Assurance", 
-      "description": "Ensuring the final build meets the highest quality standards and managing a smooth handover process to you, the client." 
+      "title": "Project Management", 
+      "description": "We deliver targeted project control to ensure construction projects are completed efficiently, on schedule, and to the highest standard." 
     }
   ]
 },
