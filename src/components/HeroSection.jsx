@@ -4,7 +4,7 @@ import { FaCalculator, FaCalendarAlt, FaGem } from 'react-icons/fa';
 
 // Import your building/architecture images
 import homeBanner from '../assets/img/homeBanner.jpg'; // Assuming this is your subtle background pattern
-import rightImage from '../assets/img/rightImage2.png';
+import rightImage from '../assets/img/rightImage4.png';
 
 const HeroStatic = () => {
   const { t } = useTranslation();
@@ -80,7 +80,7 @@ const HeroStatic = () => {
               <img 
                 src={rightImage}
                 alt="Building Illustration" 
-                className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-auto transition-transform duration-300 ease-in-out hover:scale-105" 
+                className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-auto max-h-95 object-contain transition-transform duration-300 ease-in-out hover:scale-105" 
               />       
             </div>          
           </div>

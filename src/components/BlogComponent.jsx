@@ -43,12 +43,6 @@ const BlogPostCard = ({ post, readMoreText }) => {
           <div className="flex items-center"><FaFolderOpen className="mr-2 text-[#B49562]" /><span>{post.category}</span></div>
         </div>
         <p className="text-base text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
-        <hr className="my-4"/>
-        <a href={post.link} className="font-bold text-[#B49562] hover:text-gray-600 flex items-center self-start">
-          {/* Use the translated prop here */}
-          <span>{readMoreText}</span>
-          <HiArrowRight className="ml-2" />
-        </a>
       </div>
     </article>
   );
