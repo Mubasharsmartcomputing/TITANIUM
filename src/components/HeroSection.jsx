@@ -80,7 +80,7 @@ const HeroStatic = () => {
               <img 
                 src={rightImage}
                 alt="Building Illustration" 
-                className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-auto max-h-95 mt-16 object-contain transition-transform duration-300 ease-in-out hover:scale-105" 
+                className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-auto max-h-95 mt-10 object-contain transition-transform duration-300 ease-in-out hover:scale-105" 
               />       
             </div>          
           </div>
