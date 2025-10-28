@@ -145,11 +145,13 @@ const BlogDetail = () => {
             <div className="border-t border-gray-200 my-8"></div>
 
             {/* Main Content */}
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-xl max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-headings:mb-6 prose-p:text-gray-700 prose-p:leading-8 prose-p:mb-6 prose-a:text-[#B49562] prose-a:font-medium prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-strong:font-semibold prose-em:text-gray-600 prose-blockquote:border-l-4 prose-blockquote:border-[#B49562] prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-ul:space-y-2 prose-ol:space-y-2 prose-li:text-gray-700 prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono">
               {post.content ? (
                 <ReactMarkdown>{post.content}</ReactMarkdown>
               ) : (
-                <p className="text-gray-600">No content available for this post.</p>
+                <div className="flex items-center justify-center py-20">
+                  <p className="text-gray-500 text-lg font-light">No content available for this post.</p>
+                </div>
               )}
             </div>
           </div>
