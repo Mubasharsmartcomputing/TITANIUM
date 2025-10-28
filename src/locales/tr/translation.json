@@ -19,7 +19,8 @@
     "nextSlide": "Sonraki slayt",
     "goToSlide": "{{index}}. slayda git",
     "pauseSlideshow": "Slayt gösterisini duraklat",
-    "playSlideshow": "Slayt gösterisini başlat"
+    "playSlideshow": "Slayt gösterisini başlat",
+    "backToBlog": "Bloga geri dön"
   },
   "pages": {
     "home": {
