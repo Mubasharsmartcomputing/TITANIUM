@@ -2,3 +2,45 @@
 body{
     background-color: #E5E7EB;
 }
+
+/* Markdown Content Styling */
+.markdown-content {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.markdown-content h2 {
+  @apply text-3xl font-bold text-gray-900 mt-10 mb-6;
+}
+
+.markdown-content h3 {
+  @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+}
+
+.markdown-content p {
+  @apply mb-4 text-lg leading-relaxed;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  @apply mb-6 ml-6 space-y-2;
+}
+
+.markdown-content ul {
+  @apply list-disc;
+}
+
+.markdown-content ol {
+  @apply list-decimal;
+}
+
+.markdown-content li {
+  @apply text-lg;
+}
+
+.markdown-content strong {
+  @apply font-semibold text-gray-900;
+}
+
+.markdown-content a {
+  @apply text-[#B49562] hover:underline;
+}

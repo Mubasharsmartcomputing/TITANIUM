@@ -23,10 +23,17 @@ export default function Header() {
     setMenuOpen(false);
   };
 
-  const handleLanguageChange = (languageCode) => {
-    i18n.changeLanguage(languageCode);
-    setLanguageDropdownOpen(false);
-    console.log(`Language changed to: ${languageCode}`);
+  const handleLanguageChange = async (languageCode) => {
+    try {
+      await i18n.changeLanguage(languageCode);
+      setLanguageDropdownOpen(false);
+      // Force a small delay to ensure language is fully loaded
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
+    } catch (error) {
+      console.error('Error changing language:', error);
+    }
   };
 
   const toggleLanguageDropdown = () => {
@@ -48,14 +55,14 @@ export default function Header() {
     <>
       <header className="bg-white shadow-md sticky top-0 z-50 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 lg:h-20">
+          <div className="flex items-center justify-between h-20 lg:h-24">
             
             {/* Logo */}
             <NavLink to="/">
               <img 
                 src={logo} 
                 alt="Titanium Engineering Logo" 
-                className="h-20 w-24 lg:h-32 lg:w-36"
+                className="h-16 w-20 lg:h-20 lg:w-24"
               />
             </NavLink>
 

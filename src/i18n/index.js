@@ -27,15 +27,16 @@ i18n
   // Initialize i18next
   .init({
     resources,
-    lng: 'de', // Default language set to German
-    fallbackLng: 'de', // Fallback language set to German
+   lng: localStorage.getItem('i18nextLng') || 'de',
+fallbackLng: 'de',
+    supportedLngs: ['en', 'de', 'tr'],
     debug: false, // Set to true for debugging
     interpolation: {
       escapeValue: false // React already does escaping
     },
     detection: {
-      order: ['localStorage', 'cookie', 'navigator', 'htmlTag', 'path', 'subdomain'],
-      caches: ['localStorage', 'cookie']
+      order: ['localStorage', 'navigator', 'htmlTag'],
+      caches: ['localStorage']
     }
   });
 

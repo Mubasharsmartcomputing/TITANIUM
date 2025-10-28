@@ -8,9 +8,9 @@ import { HiArrowRight } from 'react-icons/hi';
 
 // --- IMPORT IMAGES ---
 import profileImg from '../assets/img/consultant-profile.png'; // Your professional headshot
-import blogImg1 from '../assets/img/blog/blog-1.jpg';
-import blogImg2 from '../assets/img/blog/blog-2.jpg';
-import blogImg3 from '../assets/img/blog/blog-3.jpg';
+import blogImg1 from '../assets/img/blog/blog-1.png';
+import blogImg2 from '../assets/img/blog/blog-2.png';
+import blogImg3 from '../assets/img/blog/blog-3.png';
 
 // 2. Data for non-translatable content. The order MUST match the JSON.
 const staticSkillsData = [

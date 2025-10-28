@@ -7,21 +7,21 @@ import { FaUser, FaFolderOpen } from 'react-icons/fa';
 import { HiArrowRight } from 'react-icons/hi';
 
 // --- IMPORT IMAGES ---
-import blogImg1 from '../assets/img/blog/blog-1.jpg';
+import blogImg1 from '../assets/img/blog/blog-1.png';
 import blogImg2 from '../assets/img/blog/blog-2.png';
-import blogImg6 from '../assets/img/blog/blog-3.png';
+import blogImg3 from '../assets/img/blog/blog-3.png';
 import blogImg4 from '../assets/img/blog/blog-4.png';
-import blogImg5 from '../assets/img/blog/blog-5.jpg';
-import blogImg3 from '../assets/img/blog/blog-6.jpg';
+import blogImg5 from '../assets/img/blog/blog-5.png';
+import blogImg6 from '../assets/img/blog/blog-6.png';
 
 // 2. Data for non-translatable content. The order MUST match the JSON.
 const staticBlogData = [
-  { id: 1, image: blogImg1, link: '/blog/post-1' },
-  { id: 2, image: blogImg2, link: '/blog/post-2' },
-  { id: 3, image: blogImg3, link: '/blog/post-3' },
-  { id: 4, image: blogImg4, link: '/blog/post-4' },
-  { id: 5, image: blogImg5, link: '/blog/post-5' },
-  { id: 6, image: blogImg6, link: '/blog/post-6' }
+  { id: 1, image: blogImg1 },
+  { id: 2, image: blogImg2 },
+  { id: 3, image: blogImg3 },
+  { id: 4, image: blogImg4 },
+  { id: 5, image: blogImg5 },
+  { id: 6, image: blogImg6 }
 ];
 
 // --- REUSABLE BLOG POST CARD COMPONENT ---
@@ -31,18 +31,30 @@ const BlogPostCard = ({ post, readMoreText }) => {
     <article className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full group">
       <div className="relative">
         <img src={post.image} alt={post.title} className="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300" />
-        <span className="absolute bottom-0 right-0 bg-[#B49562] text-white text-sm font-semibold px-4 py-2">{post.date}</span>
       </div>
       <div className="p-6 flex flex-col flex-grow text-start">
         <h3 className="text-lg font-semibold text-gray-800 mb-3 hover:text-[#B49562] transition-colors">
-          <a href={post.link}>{post.title}</a>
+          <a 
+            href={`/blog/${post.slug}`}
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = `/blog/${post.slug}`;
+            }}
+          >
+            {post.title}
+          </a>
         </h3>
-        <div className="flex items-center text-sm text-g[#B49562] mb-4">
-          <div className="flex items-center"><FaUser className="mr-2 text-[#B49562]" /><span>{post.author}</span></div>
-          <span className="mx-3">/</span>
-          <div className="flex items-center"><FaFolderOpen className="mr-2 text-[#B49562]" /><span>{post.category}</span></div>
-        </div>
         <p className="text-base text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
+        <a 
+          href={`/blog/${post.slug}`}
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = `/blog/${post.slug}`;
+          }}
+          className="inline-flex items-center text-[#B49562] font-semibold hover:underline"
+        >
+          {readMoreText} <HiArrowRight className="ml-2" />
+        </a>
       </div>
     </article>
   );

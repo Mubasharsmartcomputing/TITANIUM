@@ -34,12 +34,12 @@ const MethodologyCard = ({ image, title, heading, description, points, isIndustr
                     </div>
                 </div>
                 <div className="xl:col-span-7 flex items-center">
-                    <div className="p-8 flex flex-col justify-between h-full">
+                    <div className="p-8 flex flex-col  h-full">
                         <div>
                             <h4 className="text-lg font-semibold text-gray-800 mb-3 hover:text-[#C3A666] transition-colors line-clamp-2">
                                 <a href="#">{heading}</a>
                             </h4>
-                            <p className={`text-gray-600 leading-relaxed text-sm line-clamp-3 ${isIndustrial ? 'mb-2' : 'mb-4'}`}>{description}</p>
+                            {/* <p className={`text-gray-600 leading-relaxed text-sm line-clamp-3 ${isIndustrial ? 'mb-2' : 'mb-4'}`}>{description}</p> */}
                         </div>
                         <ul className={`space-y-2 ${isIndustrial ? 'mt-2' : 'mt-4'}`}>
                             {/* Check if points exists and is an array before mapping */}

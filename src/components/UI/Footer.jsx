@@ -70,7 +70,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Titanium Engineering Logo" 
-                className="h-20 w-24 lg:h-32 lg:w-36"
+                className="h-20 w-24 lg:h-20 lg:w-24"
               />
             </NavLink>
             <p className="text-sm text-gray-900 leading-relaxed mb-4">
