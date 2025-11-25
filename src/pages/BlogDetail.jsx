@@ -29,6 +29,11 @@ const BlogDetail = () => {
   
   // Find post by slug or ID
   useEffect(() => {
+    if (!posts || posts.length === 0) {
+      setPost(null);
+      return;
+    }
+
     let foundPost = posts.find(p => p.slug === slug);
     
     // If not found by slug, try to find by ID from state

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; // 1. Import hook
+import { useNavigate } from 'react-router-dom';
 
 // --- IMPORT ICONS ---
 import { FaUser, FaFolderOpen } from 'react-icons/fa';
@@ -27,6 +28,15 @@ const staticBlogData = [
 // --- REUSABLE BLOG POST CARD COMPONENT ---
 // Now accepts `readMoreText` as a prop
 const BlogPostCard = ({ post, readMoreText }) => {
+  const navigate = useNavigate();
+
+  const handlePostClick = (e) => {
+    e.preventDefault();
+    navigate(`/blog/${post.slug}`, {
+      state: { postId: post.id }
+    });
+  };
+
   return (
     <article className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full group">
       <div className="relative">
@@ -34,27 +44,20 @@ const BlogPostCard = ({ post, readMoreText }) => {
       </div>
       <div className="p-6 flex flex-col flex-grow text-start">
         <h3 className="text-lg font-semibold text-gray-800 mb-3 hover:text-[#B49562] transition-colors">
-          <a 
-            href={`/blog/${post.slug}`}
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = `/blog/${post.slug}`;
-            }}
+          <button 
+            onClick={handlePostClick}
+            className="text-left hover:text-[#B49562] transition-colors"
           >
             {post.title}
-          </a>
+          </button>
         </h3>
         <p className="text-base text-gray-600 mb-4 flex-grow">{post.excerpt}</p>
-        <a 
-          href={`/blog/${post.slug}`}
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.href = `/blog/${post.slug}`;
-          }}
-          className="inline-flex items-center text-[#B49562] font-semibold hover:underline"
+        <button 
+          onClick={handlePostClick}
+          className="inline-flex items-center text-[#B49562] font-semibold hover:underline text-left"
         >
           {readMoreText} <HiArrowRight className="ml-2" />
-        </a>
+        </button>
       </div>
     </article>
   );
