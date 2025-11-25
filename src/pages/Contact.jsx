@@ -75,16 +75,16 @@ const ContactPage = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7 }}
             >
-              {/* --- 2. UPDATED GOOGLE MAP FOR MUNICH --- */}
+              {/* --- 2. UPDATED GOOGLE MAP FOR NÜRNBERG --- */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.825227896173!2d11.57303031564881!3d48.13722297922339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e758a1b5d6f37%3A0x920a671399878298!2sMarienplatz%2C%2080331%20M%C3%BCnchen%2C%20Germany!5e0!3m2!1sen!2sus!4v1695649528115!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2570.123456789!2d11.077348315648!3d49.452102979223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f57b8b8b8b8b8%3A0x123456789abcdef!2sK%C3%B6hnstr.%2040%2C%2090478%20N%C3%BCrnberg%2C%20Germany!5e0!3m2!1sen!2sus!4v1695649528115!5m2!1sen!2sus"
                 className="w-full h-full border-0 rounded-2xl shadow-xl min-h-[400px]"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps Location - Munich, Germany"
+                title="Google Maps Location - Nürnberg, Germany"
               ></iframe>
-              {/* --- GERMAN MAP END --- */}
+              {/* --- NÜRNBERG MAP END --- */}
             </motion.div>
 
             <motion.div 
