@@ -148,7 +148,7 @@ const Footer = () => {
         aria-label={t('footer.scrollToTop')}
         className={`fixed bottom-6 right-6 w-11 h-11 bg-[#B49562] hover:bg-[#9D7638] text-white rounded-full 
                     shadow-lg transition-all duration-300 transform hover:scale-105 
-                    flex items-center justify-center z-50 cursor-pointer
+                    flex items-center justify-center z-60 cursor-pointer
                     ${isScrollButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
       >
         <FaArrowUp className="w-4 h-4" />

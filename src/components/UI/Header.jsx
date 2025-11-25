@@ -189,7 +189,7 @@ export default function Header() {
       {/* Overlay for mobile menu */}
       {isMenuOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-25 lg:hidden z-40" 
+          className="fixed inset-0 bg-black bg-opacity-25 lg:hidden z-30" 
           onClick={closeMenu}
         />
       )}
@@ -197,7 +197,7 @@ export default function Header() {
       {/* Overlay for language dropdown */}
       {isLanguageDropdownOpen && (
         <div 
-          className="fixed inset-0 z-40" 
+          className="fixed inset-0 z-30" 
           onClick={() => setLanguageDropdownOpen(false)}
         />
       )}
