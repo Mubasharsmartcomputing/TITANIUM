@@ -91,7 +91,7 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={toggleLanguageDropdown}
-                  className="flex items-center space-x-2 text-gray-700 hover:text-[#B49562] transition-colors duration-200 px-2 py-1 rounded-md"
+                  className="flex items-center space-x-2 text-gray-700 hover:text-[#B49562] transition-colors duration-200 px-2 py-1 rounded-md cursor-pointer"
                 >
                   <span className="text-sm font-medium">{i18n.language.toUpperCase()}</span>
                   <HiGlobeAlt size={16} />
@@ -105,7 +105,7 @@ export default function Header() {
                       <button
                         key={language.code}
                         onClick={() => handleLanguageChange(language.code)}
-                        className={`w-full text-left px-4 py-2 text-sm hover:bg-red-50 hover:text-[#B49562] transition-colors duration-200 flex items-center space-x-2
+                        className={`w-full text-left px-4 py-2 text-sm hover:bg-red-50 hover:text-[#B49562] transition-colors duration-200 flex items-center space-x-2 cursor-pointer
                           ${i18n.language === language.code ? 'bg-red-50 text-[#B49562]' : 'text-gray-700'}
                         `}
                       >
@@ -117,12 +117,6 @@ export default function Header() {
                 )}
               </div>
 
-              <button 
-                className="text-[#B49562] hover:text-[#B49562] transition-colors duration-200"
-                title={t('common.search')}
-              >
-                <HiSearch size={20} />
-              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -174,7 +168,7 @@ export default function Header() {
                   <button
                     key={language.code}
                     onClick={() => handleLanguageChange(language.code)}
-                    className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors duration-200 flex items-center space-x-2
+                    className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors duration-200 flex items-center space-x-2 cursor-pointer
                       ${i18n.language === language.code 
                         ? 'bg-[#B49562] text-white' 
                         : 'text-gray-700 hover:text-[#B49562] hover:bg-red-50'
@@ -186,16 +180,7 @@ export default function Header() {
                   </button>
                 ))}
               </div>
-              
-              {/* Search button */}
-              <div className="flex justify-end pt-3 mt-3 border-t border-gray-200">
-                <button 
-                  className="text-[#B49562] hover:text-[#B49562] transition-colors duration-200"
-                  title={t('common.search')}
-                >
-                  <HiSearch size={20} />
-                </button>
-              </div>
+
             </div>
           </nav>
         </div>
